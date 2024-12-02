@@ -807,15 +807,14 @@ main {
 footer {
   background-image: linear-gradient(45deg, var(--brand-color-alt), var(--brand-color));
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-  color: var(--white)
+  color: var(--white);
 }
 
-/*footer .recap-wrap {
-  display: flex;
+footer .recap-wrap {
   padding-block: 2.5rem;
   align-items: center;
   justify-content: space-between;
-}*/
+}
 
 footer ul {
   gap: 2rem;
