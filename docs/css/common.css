@@ -810,12 +810,12 @@ footer {
   color: var(--white)
 }
 
-footer .recap-wrap {
+/*footer .recap-wrap {
   display: flex;
   padding-block: 2.5rem;
   align-items: center;
   justify-content: space-between;
-}
+}*/
 
 footer ul {
   gap: 2rem;
