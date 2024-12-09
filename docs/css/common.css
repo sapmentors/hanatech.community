@@ -1,7 +1,7 @@
 :root {
   --background-color: #F5F5F5;
   --brand-color: #ba066c;
-  --brand-color-alt: #b106ba;
+  --brand-color-alt: #9f06ba;
   --dark-brand-color: #242424;
   --text-color: #686868;
   --white: #fff;
@@ -642,7 +642,7 @@ main {
 }
 
 .recap-site-header .recap-logo {
-  height: clamp(6rem, 15vw, 15rem)
+  height: clamp(6rem, 15vw, 25rem)
 }
 
 .recap-agenda-annonce a {
