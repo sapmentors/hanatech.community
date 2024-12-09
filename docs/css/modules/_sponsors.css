@@ -1,3 +1,64 @@
+.recap-sponsors-table {
+  font-size: var(--type-0);
+  /* margin: auto; */
+  margin-block: 4rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .recap-sponsors-table {
+    font-size: .85rem;
+  }
+}
+
+.recap-sponsors-table tr {
+  height: 3rem;
+}
+
+.recap-sponsors-table thead th {
+  line-height: 1.75;
+}
+
+.recap-sponsors-table th:first-child {
+  text-align: left;
+  padding-inline-start: 0;
+}
+
+.recap-sponsors-table tbody th {
+  text-align: left;
+}
+
+.recap-sponsors-table th,
+.recap-sponsors-table td {
+  line-height: 1.5;
+}
+
+.recap-sponsors-table td {
+  text-align: center;
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  .recap-sponsors-table th,
+  .recap-sponsors-table td {
+    padding-block: .2rem;
+    padding-inline: .5rem;
+  }
+
+  .recap-sponsors-table td {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+  .recap-sponsors-table th,
+  .recap-sponsors-table td {
+    padding-block: .5rem;
+    padding-inline: 1rem;
+  }
+}
+
 .recap-site-header.sponsors .recap-site-back {
   gap: 0;
   color: var(--brand-color-alt);
