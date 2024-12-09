@@ -540,11 +540,11 @@ a.recap-btn:is(:focus) {
 /* ----------------------- Structure Contents ---------------------------  */
 main {
   position: relative;
-  padding-block-end: 2rem;
+  padding-block-end: 1rem;
 }
 
 .about {
-  padding-block: 5rem;
+  padding-block: 1rem;
   background-image: linear-gradient(45deg, var(--brand-color-alt), var(--brand-color));
   /*clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);*/
   color: var(--white)
@@ -722,12 +722,50 @@ main {
   }
 }
 
+.recap-map {
+  display: block;
+  background-position: 50%;
+  background-size: cover;
+  height: 664px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.recap-location {
+  padding: 0;
+  position: relative;
+}
+
+.recap-location-desc {
+  display: inline-block;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--brand-color);
+  padding: 10px;
+}
+
+.recap-location-desc h2 {
+  color: white;
+  background-image: none;
+}
+
+.recap-location-desc > p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 /* ---------------------------- Teaser ----------------------------  */
 .recap-teaser-container {
   gap: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.recap-teaser-container > div {
+  flex: 0 0 calc(50% - 10px);
+  align-self: center;
 }
 
 .recap-teaser {
