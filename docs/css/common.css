@@ -722,39 +722,6 @@ main {
   }
 }
 
-.recap-map {
-  display: block;
-  background-position: 50%;
-  background-size: cover;
-  height: 664px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.recap-location {
-  padding: 0;
-  position: relative;
-}
-
-.recap-location-desc {
-  display: inline-block;
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--brand-color);
-  padding: 10px;
-}
-
-.recap-location-desc h2 {
-  color: white;
-  background-image: none;
-}
-
-.recap-location-desc > p {
-  font-size: 2rem;
-  font-weight: 300;
-}
-
 /* ---------------------------- Teaser ----------------------------  */
 .recap-teaser-container {
   gap: 4rem;
@@ -808,6 +775,133 @@ main {
   .recap-teaser li {
     margin-inline-end: 2rem;
   }
+}
+
+/* ------------------------ Countdown Section -------------------------  */
+
+.recap-countdown-container {
+  display: block;
+  align-items: center;
+}
+
+.recap-countdown-container > * {
+  display: inline;
+}
+
+.clock-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  min-height: 100px;
+}
+
+.clock-col {
+  text-align: center;
+  margin-right: 40px;
+  margin-left: 40px;
+  min-width: 90px;
+  position: relative;
+}
+
+.clock-col:not(:last-child):before,
+.clock-col:not(:last-child):after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  right: -42px;
+}
+
+.clock-col:not(:last-child):before {
+  top: 35%;
+}
+
+.clock-col:not(:last-child):after {
+  top: 50%;
+}
+
+.clock-timer:before {
+  color: #fff;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+}
+
+.clock-label {
+  color: var(--brand-color);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 825px) {
+  .clock-container {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .clock-col+.clock-col {
+    margin-top: 20px;
+  }
+
+  .clock-col:before,
+  .clock-col:after {
+    display: none !important;
+  }
+}
+
+.clock-day:before {
+  content: var(--timer-day);
+}
+
+.clock-hours:before {
+  content: var(--timer-hours);
+}
+
+.clock-minutes:before {
+  content: var(--timer-minutes);
+}
+
+.clock-seconds:before {
+  content: var(--timer-seconds);
+}
+
+/* ------------------------ Map Section -------------------------  */
+
+.recap-map {
+  display: block;
+  background-position: 50%;
+  background-size: cover;
+  height: 664px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.recap-location {
+  padding: 0;
+  position: relative;
+}
+
+.recap-location-desc {
+  display: inline-block;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--brand-color);
+  padding: 10px;
+}
+
+.recap-location-desc h2 {
+  color: white;
+  background-image: none;
+}
+
+.recap-location-desc>p {
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 /* ------------------------ Newsletter section -------------------------  */

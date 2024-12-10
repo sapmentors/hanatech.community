@@ -35,25 +35,54 @@
 <body>
   <header class="recap-site-header" id="header">
     <div class="recap-wrap">
-      <h1>
-        <span>20<br aria-hidden="true" />25</span>
-        <span>June 4</span>
-      </h1>
+      <div class="recap-countdown-container">
+        <h1>
+          <span>June 4, 2025</span>
+        </h1>
+
+        <div class="clock-container">
+          <div class="clock-col">
+            <p class="clock-day clock-timer">
+            </p>
+            <p class="clock-label">
+              Days
+            </p>
+          </div>
+          <div class="clock-col">
+            <p class="clock-hours clock-timer">
+            </p>
+            <p class="clock-label">
+              Hours
+            </p>
+          </div>
+          <div class="clock-col">
+            <p class="clock-minutes clock-timer">
+            </p>
+            <p class="clock-label">
+              Minutes
+            </p>
+          </div>
+          <div class="clock-col">
+            <p class="clock-seconds clock-timer">
+            </p>
+            <p class="clock-label">
+              Seconds
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div class="recap-container">
         <img class="recap-logo" src="./images/htec-logo.svg" alt="logo of HANA conference" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-          eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-          arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-          Integer tincidunt. Cras dapibus.
-        </p>
-
-        <a href="https://recap.cfapps.eu12.hana.ondemand.com/" hreflang="en" rel="external nofollow" class="recap-btn">
-          propose your topic
-        </a>
       </div>
+    </div>
+    <div class="recap-wrap">
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+      </p>
+      <a href="https://recap.cfapps.eu12.hana.ondemand.com/" hreflang="en" rel="external nofollow" class="recap-btn">
+        propose your topic
+      </a>
     </div>
   </header>
 
@@ -402,6 +431,7 @@
   <script src="./js/luxon.min.js"></script>
   <script src="./js/agenda.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/clock.js"></script>
 </body>
 
 </html>
