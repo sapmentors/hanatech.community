@@ -17,6 +17,11 @@
   --type-3: clamp(1.7281rem, 1.5244rem + 1.0188vw, 2.4413rem);
   --type-4: clamp(2.0738rem, 1.7943rem + 1.3973vw, 3.0519rem);
   --type-5: clamp(3.5rem, 2.1786rem + 6.6071vw, 8.125rem);
+
+  --timer-day: "00";
+  --timer-hours: "00";
+  --timer-minutes: "00";
+  --timer-seconds: "00";
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -642,7 +647,7 @@ main {
 }
 
 .recap-site-header .recap-logo {
-  height: clamp(6rem, 15vw, 25rem)
+  height: clamp(11rem, 15vw, 25rem)
 }
 
 .recap-agenda-annonce a {
