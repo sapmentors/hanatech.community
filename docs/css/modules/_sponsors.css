@@ -16,6 +16,7 @@
 
 .recap-sponsors-table thead th {
   line-height: 1.75;
+  border-bottom: 1px solid white;
 }
 
 .recap-sponsors-table th:first-child {
@@ -34,7 +35,10 @@
 
 .recap-sponsors-table td {
   text-align: center;
+}
 
+.recap-sponsors-table-bleft  {
+  border-left: white 1px solid;
 }
 
 @media only screen and (min-width: 600px) {
