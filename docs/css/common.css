@@ -18,7 +18,7 @@
   --type-4: clamp(2.0738rem, 1.7943rem + 1.3973vw, 3.0519rem);
   --type-5: clamp(3.5rem, 2.1786rem + 6.6071vw, 8.125rem);
 
-  --timer-day: "00";
+  --timer-day: "000";
   --timer-hours: "00";
   --timer-minutes: "00";
   --timer-seconds: "00";
