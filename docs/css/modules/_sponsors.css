@@ -184,7 +184,7 @@ svg.asbrucon {
   color: var(--background-color);
   font-size: 1rem;
   background-image: linear-gradient(55deg, var(--brand-color-alt), var(--brand-color));
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    /*clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);*/
 
 }
 
