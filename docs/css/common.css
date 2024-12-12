@@ -546,6 +546,12 @@ a.recap-btn:is(:focus) {
 main {
   position: relative;
   padding-block-end: 1rem;
+  /*background-image: url("../images/htec-logo.svg");
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: repeat;
+  background-blend-mode: lighten;
+  background-color: rgba(100, 100, 100, 0.4);*/
 }
 
 .about {
@@ -570,6 +576,10 @@ main {
   margin-inline: auto;
   padding-block: 3rem;
   padding-inline: 3vw;
+  text-align: center;
+}
+
+.recap-wrap h2 {
   text-align: center;
 }
 
@@ -981,6 +991,8 @@ main {
   bottom: 2rem;
   right: 2rem;
   background-color: var(--brand-color);
+  border: 0.25rem solid var(--brand-color);
+  border-radius: 1em;
   padding: 10px;
 }
 
