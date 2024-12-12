@@ -12,6 +12,8 @@ function ensureTwoDigits(time) {
 
 function updateTime() {
     var delta = (CONFERENCE_TIME - Date.now()) / 1000;
+    delta = Math.round(delta)
+
     var days = Math.floor(delta / 86400);
     delta -= days * 86400;
 
