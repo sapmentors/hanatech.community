@@ -886,6 +886,20 @@ main {
 
 /* ------------------------ Next Steps -------------------------  */
 
+.what-is-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 0;
+  font-size: large;
+}
+
+.what-is-buttons a {
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
 .next-steps p {
   margin: 0;
   line-height: 1.6;
