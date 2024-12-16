@@ -990,7 +990,7 @@ main {
   display: block;
   background-position: 50%;
   background-size: cover;
-  height: 664px;
+  min-height: 664px;
   padding: 0px;
   margin: 0px;
 }
