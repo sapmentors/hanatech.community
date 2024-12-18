@@ -752,6 +752,10 @@ main {
 
 .recap-teaser {
   text-align: center;
+  /*display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;*/
 }
 
 .recap-teaser p {
@@ -782,10 +786,10 @@ main {
     text-align: start;
   }
 
-  .recap-teaser ul {
+  /*.recap-teaser ul {
     margin-inline: 0;
     justify-content: start;
-  }
+  }*/
 
   .recap-teaser li {
     margin-inline-end: 2rem;
@@ -839,7 +843,7 @@ main {
 }
 
 .clock-timer:before {
-  color: #fff;
+  color: var(--text-color);
   font-size: 4.2rem;
   text-transform: uppercase;
 }
@@ -950,7 +954,7 @@ main {
   display: flex;
   align-items: baseline;
   margin: 0 0 1rem;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .next-steps h3::before {
@@ -1016,9 +1020,10 @@ main {
   background-image: none;
 }
 
-.recap-location-desc>p {
+.recap-location-desc > p {
   font-size: 2rem;
   font-weight: 300;
+  color: var(--text-color);
 }
 
 /* ------------------------ Newsletter section -------------------------  */
