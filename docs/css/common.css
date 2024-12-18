@@ -1012,7 +1012,7 @@ main {
   background-color: var(--brand-color);
   border: 0.25rem solid var(--brand-color);
   border-radius: 1em;
-  padding: 10px;
+  padding: 15px;
 }
 
 .recap-location-desc h2 {
@@ -1020,10 +1020,14 @@ main {
   background-image: none;
 }
 
-.recap-location-desc > p {
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--text-color);
+.recap-location-desc p, a {
+  font-size: 1rem;
+  white-space: nowrap;
+  color: white;
+}
+
+.recap-location-desc a {
+  text-decoration: underline;
 }
 
 /* ------------------------ Newsletter section -------------------------  */
