@@ -937,7 +937,8 @@ main {
 .next-steps a {
   white-space: nowrap;
   display: inline;
-  color: var(--brand-color);
+  color: var(--brand-color-alt);
+  font-size: var(--type-0);
 }
 
 .next-steps li::before {
