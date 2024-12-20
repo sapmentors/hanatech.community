@@ -481,24 +481,24 @@ a:is(.active) {
   text-decoration-color: var(--text-color);
 }
 
-.recap-email-link {
+.htec-email-link {
   display: inline-flex;
   color: var(--brand-color);
 }
 
-.recap-email-link:is(:hover) {
+.htec-email-link:is(:hover) {
   color: var(--brand-color-alt);
   text-decoration-color: var(--brand-color-alt);
 }
 
-.recap-email-link:is(:focus, .active, .active:hover) {
+.htec-email-link:is(:focus, .active, .active:hover) {
   outline: none;
   color: var(--brand-color-alt);
   text-decoration: underline;
   text-decoration-color: var(--brand-color-alt);
 }
 
-.recap-btn {
+.htec-btn {
   display: inline-block;
   padding-block: 0.75rem;
   padding-inline: 1rem;
@@ -514,7 +514,7 @@ a:is(.active) {
   box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
 }
 
-.recap-btn:is(:hover) {
+.htec-btn:is(:hover) {
   background-image: linear-gradient(45deg, var(--brand-color), var(--brand-color-alt));
   color: var(--white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
@@ -522,7 +522,7 @@ a:is(.active) {
   text-decoration: none;
 }
 
-.recap-btn:is(:focus) {
+.htec-btn:is(:focus) {
   color: var(--white);
   background-image: linear-gradient(45deg, var(--brand-color), var(--brand-color-alt));
   box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
@@ -530,11 +530,11 @@ a:is(.active) {
   outline-offset: 3px;
 }
 
-a.recap-btn:is(:focus) {
+a.htec-btn:is(:focus) {
   outline: 2px solid var(--brand-color-alt);
 }
 
-.recap-btn .icon {
+.htec-btn .icon {
   width: 1.5rem;
   height: 1.5rem;
   display: inline-block;
@@ -570,7 +570,7 @@ main {
   color: var(--white);
 }
 
-.recap-wrap {
+.htec-wrap {
   max-width: 1440px;
   margin-block: 0;
   margin-inline: auto;
@@ -579,17 +579,17 @@ main {
   text-align: center;
 }
 
-.recap-wrap h2 {
+.htec-wrap h2 {
   text-align: center;
 }
 
-.recap-grid-wrap {
+.htec-grid-wrap {
   gap: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
 }
 
-.recap-annonce {
+.htec-annonce {
   font-size: var(--type-2);
   font-weight: 900;
   margin-block-start: 0;
@@ -599,86 +599,86 @@ main {
 }
 
 @media only screen and (min-width: 768px) {
-  .recap-wrap {
+  .htec-wrap {
     padding-block: 6rem;
     text-align: start;
   }
 }
 
 /* --------------------------- Main Contents ---------------------------  */
-.recap-site-header {
+.htec-site-header {
   min-height: 55vh;
   position: relative;
   background: linear-gradient(to bottom, var(--white) 20%, rgba(255,255,255,.0));
   text-align: center;
 }
 
-.recap-site-header .recap-wrap {
+.htec-site-header .htec-wrap {
   gap: clamp(5%, 10vw, 15%);
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.recap-site-header .recap-container {
+.htec-site-header .htec-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.recap-site-header .recap-container b {
+.htec-site-header .htec-container b {
   color: var(--brand-color);
 }
 
-.recap-site-header .recap-container div {
+.htec-site-header .htec-container div {
   gap: 2rem;
   display: flex;
 }
 
-.recap-site-header p {
+.htec-site-header p {
   margin-block: 2rem;
   margin-inline: 1rem;
   text-align: center;
 }
 
-.recap-site-header h1 {
+.htec-site-header h1 {
   display: flex;
   flex-direction: column;
 }
 
-.recap-site-header h1 span:first-child {
+.htec-site-header h1 span:first-child {
   font-size: clamp(8rem, 20vw, 15rem);
   line-height: 1;
 }
 
-.recap-site-header h1 span:last-child {
+.htec-site-header h1 span:last-child {
   font-size: clamp(2.6rem, 7vw, 5rem);
   color: var(--brand-color);
 }
 
-.recap-site-header .recap-logo {
+.htec-site-header .htec-logo {
   height: clamp(15rem, 15vw, 25rem)
 }
 
-.recap-agenda-annonce a {
+.htec-agenda-annonce a {
   font-weight: 600;
   display: inline-flex;
   color: var(--brand-color-alt);
 }
 
-.recap-agenda-annonce a:is(:hover, :focus) {
+.htec-agenda-annonce a:is(:hover, :focus) {
   color: var(--brand-color);
   outline: none;
 }
 
-.recap-sponsors-header {
+.htec-sponsors-header {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-block-start: 3rem;
 }
 
-.recap-sponsors-header-overview-list {
+.htec-sponsors-header-overview-list {
   gap: 3rem;
   display: flex;
   align-items: center;
@@ -686,18 +686,18 @@ main {
   justify-content: center;
 }
 
-.recap-sponsors-header-overview-list .recap-sponsors-logo {
+.htec-sponsors-header-overview-list .htec-sponsors-logo {
     width: 7rem;
     max-height: 3rem;
     min-height: 2.5rem;
 }
 
-.recap-sponsors-header-overview-list .recap-sponsors-logo:is(picture) {
+.htec-sponsors-header-overview-list .htec-sponsors-logo:is(picture) {
     margin-block-start: 1rem;
     margin-block-end: 0;
 }
 
-.recap-live {
+.htec-live {
   display: flex;
   line-height: 1;
   color: var(--brand-color);
@@ -710,47 +710,47 @@ main {
   margin-block: 1rem 2rem;
 }
 
-.recap-btn.secondary {
+.htec-btn.secondary {
   color: var(--text-color);
   margin-block: 2rem;
   background: transparent;
   border: 2px solid var(--brand-color-alt);
 }
 
-.recap-btn.secondary:is(:hover,:focus) {
+.htec-btn.secondary:is(:hover,:focus) {
   margin-block: 2rem;
   background: transparent;
   border-color: var(--brand-color);
 }
 
 @media only screen and (min-width: 1100px) {
-  .recap-site-header .recap-wrap {
+  .htec-site-header .htec-wrap {
     flex-direction: row-reverse;
   }
 
-  .recap-site-header .recap-container {
+  .htec-site-header .htec-container {
     align-items: center;
   }
 
-  .recap-site-header p {
+  .htec-site-header p {
     text-align: justify;
   }
 }
 
 /* ---------------------------- Teaser ----------------------------  */
-.recap-teaser-container {
+.htec-teaser-container {
   gap: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.recap-teaser-container > div {
+.htec-teaser-container > div {
   flex: 0 0 calc(50% - 10px);
   align-self: center;
 }
 
-.recap-teaser {
+.htec-teaser {
   text-align: center;
   /*display: flex;
   flex-direction: row;
@@ -758,11 +758,11 @@ main {
   justify-content: center;*/
 }
 
-.recap-teaser p {
+.htec-teaser p {
   white-space: nowrap;
 }
 
-.recap-teaser ul {
+.htec-teaser ul {
   gap: 1.35rem;
   display: flex;
   flex-wrap: wrap;
@@ -773,37 +773,38 @@ main {
   justify-content: center;
 }
 
-.recap-teaser li {
+.htec-teaser li {
   margin-inline-end: 0;
 }
 
 @media only screen and (min-width: 768px) {
-  .recap-teaser-container {
+  .htec-teaser-container {
     flex-direction: row;
   }
 
-  .recap-teaser {
+  .htec-teaser {
     text-align: start;
   }
 
-  /*.recap-teaser ul {
+  /*.htec-teaser ul {
     margin-inline: 0;
     justify-content: start;
   }*/
 
-  .recap-teaser li {
+  .htec-teaser li {
     margin-inline-end: 2rem;
   }
 }
 
 /* ------------------------ Countdown Section -------------------------  */
 
-.recap-countdown-container {
+.htec-countdown-container {
   display: block;
   align-items: center;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
-.recap-countdown-container > * {
+.htec-countdown-container > * {
   display: inline;
 }
 
@@ -849,7 +850,7 @@ main {
 }
 
 .clock-label {
-  color: var(--brand-color);
+  color: var(--brand-color-alt);
   text-transform: uppercase;
   font-size: 0.7rem;
   margin-top: 10px;
@@ -991,7 +992,7 @@ main {
 
 /* ------------------------ Map Section -------------------------  */
 
-.recap-map {
+.htec-map {
   display: block;
   background-position: 50%;
   background-size: cover;
@@ -1000,12 +1001,12 @@ main {
   margin: 0px;
 }
 
-.recap-location {
+.htec-location {
   padding: 0;
   position: relative;
 }
 
-.recap-location-desc {
+.htec-location-desc {
   display: inline-block;
   position: absolute;
   bottom: 2rem;
@@ -1016,23 +1017,23 @@ main {
   padding: 15px;
 }
 
-.recap-location-desc h2 {
+.htec-location-desc h2 {
   color: white;
   background-image: none;
 }
 
-.recap-location-desc p, a {
+.htec-location-desc p, a {
   font-size: 1rem;
   white-space: nowrap;
   color: white;
 }
 
-.recap-location-desc a {
+.htec-location-desc a {
   text-decoration: underline;
 }
 
 /* ------------------------ Newsletter section -------------------------  */
-.recap-social-links {
+.htec-social-links {
   gap: 8vw;
   display: flex;
   padding-inline: 0;
@@ -1042,7 +1043,7 @@ main {
   justify-content: center;
 }
 
-.recap-social-links a {
+.htec-social-links a {
   gap: 1rem;
   display: flex;
   align-items: center;
@@ -1050,13 +1051,13 @@ main {
   flex-direction: column;
 }
 
-.recap-social-links svg {
+.htec-social-links svg {
   width: 2rem;
   height: 2rem;
 }
 
 @media only screen and (min-width: 768px) {
-  .recap-newsletter p {
+  .htec-newsletter p {
     width: 50%;
   }
 }
@@ -1069,7 +1070,7 @@ footer {
   color: var(--white);
 }
 
-footer .recap-wrap {
+footer .htec-wrap {
   padding-block: 2.5rem;
   align-items: center;
   justify-content: space-between;
@@ -1103,21 +1104,21 @@ footer a:is(:hover, :focus) svg {
   fill: #008fd3;
 }
 
-.recap-footer-container {
+.htec-footer-container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.recap-footer-container p {
+.htec-footer-container p {
   text-wrap: wrap;
   order: 3;
   flex-basis: 100%;
   text-align: center;
 }
 
-.recap-links-container {
+.htec-links-container {
   gap: 1rem 2rem;
   order: 3;
   width: 100%;
@@ -1140,12 +1141,12 @@ footer a:is(:hover, :focus) svg {
     --modala-shadow: .1rem .1rem 1rem var(--brand-color-alt);
   }
 
-  .recap-site-header {
+  .htec-site-header {
     background-image: linear-gradient(to bottom, rgba(50, 50, 50, 1), rgba(255,255,255,.0))
   }
 
-  .recap-btn,
-  .recap-btn:is(:hover,:focus) {
+  .htec-btn,
+  .htec-btn:is(:hover,:focus) {
     color: var(--text-color);
   }
 

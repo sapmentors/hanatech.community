@@ -1,85 +1,85 @@
-.recap-sponsors-table {
+.htec-sponsors-table {
   font-size: var(--type-0);
   margin: auto;
   margin-block: 4rem;
 }
 
 @media only screen and (max-width: 750px) {
-  .recap-sponsors-table {
+  .htec-sponsors-table {
     font-size: .85rem;
   }
 }
 
-.recap-sponsors-table tr {
+.htec-sponsors-table tr {
   height: 3rem;
 }
 
-.recap-sponsors-table thead th {
+.htec-sponsors-table thead th {
   line-height: 1.75;
   border-bottom: 1px solid var(--logo-color);
 }
 
-.recap-sponsors-table th:first-child {
+.htec-sponsors-table th:first-child {
   text-align: left;
   padding-inline-start: 0;
 }
 
-.recap-sponsors-table tbody th {
+.htec-sponsors-table tbody th {
   text-align: left;
 }
 
-.recap-sponsors-table th,
-.recap-sponsors-table td {
+.htec-sponsors-table th,
+.htec-sponsors-table td {
   line-height: 1.5;
 }
 
-.recap-sponsors-table td {
+.htec-sponsors-table td {
   text-align: center;
 }
 
-.recap-sponsors-table-bleft  {
+.htec-sponsors-table-bleft  {
   border-left: 1px solid var(--logo-color);
 }
 
 @media only screen and (min-width: 600px) {
 
-  .recap-sponsors-table th,
-  .recap-sponsors-table td {
+  .htec-sponsors-table th,
+  .htec-sponsors-table td {
     padding-block: .2rem;
     padding-inline: .5rem;
   }
 
-  .recap-sponsors-table td {
+  .htec-sponsors-table td {
     white-space: nowrap;
   }
 }
 
 @media only screen and (min-width: 800px) {
 
-  .recap-sponsors-table th,
-  .recap-sponsors-table td {
+  .htec-sponsors-table th,
+  .htec-sponsors-table td {
     padding-block: .5rem;
     padding-inline: 1rem;
   }
 }
 
-.recap-site-header.sponsors .recap-site-back {
+.htec-site-header.sponsors .htec-site-back {
   gap: 0;
   color: var(--brand-color-alt);
 }
 
-.recap-site-header.sponsors .recap-site-back:is(:focus) {
+.htec-site-header.sponsors .htec-site-back:is(:focus) {
   outline: none;
   color: var(--brand-color);
   text-decoration: underline;
 }
 
-.recap-site-header.sponsors {
+.htec-site-header.sponsors {
   min-height: auto;
   text-align: start;
 }
 
-.recap-site-header.sponsors .recap-wrap {
+.htec-site-header.sponsors .htec-wrap {
   gap: 2rem;
   display: flex;
   flex-direction: row;
@@ -87,59 +87,59 @@
   justify-content: space-between;
 }
 
-.recap-site-header.sponsors .recap-wrap .recap-logo {
+.htec-site-header.sponsors .htec-wrap .htec-logo {
   height: 3rem;
 }
 
-.recap-site-header.sponsors h1 {
+.htec-site-header.sponsors h1 {
   font-size: var(--type-4);
 }
 
-.recap-sponsors-list {
+.htec-sponsors-list {
   margin-block: 4rem 6rem;
 }
 
-.recap-sponsors-item {
+.htec-sponsors-item {
   margin-block: 2rem 4rem;
   gap: 3rem;
   display: flex;
   flex-direction: column;
 }
 
-.recap-sponsors-item h3 {
+.htec-sponsors-item h3 {
   font-size: var(--type-2);
 }
 
-.recap-sponsors-container:first-child {
+.htec-sponsors-container:first-child {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.recap-sponsors-socials {
+.htec-sponsors-socials {
   gap: 1rem;
   display: flex;
   margin-block-end: 1rem;
 }
 
-.recap-sponsors-socials a {
+.htec-sponsors-socials a {
   color: var(--brand-color-alt);
 }
 
-.recap-sponsors-socials a:hover,
-.recap-sponsors-socials a:focus
+.htec-sponsors-socials a:hover,
+.htec-sponsors-socials a:focus
 {
   color: var(--brand-color);
   outline-color: var(--brand-color);
 }
 
-.recap-sponsors-socials svg {
+.htec-sponsors-socials svg {
   width: 2rem;
   height: 2rem;
 }
 
-.recap-sponsors-logo {
+.htec-sponsors-logo {
   display: block;
   fill: var(--text-color);
   color: var(--logo-color);
@@ -150,7 +150,7 @@
   align-items: center;
 }
 
-.recap-sponsors-logo:is(picture) {
+.htec-sponsors-logo:is(picture) {
   margin-block: 2rem;
 }
 
@@ -175,7 +175,7 @@ svg.asbrucon {
   }
 }
 
-.recap-sponsors-badge {
+.htec-sponsors-badge {
   text-transform: uppercase;
   font-weight: 600;
   width: fit-content;
@@ -188,21 +188,21 @@ svg.asbrucon {
 
 }
 
-.recap-sponsors-badge {
+.htec-sponsors-badge {
   color: white;
 }
 
 @media only screen and (min-width: 900px) {
- .recap-sponsors-item {
+ .htec-sponsors-item {
   flex-direction: row;
  }
 
- .recap-sponsors-container:first-child {
+ .htec-sponsors-container:first-child {
     align-items: flex-start;
   }
 }
 
-.recap-sponsors-overview-list {
+.htec-sponsors-overview-list {
   display: flex;
   gap: 3rem;
   flex-wrap: wrap;
@@ -210,50 +210,50 @@ svg.asbrucon {
   justify-content: center;
 }
 
-.recap-sponsors-overview-list a {
+.htec-sponsors-overview-list a {
   width: fit-content;
 }
 
-.recap-sponsors-overview-list li:nth-child(2)::after{
+.htec-sponsors-overview-list li:nth-child(2)::after{
     content: "\a";
     white-space: pre;
 }
 
-.recap-sponsors-overview-list .recap-sponsors-logo {
+.htec-sponsors-overview-list .htec-sponsors-logo {
   width: 8rem;
   max-height: 4rem;
   min-height: 4rem;
 }
 
-.recap-sponsors-overview-list .recap-sponsors-logo:is(picture) {
+.htec-sponsors-overview-list .htec-sponsors-logo:is(picture) {
     margin-block: 0;
 }
 
-.recap-sponsors-overview-info {
+.htec-sponsors-overview-info {
   text-align: center;
   margin-block-start: 3rem;
 }
 
-.recap-sponsors-overview-info p {
+.htec-sponsors-overview-info p {
   margin-block-end: 2rem;
 }
 
-.recap-wrap.sponsors {
+.htec-wrap.sponsors {
   text-align: center;
 }
 
-.recap-wrap.sponsors .recap-sponsors-badge {
+.htec-wrap.sponsors .htec-sponsors-badge {
   display: block;
   margin-inline: auto;
   margin-block: 2rem;
 }
 
 @media only screen and (min-width: 900px) {
-  .recap-sponsors-overview-list {
+  .htec-sponsors-overview-list {
     gap: 4rem;
   }
 
-  .recap-sponsors-overview-list .recap-sponsors-logo {
+  .htec-sponsors-overview-list .htec-sponsors-logo {
     width: 12rem;
     max-height: 6rem;
     min-height: 6rem;
