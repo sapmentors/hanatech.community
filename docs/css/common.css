@@ -1,7 +1,7 @@
 :root {
   --background-color: #F5F5F5;
   --brand-color: #ba066c;
-  --brand-color-alt: #ae06ba;
+  --brand-color-alt: #740343;
   --dark-brand-color: #242424;
   --text-color: #686868;
   --white: #fff;
@@ -938,7 +938,7 @@ main {
 .next-steps a {
   white-space: nowrap;
   display: inline;
-  color: var(--brand-color-alt);
+  color: var(--brand-color);
   font-size: var(--type-0);
 }
 
