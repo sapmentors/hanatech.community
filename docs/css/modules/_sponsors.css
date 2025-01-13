@@ -259,3 +259,13 @@ svg.asbrucon {
     min-height: 6rem;
   }
 }
+
+.htec-sponsors-future-list {
+  list-style-type: square;
+  display: inline-block
+}
+
+.htec-sponsors-future-list li {
+  text-align: left;
+  margin-block: .5rem;
+}
