@@ -461,6 +461,10 @@ ul {
   gap: 1.5rem;
 }
 
+.htec-nav a {
+  color: var(--logo-color);
+}
+
 .htec-nav li:first-child {
   flex: 1 0 100%
 }
@@ -535,11 +539,6 @@ a:is(.active) {
 .htec-email-link {
   display: inline-flex;
   color: var(--brand-color);
-}
-
-.htec-email-link:is(:hover) {
-  color: var(--brand-color-alt);
-  text-decoration-color: var(--brand-color-alt);
 }
 
 .htec-email-link:is(:focus, .active, .active:hover) {
