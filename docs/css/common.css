@@ -546,7 +546,6 @@ a:is(.active) {
 
 .htec-email-link {
   display: inline-flex;
-  color: var(--brand-color);
   white-space: nowrap;
   display: inline;
   color: var(--brand-color);
@@ -558,6 +557,19 @@ a:is(.active) {
   color: var(--brand-color-alt);
   text-decoration: underline;
   text-decoration-color: var(--brand-color-alt);
+}
+
+.htec-early-bird-link {
+  display: inline-flex;
+  white-space: nowrap;
+  display: inline;
+  font-size: var(--type-0);
+  text-decoration: underline;
+}
+
+.htec-early-bird-link:is(:focus, .active, .active:hover) {
+  outline: none;
+  text-decoration: underline;
 }
 
 .htec-btn {
