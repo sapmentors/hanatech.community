@@ -904,7 +904,7 @@ main {
 }
 
 .clock-label {
-  color: var(--brand-color-alt);
+  color: var(--brand-color);
   text-transform: uppercase;
   font-size: 0.7rem;
   margin-top: 10px;
