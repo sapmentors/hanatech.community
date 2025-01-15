@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:HANA Tech Con 2025
+BEGIN:VEVENT
+DTSTART:20250710
+DTEND:20250711
+DTSTAMP:20250115T102656Z
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+SUMMARY:HANA Tech Con 2025
+DESCRIPTION:Get Connected! If there is anything about SAP HANA you always wanted to know but never dared to ask - this is the place for you! \nBe part of the community of development experts, users and partners to exchange, ignite and delight.\nGet Involved! If you want to speak up in your own session worthwhile to be shared with this great community.\nLooking forward to see you there soon!
+LOCATION:SAP-Allee 27, 68789 Sankt Leon-Rot, Germany
+UID:5066
+END:VEVENT
+END:VCALENDAR
