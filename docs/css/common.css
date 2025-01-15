@@ -10,6 +10,14 @@
   --code-connect-color: #3B4673;
   --backdrop-color: rgba(0, 0, 0, 0.4);
   --modala-shadow: .25rem .25rem 1.5rem rgba(0,0,0,.25);
+  --code-connect-color: #8838EC;
+  --logo-color: #646363;
+  --code-connect-color: #3B4673;
+  --code-connect-brand-color: #3B4673;
+  --brand-color-recap: #0090DA;
+  --brand-color-ui5con: #FF5D17;
+  --brand-color-hana: #BA066C;
+  --brand-color-codejam: #9D6B57;
 
   --type-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
   --type-1: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
@@ -1113,6 +1121,156 @@ main {
   .htec-newsletter p {
     width: 50%;
   }
+}
+
+/* ------------------------- Code Connect Section -------------------------  */
+.htec-cc-links {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding-inline: 0;
+  margin-block: 2rem;
+}
+
+.htec-cc-links li:first-child {
+  flex: 1 0 100%;
+}
+
+.htec-cc-logo {
+  height: 4rem;
+}
+
+.htec-cc-logo g {
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.htec-event-marker {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--logo-color);
+  color: var(--white);
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.9rem;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  transition: all .1s allow-discrete;
+}
+
+.htec-event-marker:is(span) {
+  cursor: initial;
+}
+
+.htec-content-box .htec-event-marker {
+  margin-block: 0;
+  margin-inline-end: 0;
+  scroll-margin-block-start: 4rem;
+}
+
+.htec-content-box.htec-sponsors .htec-teaser-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.htec-event-marker svg {
+  width: 1.6rem;
+  height: 1.9rem;
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .htec-event-marker {
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.9rem;
+  }
+
+  .htec-event-marker svg {
+    width: 2.6rem;
+    height: 3.9rem;
+  }
+
+  .htec-cc-logo {
+    height: 5.6rem;
+  }
+
+  .htec-cc-links li:first-child {
+    flex: none;
+  }
+}
+
+.htec-event-codeconnect {
+  align-items: center;
+  justify-content: center;
+}
+
+a.htec-event-marker-codejam,
+span.htec-event-marker-codejam {
+  background-color: var(--brand-color-codejam);
+  color: var(--brand-color-codejam);
+}
+
+a.htec-event-marker-codeconnect,
+span.htec-event-marker-codeconnect {
+  background-color: var(--logo-color);
+  color: var(--logo-color);
+}
+
+a.htec-event-marker-recap,
+span.htec-event-marker-recap {
+  background-color: var(--brand-color-recap);
+  color: var(--brand-color-recap);
+}
+
+a.htec-event-marker-ui5con,
+span.htec-event-marker-ui5con {
+  background-color: var(--brand-color-ui5con);
+  color: var(--brand-color-ui5con);
+}
+
+a.htec-event-marker-hanaconf,
+span.htec-event-marker-hanaconf {
+  background-color: var(--brand-color-hana);
+  color: var(--brand-color-hana);
+}
+
+a.htec-event-marker-hanaconf svg,
+span.htec-event-marker-hanaconf svg {
+  height: 2.5rem;
+}
+
+.htec-cc-links a.htec-event-marker:hover,
+.htec-cc-links a.htec-event-marker:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.htec-cc-links a.htec-event-marker-recap:hover,
+.htec-cc-links a.htec-event-marker-recap:focus {
+  color: var(--brand-color-recap);
+}
+
+.htec-cc-links a.htec-event-marker-hanaconf:hover,
+.htec-cc-links a.htec-event-marker-hanaconf:focus {
+  color: var(--brand-color-hana);
+}
+
+.htec-cc-links a.htec-event-marker-codejam:hover,
+.htec-cc-links a.htec-event-marker-codejam:focus {
+  color: var(--brand-color-codejam);
+}
+
+.htec-cc-links a.htec-event-marker-codeconnect:hover,
+.htec-cc-links a.htec-event-marker-codeconnect:focus {
+  color: var(--logo-color);
 }
 
 /* ----------------------------- Footer ------------------------------  */
