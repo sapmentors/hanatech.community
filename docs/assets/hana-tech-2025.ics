@@ -4,12 +4,12 @@ PRODID:HANA Tech Con 2025
 BEGIN:VEVENT
 DTSTART:20250710
 DTEND:20250711
-DTSTAMP:20250115T102656Z
+DTSTAMP:20250116T115144Z
 X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
 X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
 SUMMARY:HANA Tech Con 2025
-DESCRIPTION:Get Connected! If there is anything about SAP HANA you always wanted to know but never dared to ask - this is the place for you! \nBe part of the community of development experts, users and partners to exchange, ignite and delight.\nGet Involved! If you want to speak up in your own session worthwhile to be shared with this great community.\nLooking forward to see you there soon!
+DESCRIPTION:Get Connected! If there is anything about SAP HANA you always wanted to know but never dared to ask - this is the place for you! Be part of the community of development experts, users and partners to exchange, ignite and delight.\n\nGet Involved! If you want to speak up in your own session worthwhile to be shared with this great community. Looking forward to see you there soon!\n\nThis year's event will take place in St. Leon-Rot (Germany) on July 10, 2025. Ticket reservation is not open yet. Follow us on social media to stay up-to-date!\n\nhttps://hanatech.community\nhttps://bsky.app/profile/hanatech.community\nhttps://www.linkedin.com/company/hana-tech-con/posts/
 LOCATION:SAP-Allee 27, 68789 Sankt Leon-Rot, Germany
-UID:5066
+UID:76010
 END:VEVENT
 END:VCALENDAR
