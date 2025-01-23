@@ -1,3 +1,5 @@
+/* ------------------------- Sponsors Section -------------------------  */
+
 .htec-sponsors-logos {
   display: flex;
   gap: 4rem;
@@ -22,6 +24,127 @@
   display: block;
   height: auto;
 }
+
+/* ------------------------- Sponsors Page -------------------------  */
+
+.htec-sponsors-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.htec-sponsors-list>li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 1rem;
+  gap: clamp(1rem, 5vw, 2rem);
+  border-bottom: 4px solid var(--background-color-alternate);
+}
+
+.htec-sponsors-list li:last-child {
+  border-bottom: none;
+}
+
+.htec-sponsors-list li div:first-child {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 auto;
+}
+
+.htec-sponsors-list h3 {
+  color: var(--text-color);
+}
+
+.htec-sponsors-logo {
+  display: block;
+}
+
+.htec-sponsors-logo svg {
+  width: 15rem;
+  height: auto;
+}
+
+.htec-sponsors-badge {
+  display: inline-block;
+  border-radius: 4px;
+  padding: .1rem .5rem;
+  margin-block-end: .3rem;
+}
+
+.htec-sponsors-badge.diamond {
+  background: linear-gradient(to top, #9ac5db, #b8d8e7);
+}
+
+.htec-sponsors-badge.platinum {
+  background: linear-gradient(to bottom, #E5E4E2, #aab9c4);
+}
+
+.htec-sponsors-badge.gold {
+  background-color: gold;
+}
+
+.htec-sponsors-badge.silver {
+  background-color: #c0c0c0;
+}
+
+.htec-sponsors-socials {
+  list-style-type: none;
+  padding: 0;
+}
+
+.htec-sponsors-socials li {
+  display: inline-block;
+}
+
+.htec-sponsors-socials .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+  margin-inline-end: .5rem;
+  transform: translateY(-1px);
+  color: inherit;
+}
+
+@media only screen and (min-width: 800px) {
+  .htec-sponsors-list>li {
+    flex-direction: row;
+  }
+
+  .htec-sponsors-list li div:first-child {
+    align-items: center;
+    margin-block-end: 2rem;
+    flex: 0 0 15rem;
+  }
+
+  .htec-sponsors-logo {
+    margin-block-start: 2rem;
+  }
+}
+
+/* Sponsor specific */
+
+svg.asbrucon {
+  fill: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .htec-sponsors-badge.diamond,
+  .htec-sponsors-badge.platinum,
+  .htec-sponsors-badge.gold,
+  .htec-sponsors-badge.silver {
+    color: var(--btn-bg-color);
+  }
+
+  svg.asbrucon {
+    fill: var(--logo-color);
+  }
+}
+
+/* ------------------------- Sponsors Table -------------------------  */
 
 .htec-sponsors-table {
   font-size: var(--type-0);
@@ -147,64 +270,6 @@
   justify-content: space-between;
 }
 
-.htec-sponsors-socials {
-  gap: 1rem;
-  display: flex;
-  margin-block-end: 1rem;
-}
-
-.htec-sponsors-socials a {
-  color: var(--brand-color-alt);
-}
-
-.htec-sponsors-socials a:hover,
-.htec-sponsors-socials a:focus
-{
-  color: var(--brand-color);
-  outline-color: var(--brand-color);
-}
-
-.htec-sponsors-socials svg {
-  width: 2rem;
-  height: 2rem;
-}
-
-.htec-sponsors-logo {
-  display: block;
-  fill: var(--text-color);
-  color: var(--logo-color);
-  width: 14rem;
-  max-height: 8rem;
-  min-height: 7rem;
-  display: flex;
-  align-items: center;
-}
-
-.htec-sponsors-logo:is(picture) {
-  margin-block: 2rem;
-}
-
-picture img {
-  max-width: 100%;
-  display: block;
-}
-
-svg.agilita {
-  fill: #272525;
-}
-
-svg.asbrucon {
-  fill: #000;
-}
-
-@media (prefers-color-scheme: dark) {
-
-  svg.agilita,
-  svg.asbrucon {
-    fill: var(--logo-color);
-  }
-}
-
 .htec-sponsors-badge {
   text-transform: uppercase;
   font-weight: 600;
@@ -216,10 +281,6 @@ svg.asbrucon {
   background-image: linear-gradient(55deg, var(--brand-color-alt), var(--brand-color));
     /*clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);*/
 
-}
-
-.htec-sponsors-badge {
-  color: white;
 }
 
 @media only screen and (min-width: 900px) {
