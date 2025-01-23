@@ -1,3 +1,28 @@
+.htec-sponsors-logos {
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.htec-sponsors-logos a {
+  display: block;
+}
+
+.htec-sponsors-logos svg {
+  width: 12rem;
+  fill: var(--logo-color);
+  color: var(--logo-color);
+  display: block;
+  height: auto;
+}
+
 .htec-sponsors-table {
   font-size: var(--type-0);
   margin: auto;
