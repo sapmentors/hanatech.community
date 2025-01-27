@@ -105,7 +105,7 @@
   display: inline-block;
   margin-inline-end: .5rem;
   transform: translateY(-1px);
-  color: inherit;
+  color: var(--text-color);
 }
 
 @media only screen and (min-width: 800px) {
