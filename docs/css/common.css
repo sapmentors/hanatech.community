@@ -572,6 +572,12 @@ a:is(.active) {
   text-decoration: underline;
 }
 
+.htec-sponsor-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .htec-btn {
   display: inline-block;
   padding-block: 0.75rem;
@@ -586,6 +592,15 @@ a:is(.active) {
   cursor: pointer;
   line-height: 1;
   box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.htec-btn.small {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+  font-size: var(--type-0);
 }
 
 .htec-btn:is(:hover) {
