@@ -130,6 +130,14 @@ svg.asbrucon {
   fill: #000;
 }
 
+svg.brandeis text {
+  fill: #0C3C60;
+}
+
+svg.cbs {
+  color: #000;
+}
+
 @media (prefers-color-scheme: dark) {
 
   .htec-sponsors-badge.diamond,
@@ -141,6 +149,14 @@ svg.asbrucon {
 
   svg.asbrucon {
     fill: var(--logo-color);
+  }
+
+  svg.brandeis text {
+    fill: #fff;
+  }
+
+  svg.cbs {
+    color: #fff;
   }
 }
 
