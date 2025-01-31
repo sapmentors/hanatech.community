@@ -5,15 +5,71 @@
  */
 //--------------------------------------------------------------------------------------------------
 const JURY_JSON = [
+    {
+        "name": "Mathias Kemeter",
+        "position": "Software Development Manager",
+        "company": "SAP",
+        "image": "images/jury/mathias_kemeter.png",
+        "bio": "Within SAP’s database development unit, Mathias is responsible for SAP HANA’s multi-model engines. In his role is leading the development behind the spatial, graph, hierarchies, and vector engines as well as the JSON document store.",
+        "socials": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/mathiaskemeter/"
+            },
+            {
+                "type": "bluesky",
+                "url": "https://bsky.app/profile/kemeter.rocks"
+            }
+        ]
+    },
+    {
+        "name": "Susen Poppe",
+        "position": "SAP HANA Product Manager",
+        "company": "SAP",
+        "image": "images/jury/susan_poppe.jpg",
+        "bio": "Susen is part of the product management team responsible for SAP HANA and SAP HANA Cloud. Within the team she focusses on product roll-out and awareness topics.",
+        "socials": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/susen-poppe"
+            }
+        ]
+    }
 ]
+//--------------------------------------------------------------------------------------------------
+function buildSocialHTML(obj) {
+    let ret = '';
+    obj.socials.forEach(social => {
+        ret += `
+        <li>
+            <a href="${social.url}"
+                aria-label="${social.type} profile of ${obj.name}" rel="nofollow" target="_blank">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="images/icons/sprite.svg#${social.type}"></use>
+                </svg>
+            </a>
+        </li>
+    `;
+    });
+
+    return ret;
+}
 //--------------------------------------------------------------------------------------------------
 function buildMemberHTML(obj) {
     return `
-    <li class="htec-jury-member">
-        <img class="htec-jury-member-image" src="${obj.image}" alt="Image of ${obj.name}"/>
-        <div>
-            <span>${obj.position}</span><br/>
-            <span>${obj.company}</span>
+    <li>
+        <div class="htec-jury-member-quick">
+            <img src="${obj.image}" alt="Image of ${obj.name}" />
+            <div class="htec-jury-member-info">
+                <h3>${obj.name}</h3>
+                <h4>${obj.position}, ${obj.company}</h4>
+                <ul>
+                  ${buildSocialHTML(obj)}
+                </ul>
+            </div>
+        </div>
+        <div class="htec-jury-member-bio">
+            <p>${obj.bio}</p>
         </div>
     </li>
     `
