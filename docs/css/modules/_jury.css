@@ -1,18 +1,88 @@
 .htec-jury-list {
     margin: 0;
     padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+    align-items: baseline;
+}
+
+.htec-jury-list > li {
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.htec-jury-member-quick {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .8rem;
+}
+
+.htec-jury-member-quick img {
+    max-width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    max-height: 6rem;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px var(--logo-color);
+}
+
+.htec-jury-member-info {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    margin: 0;
+    padding: 0;
+}
+
+.htec-jury-member-info > h3 {
+    font-size: var(--type-1);
+    color: var(--text-color);
+    margin: 0;
+    text-align: left;
+}
+
+.htec-jury-member-info > h4 {
+    font-size: var(--type-0);
+    color: var(--text-color);
+    margin: 0;
+    margin-block-start: 0px;
+    font-weight: 400;
+}
+
+.htec-jury-member-info > ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-block-end: 0px;
+    margin-block-start: 0.4rem;
+    padding: 0;
+}
+
+.htec-jury-member-info ul > li {
+    padding: 0;
+    margin: 0;
+}
+
+.htec-jury-member-info .icon {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-inline-end: .5rem;
+    transform: translateY(-1px);
+    color: var(--text-color);
 }
 
 .htec-jury-list>li:is(:hover, :focus-within) {
     transform: scale(1.07);
 }
 
-.htec-jury-member {
+/*.htec-jury-member {
     margin: 0;
 }
 
@@ -34,4 +104,4 @@
     .ui5con-people-list {
         grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     }
-}
+}*/

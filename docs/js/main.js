@@ -9,7 +9,7 @@ const JURY_JSON = [
         "name": "Mathias Kemeter",
         "position": "Software Development Manager",
         "company": "SAP",
-        "image": "images/jury/mathias_kemeter.png",
+        "image": "images/jury/mathias_kemeter.webp",
         "bio": "Within SAP’s database development unit, Mathias is responsible for SAP HANA’s multi-model engines. In his role is leading the development behind the spatial, graph, hierarchies, and vector engines as well as the JSON document store.",
         "socials": [
             {
@@ -26,12 +26,68 @@ const JURY_JSON = [
         "name": "Susen Poppe",
         "position": "SAP HANA Product Manager",
         "company": "SAP",
-        "image": "images/jury/susan_poppe.jpg",
+        "image": "images/jury/susen_poppe.webp",
         "bio": "Susen is part of the product management team responsible for SAP HANA and SAP HANA Cloud. Within the team she focusses on product roll-out and awareness topics.",
         "socials": [
             {
                 "type": "linkedin",
                 "url": "https://www.linkedin.com/in/susen-poppe"
+            }
+        ]
+    },
+    {
+        "name": "Witalij Rudnicki",
+        "position": "Principal Developer Advocate",
+        "company": "SAP",
+        "image": "images/jury/witali.webp",
+        "bio": "Witalij Rudnicki (aka. Vitaliy Rudnytskiy) is a Principal Developer Advocate at SAP. His main interests are in Big Data and Fast Data technologies, AI/ML, Analytics and Data Visualization. He graduated from the University of Technology in Wroclaw, Poland. Before joining SAP, he worked as a technology consultant in Europe and in the U.S.",
+        "socials": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/jens-gleichmann"
+            }
+        ]
+    },
+    {
+        "name": "Anna Hartmann",
+        "position": "Managing Director",
+        "company": "in4MD Service GmbH",
+        "image": "images/jury/anna_hartmann.webp",
+        "bio": "Anna brings expertise from over a decade of working with SAP HANA databases. Since 2017, she has been actively serving as the spokeswoman for the DSAG working group 'HANA Operations,'' sharing her knowledge and experiences with the community. She is also the author of the SAP Press book 'SAP HANA Administration.'",
+        "socials": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/anna-hartmann-a936a7108"
+            }
+        ]
+    },
+    {
+        "name": "Jörg Brandeis",
+        "position": "Geschäftsführer",
+        "company": "Brandeis Consulting",
+        "image": "images/jury/jörg.webp",
+        "bio": "Jörg works as a trainer for development topics related to BW/4HANA and S/4HANA. He is the author of the book SQLScript for SAP HANA and is co-organiser of the HANA Tech Nights in Mannheim.",
+        "socials": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/joerg-brandeis"
+            },
+            {
+                "type": "bluesky",
+                "url": "https://bsky.app/profile/captainabap.bsky.social"
+            }
+        ]
+    },
+    {
+        "name": "Jens Gleichmann",
+        "position": "HANA Expert & Managing Director",
+        "company": "XLC",
+        "image": "images/jury/jens_gleichmann.webp",
+        "bio": "As a HANA expert and former HANA trainer for SAP with more than 10 years of experience in optimizing and migrating such systems, his focus is on the technical part of HANA.",
+        "socials": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/jens-gleichmann"
             }
         ]
     }
