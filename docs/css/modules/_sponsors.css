@@ -138,6 +138,10 @@ svg.cbs {
   color: #000;
 }
 
+svg.xlc {
+  fill: #23364E;
+}
+
 @media (prefers-color-scheme: dark) {
 
   .htec-sponsors-badge.diamond,
@@ -157,6 +161,10 @@ svg.cbs {
 
   svg.cbs {
     color: #fff;
+  }
+
+  svg.xlc {
+    fill: #fff;
   }
 }
 
