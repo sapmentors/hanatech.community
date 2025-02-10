@@ -49,6 +49,7 @@
 
 .htec-jury-member-info > h4 {
     font-size: var(--type-0);
+    text-align: left;
     color: var(--text-color);
     margin: 0;
     margin-block-start: 0px;
