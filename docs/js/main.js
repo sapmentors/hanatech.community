@@ -44,7 +44,11 @@ const JURY_JSON = [
         "socials": [
             {
                 "type": "linkedin",
-                "url": "https://www.linkedin.com/in/jens-gleichmann"
+                "url": "https://www.linkedin.com/in/witalij/"
+            },
+            {
+                "type": "bluesky",
+                "url": "https://bsky.app/profile/sygyzmundovych.bsky.social"
             }
         ]
     },
