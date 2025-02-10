@@ -7,7 +7,7 @@
 const JURY_JSON = [
     {
         "name": "Jörg Brandeis",
-        "position": "Geschäftsführer",
+        "position": "Managing Director",
         "company": "Brandeis Consulting",
         "image": "images/jury/jörg.webp",
         "bio": "Jörg works as a trainer for development topics related to BW/4HANA and S/4HANA. He is the author of the book SQLScript for SAP HANA and is co-organiser of the HANA Tech Nights in Mannheim.",
