@@ -142,6 +142,10 @@ svg.xlc {
   fill: #23364E;
 }
 
+svg.revtrac {
+  max-width: 85%;
+}
+
 @media (prefers-color-scheme: dark) {
 
   .htec-sponsors-badge.diamond,
