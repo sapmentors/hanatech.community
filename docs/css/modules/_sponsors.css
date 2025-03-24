@@ -146,6 +146,10 @@ svg.revtrac {
   max-width: 85%;
 }
 
+svg.blackwyse {
+  color: #05102D;
+}
+
 @media (prefers-color-scheme: dark) {
 
   .htec-sponsors-badge.diamond,
@@ -169,6 +173,10 @@ svg.revtrac {
 
   svg.xlc {
     fill: #fff;
+  }
+
+  svg.blackwyse {
+    color: #fff;
   }
 }
 
