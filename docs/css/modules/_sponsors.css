@@ -159,6 +159,10 @@ svg.sovanta {
   color: #686868;
 }
 
+svg.avantra {
+  color: #001c4e;
+}
+
 @media (prefers-color-scheme: dark) {
 
   .htec-sponsors-badge.diamond,
@@ -193,6 +197,10 @@ svg.sovanta {
   }
 
   svg.sovanta {
+    color: #fff;
+  }
+
+  svg.avantra {
     color: #fff;
   }
 }
