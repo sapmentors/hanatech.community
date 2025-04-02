@@ -1,0 +1,72 @@
+.dialog-container,
+.dialog-overlay {
+    position: fixed;
+    inset: 0;
+}
+
+.dialog-container {
+    z-index: 2000;
+    display: flex;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.dialog-container[aria-hidden='true'] {
+    display: none;
+}
+
+.dialog-overlay {
+    background-color: rgb(43 46 56 / 0.9);
+}
+
+.dialog-content {
+    margin: auto;
+    z-index: 2000;
+    position: relative;
+    overflow: auto;
+    max-height: 90vh;
+    background-color: var(--background-color);
+}
+
+.dialog-content h3 {
+    text-align: center;
+    margin: 0;
+    padding: 1.5em;
+    font-size: var(--type-2);
+    color: var(--brand-color);
+}
+
+.dialog-content p {
+    font-size: var(--type-0);
+    padding: 1em;
+    color: var(--text-color);
+}
+
+.dialog-close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    border: 0;
+    padding: 0.25em;
+    background-color: transparent;
+    font-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.15s;
+    border-radius: 50%;
+}
+
+.dialog-close:hover {
+    background-color: rgb(50 50 0 / 0.15);
+}
+
+.agenda-dialog-speakers-list {
+    list-style-type: none;
+    margin: 2rem;
+}
+
+.agenda-dialog-speakers-list li {
+    margin-top: 1.5rem;
+}
