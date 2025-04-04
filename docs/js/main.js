@@ -618,7 +618,7 @@ function buildMemberHTML(obj) {
             <img src="${obj.image}" alt="Image of ${obj.name}" />
             <div class="htec-jury-member-info">
                 <h3>${obj.name}</h3>
-                <h4>${obj.position}, ${obj.company}</h4>
+                <h4>${obj.position !== undefined ? obj.position : ""}${obj.company}</h4>
                 <ul>
                   ${buildSocialHTML(obj)}
                 </ul>
@@ -687,8 +687,9 @@ function buildAgenda() {
         }
 
         // Extract basic information
+        let isMultiTrackEvent = obj.type.includes('note');
         let track = ROOM_TRACK_MAPPING[obj.location];
-        let gridCol = obj.type.includes('note') ? 'track-1-start / track-2-end' : track;
+        let gridCol = isMultiTrackEvent ? 'track-1-start / track-2-end' : track;
         let startTimeAdj = obj.startTime.replace(':', '');
         let endTimeAdj = obj.endTime.replace(':', '');
 
@@ -714,8 +715,8 @@ function buildAgenda() {
 
         // Emit Agenda
         schedule.innerHTML += `
-        <div class="session ${track}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
-            <h3 class="session-title"><a onclick="showAgendaDialog('${obj.id}');">${obj.title}</a></h3>
+        <div class="session ${isMultiTrackEvent ? "track-multi" : track}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
+            <h3 class="session-title"><a href="#" onclick="showAgendaDialog('${obj.id}'); return false;">${obj.title}</a></h3>
             <div class="session-info-container">
               <div class="session-time">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
@@ -755,7 +756,6 @@ function injectAgendaDialogContent(itemId) {
         let fullName = speaker.firstName + ' ' + speaker.lastName;
         speakersListHTML.innerHTML += buildMemberHTML({
                 name: fullName,
-                position: speaker.company,
                 company: speaker.company,
                 image: `images/jury/mathias_kemeter.webp`,
                 socials: [

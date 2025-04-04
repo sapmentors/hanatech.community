@@ -164,7 +164,7 @@
     justify-content: space-between;
 
     &:hover {
-        outline: 4px dotted var(--brand-color);
+        /*outline: 4px dotted var(--brand-color);*/
         transform: scale(1.02);
     }
 }
@@ -232,12 +232,17 @@
 }
 
 .track-1 {
-    background-color: var(--sucess-color);
+    background-color: var(--brand-color-ui5con);
     color: #fff;
 }
 
 .track-2 {
-    background-color: var(--code-connect-brand-color);
+    background-color: var(--brand-color-recap);
+    color: #fff;
+}
+
+.track-multi {
+    background-image: linear-gradient(35deg, var(--brand-color), var(--brand-color-alt));
     color: #fff;
 }
 
