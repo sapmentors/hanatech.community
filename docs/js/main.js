@@ -593,6 +593,12 @@ const ROOM_TRACK_MAPPING = {
     "room_w2": "track-2",
 };
 //--------------------------------------------------------------------------------------------------
+function getConferenceUnixTime(hour = 9, minute = 0) {
+    hour = hour.toString().padStart(2, "0");
+    minute = minute.toString().padStart(2, "0");
+    return Math.floor(Date.parse(`2025-07-10T${hour}:${minute}:00+02:00`) / 1000);
+}
+//--------------------------------------------------------------------------------------------------
 function buildSocialHTML(obj) {
     let ret = '';
     obj.socials.forEach(social => {
@@ -678,13 +684,18 @@ function buildAgenda() {
         // Emit time slots for the agenda
         let currHour = parseInt(obj.startTime.split(':')[0]);
         while (lastHour <= currHour) {
-            let adjHour = lastHour === 9 ? '0' + (lastHour) : (lastHour);
+            let adjHour = lastHour.toString().padStart(2, "0");
             schedule.innerHTML += `
             <h2 class="time-slot" style="grid-row: time-${adjHour}00;">${adjHour}:00</h2>
             `;
 
             lastHour++;
         }
+
+        // Extract time information
+        let eventHour = parseInt(obj.endTime.split(':')[0]);
+        let eventMin = parseInt(obj.endTime.split(':')[1]);
+        let isEventOver = Math.floor(Date.now() / 1000) > getConferenceUnixTime(eventHour, eventMin);
 
         // Extract basic information
         let isMultiTrackEvent = obj.type.includes('note');
@@ -694,13 +705,13 @@ function buildAgenda() {
         let endTimeAdj = obj.endTime.replace(':', '');
 
         // Extract Speakers and sort alphabetically
-        let speakersRed = obj.speakers.reduce((acc, speaker) => {
+        let speakerNames = obj.speakers.reduce((acc, speaker) => {
             acc.push(speaker['firstName'] + ' ' + speaker['lastName']);
             return acc;
         }, []);
 
-        speakersRed.sort();
-        let speakersAcc = speakersRed.join(', ');
+        speakerNames.sort();
+        let speakersAcc = speakerNames.join(', ');
         if (speakersAcc === "") {
             speakersAcc = "TBD";
         }
@@ -715,7 +726,7 @@ function buildAgenda() {
 
         // Emit Agenda
         schedule.innerHTML += `
-        <div class="session ${isMultiTrackEvent ? "track-multi" : track}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
+        <div class="session ${isMultiTrackEvent ? "track-multi" : track} ${isEventOver ? "event-over" : ""}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
             <h3 class="session-title"><a href="#" onclick="showAgendaDialog('${obj.id}'); return false;">${obj.title}</a></h3>
             <div class="session-info-container">
               <div class="session-time">

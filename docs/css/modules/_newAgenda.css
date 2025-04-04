@@ -107,6 +107,12 @@
             [time-1720] 1fr
             [time-1725] 1fr
             [time-1730] 1fr;
+            /*[time-1735] 1fr
+            [time-1740] 1fr
+            [time-1745] 1fr
+            [time-1750] 1fr
+            [time-1755] 1fr
+            [time-1800] 1fr;*/
 
         grid-template-columns:
             [times] 4em
@@ -268,4 +274,8 @@
 
 .meta a {
     color: #555;
+}
+
+.event-over {
+    opacity: 0.5;
 }
