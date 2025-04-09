@@ -234,6 +234,7 @@
 
 .track-slot {
     font-size: var(--type-0);
+    color: #fff;
     font-weight: bold;
 }
 
