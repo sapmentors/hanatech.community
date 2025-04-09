@@ -810,6 +810,13 @@ function injectAgendaDialogContent(itemId) {
     let speakersListHTML = document.getElementById('htec-agenda-dialog-speakers-inject');
     speakersListHTML.innerHTML = '';
 
+    let speakersDiv = document.getElementsByClassName("agenda-dialog-speakers")[0];
+    if (agendaObj.speakers.length == 0) {
+        speakersDiv.style.cssText = "display: none;"
+    } else {
+        speakersDiv.style.cssText = "";
+    }
+
     agendaObj.speakers.forEach(speaker => {
         let fullName = speaker.firstName + ' ' + speaker.lastName;
         speakersListHTML.innerHTML += buildMemberHTML({
