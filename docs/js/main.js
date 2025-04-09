@@ -618,20 +618,30 @@ function buildSocialHTML(obj) {
 }
 //--------------------------------------------------------------------------------------------------
 function buildMemberHTML(obj) {
+    let imgStr = "";
+    if (obj.image !== undefined) {
+        if (obj.isAgenda && obj.image.endsWith('.svg')) {
+            imgStr = `<svg class="htec-jury-member-svg">
+                        <use xlink:href="${obj.image}"></use>
+                      </svg>`;
+        } else {
+            imgStr = `<img aria-hidden="true" src=\"${obj.image}\" alt=\"Image of ${obj.name}\" />`;
+        }
+    }
+
+    let socialStr = obj.socials !== undefined ? `<ul>${buildSocialHTML(obj)}</ul>` : "";
     return `
     <li>
         <div class="htec-jury-member-quick">
-            <img src="${obj.image}" alt="Image of ${obj.name}" />
+            ${imgStr}
             <div class="htec-jury-member-info">
                 <h3>${obj.name}</h3>
                 <h4>${obj.position !== undefined ? obj.position : ""}${obj.company}</h4>
-                <ul>
-                  ${buildSocialHTML(obj)}
-                </ul>
+                ${socialStr}
             </div>
         </div>
         <div class="htec-jury-member-bio">
-            <p>${obj.bio}</p>
+            <p ${obj.isAgenda !== undefined ? "class=\"htec-agenda-bio-text\"" : ""}>${obj.bio}</p>
         </div>
     </li>
     `
@@ -766,16 +776,17 @@ function injectAgendaDialogContent(itemId) {
     agendaObj.speakers.forEach(speaker => {
         let fullName = speaker.firstName + ' ' + speaker.lastName;
         speakersListHTML.innerHTML += buildMemberHTML({
+                isAgenda: true,
                 name: fullName,
                 company: speaker.company,
-                image: `images/jury/mathias_kemeter.webp`,
-                socials: [
+                image: `images/speakers/smiley.webp`,
+                /*socials: [
                     {
                         name: fullName,
                         url: 'mailto:' + speaker.email,
                         type: 'mail'
                     }
-                ],
+                ],*/
                 bio: speaker.bio || ''
             });
     });

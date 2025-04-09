@@ -32,6 +32,15 @@
     box-shadow: 0 0 0 1px var(--logo-color);
 }
 
+.htec-jury-member-svg {
+    fill: red;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-inline-end: .5rem;
+    transform: translateY(-1px);
+}
+
 .htec-jury-member-info {
     display: flex;
     flex-direction: column;

@@ -36,10 +36,17 @@
     color: var(--brand-color);
 }
 
-.dialog-content p {
+.dialog-content p:not(.htec-agenda-bio-text) {
     font-size: var(--type-0);
     padding: 1em;
     color: var(--text-color);
+}
+
+.htec-agenda-bio-text {
+    padding-left: 0px;
+    font-size: var(--type-0);
+    color: var(--text-color);
+    margin-bottom: 2.5em;
 }
 
 .dialog-close {
