@@ -63,6 +63,7 @@
     cursor: pointer;
     transition: 0.15s;
     border-radius: 50%;
+    color: var(--logo-color);
 }
 
 .dialog-close:hover {
