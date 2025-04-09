@@ -115,7 +115,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "sharath.gangadhara@bs.nttdata.com",
-                "email": "sharath.gangadhara@bs.nttdata.com",
                 "firstName": "Sharath",
                 "lastName": "Machenahalli Gangadhara",
                 "company": "NTT Data Business Solutions Ltd",
@@ -139,7 +138,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "mathias.kemeter@sap.com",
-                "email": "mathias.kemeter@sap.com",
                 "firstName": "Mathias",
                 "lastName": "Kemeter",
                 "company": "SAP SE",
@@ -163,7 +161,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "bastian.bremerich@sap.com",
-                "email": "bastian.bremerich@sap.com",
                 "firstName": "Bastian",
                 "lastName": "Bremerich",
                 "company": "SAP SE",
@@ -187,7 +184,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "matthias.sander@x-l-c.de",
-                "email": "matthias.sander@x-l-c.de",
                 "firstName": "Matthias",
                 "lastName": "Sander",
                 "company": "XLC - Crossload Consulting GmbH",
@@ -202,8 +198,8 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1739806461731-129",
-        "title": "Mastering HANA Workload Management",
-        "description": "Many HANA professionals have heard of HANA Workload Management, but how well is it really understood and applied? In this session, we will first take a high-level look at its core functionalities and the latest enhancements introduced in HANA 2.0 SPS07. Then, we’ll dive deep into real-world use cases to see how effective workload management can improve system stability and performance.\n\nKey topics include:\n- Parent and Child Workload Classes – Structuring and optimizing workload distribution\n- Analyzing Load within a Class – Identifying bottlenecks and imbalances\n- Finding the Right Mapping &amp; Implementation – Assigning workloads effectively\n- Restricting Specific Application Groups – Managing resource consumption\n- Workarounds &amp; Temporary Fixes – Handling issues until a permanent solution is implemented\n\nOne of the biggest challenges in performance tuning is when problems cannot be fixed purely by adjusting code or ABAP-side workload behavior. Often, the solution requires a combined approach, both database-side analysis and ABAP expertise. But what can be done right now to mitigate performance issues? This is where HANA Workload Management acts as a powerful tool, offering immediate control and temporary workarounds until a final fix is in place.",
+        "title": "Mastering HANA Performance: The Impact of Workload Management Partitioning",
+        "description": "Partitioning in SAP HANA is often regarded as a necessity to circumvent the well-known 2-billion-row limit—but its full potential for performance optimization is frequently underestimated. In this session, we’ll demonstrate how smart partitioning strategies can dramatically improve query performance, reduce memory consumption, and enhance system scalability.\n\nBased on real-world customer scenarios, we go beyond the standard guidance from SAP Note 2044468 and explore advanced techniques such as RANGE-HASH partitioning—using hands-on examples like ACDOCA. We’ll also take a closer look at Partition Pruning: how it works, when it works, and how much of a performance boost it can actually provide. Tools like PlanViz and the EXPLAIN function will be used live to analyze and validate partitioning effectiveness.\n\nIn the second part of the session, we turn our attention to a topic that many HANA professionals have heard of but few have fully leveraged: HANA Workload Management. We’ll begin with an overview of its core features and recent enhancements introduced in HANA 2.0 SPS07, followed by a deep dive into real-world use cases to illustrate how effective workload control can stabilize systems and improve overall performance.\n\nKey topics include:\n\n- Parent and Child Workload Classes – Structuring and optimizing workload distribution\n- Analyzing Load within a Class – Identifying bottlenecks and imbalances\n- Mapping &amp; Implementation Best Practices – Assigning workloads effectively\n- Restricting Specific Application Groups – Managing targeted resource usage\n- Workarounds &amp; Temporary Fixes – Bridging the gap until a long-term solution is in place\n\nPerformance tuning doesn’t always come down to better ABAP code or application-side logic. Sometimes, the key lies in the database layer—and this is where HANA Workload Management becomes an invaluable tool. It offers immediate control and mitigation options when quick action is needed, and it complements more permanent solutions still in development.",
         "type": "presentation_detailed",
         "extraInfo": "",
         "accepted": true,
@@ -211,7 +207,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "matthias.sander@x-l-c.de",
-                "email": "matthias.sander@x-l-c.de",
                 "firstName": "Matthias",
                 "lastName": "Sander",
                 "company": "XLC - Crossload Consulting GmbH",
@@ -235,27 +230,24 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "mohamed.ali.chriki@sap.com",
-                "email": "mohamed.ali.chriki@sap.com",
                 "firstName": "Mohamed Ali",
                 "lastName": "Chriki",
                 "company": "SAP SE",
-                "bio": ""
-            },
-            {
-                "id": "taehyung.lee@sap.com",
-                "email": "taehyung.lee@sap.com",
-                "firstName": "Taehyung",
-                "lastName": "Lee",
-                "company": "SAP SE",
-                "bio": ""
+                "bio": "Mohamed Ali Chriki is a Tunisian national who started working for SAP in Paris in 2008. In 2014, he moved to SAP HANA in Walldorf, Germany. Since 2019, Mohamed has been working as a C++ developer in the HANA Calculation Engine team."
             },
             {
                 "id": "elisabeth.badino@sap.com",
-                "email": "elisabeth.badino@sap.com",
                 "firstName": "Elisabeth",
                 "lastName": "Badino",
                 "company": "SAP SE",
-                "bio": ""
+                "bio": "I started my career with SAP in 2016 in the area of SAP BW, and moved to support our critical customers on SAP HANA in 2020. Since then, I have been part of a team that handles escalations and bugs, as well as programs for early adoption of new technologies within SAP HANA. For the past 2 years, I have exclusively worked with supporting customers on SAP HANA Cloud.\n\nAs a Danish national I studied at the IT University of Copenhagen where I received a B.Sc. in Global Business Informatics and went on to complete my M.Sc. in Information Systems at Hawaii Pacific University, with a semester spent at FH Salzburg.\n\nI look forward to sharing some of the tools with you that we use for troubleshooting in the area of Calculation View queries using the HEX Engine."
+            },
+            {
+                "id": "m.mayr@sap.com",
+                "firstName": "Manuel",
+                "lastName": "Mayr",
+                "company": "SAP SE",
+                "bio": "Manuel Mayr is a Development Expert at SAP, where he works on the HANA Execution Engine (HEX) as part of the HANA database core team, focusing on architecture and performance-critical components. With over a decade of experience in enterprise software development, Manuel has held senior engineering roles at both IBM and SAP, contributing to the design and optimization of large-scale data processing systems.\n\nOriginally from South Tyrol, Italy, he holds a Diploma in Computer Science with a minor in Mathematics from the Technical University of Munich, and a doctorate in Computer Science from the University of Tübingen. His academic work explored compiler techniques bridging the gap between object-oriented programming and relational database systems.\n\nManuel is passionate about system internals, performance engineering, and mathematics, and enjoys advancing the boundaries of in-memory database technology."
             }
         ],
         "associatedSpeakers": "",
@@ -266,8 +258,8 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1739885384989-490",
-        "title": "HANA Statement Hints",
-        "description": "Execution plans are prepared for the execution of the statements. Sometimes HANA SQL Optimizer chooses an unsuitable way to access data.\nIf you understand the statements, you might also understand that HANA SQL Optimizer has chosen maybe an unsuitable execution plan,\nYou can use statement hints to force the HANA SQL Optimizer to choose which way it should take or what it should not take under any circumstances.\nI have gained some experiences with HANA statement hints over the last few years and would like to share these experiences with the participants,",
+        "title": "SAP HANA Statement Hints",
+        "description": "Execution plans are prepared for the execution of the statements. It can happen that SAP HANA SQL Optimizer chooses a wrong or non-optimal execution plan.\nYou can apply HANA statement hints to force the SAP HANA SQL Optimizer to use or to prevent a specific way to process a database request.\n It is not so easy to find a suitable hint, because incomplete HANA execution plans are stored historicized in the HANA Monitoring views, only used engines. SQL collection from the SAP Note 1969700 can help you to perform some analysis regarding HANA engine changes.\nI have gained some experiences with HANA statement hints over the last few years and would like to share these experiences with the participants.",
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
@@ -275,11 +267,10 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "kutbettin.baran@sys.aok.de",
-                "email": "kutbettin.baran@sys.aok.de",
                 "firstName": "Kuto",
                 "lastName": "Baran",
                 "company": "AOK Systems GmbH",
-                "bio": ""
+                "bio": "I've been working with HANA for years and mostly support HANA performance issues for our customers. I like to share my experiences (performing workshops, trainings oder presentations) with HANA that I have gained over the last 10 years."
             }
         ],
         "associatedSpeakers": "",
@@ -299,11 +290,10 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "johannes.osterhoff@sap.com",
-                "email": "johannes.osterhoff@sap.com",
                 "firstName": "Johannes",
                 "lastName": "Osterhoff",
                 "company": "SAP SE",
-                "bio": ""
+                "bio": "UX Lead and Manager for HANA Tools"
             }
         ],
         "associatedSpeakers": "",
@@ -311,6 +301,29 @@ const AGENDA_JSON = [
         "startTime": "10:50",
         "endTime": "11:35",
         "location": "audimax"
+    },
+    {
+        "id": "id-1739972283491-548",
+        "title": "Developing calculation views in Business Application Studio",
+        "description": "Are you interested in how you can develop calculation views using the graphical editor in SAP Business Application Studio (BAS) to support your analytic use cases?\nThis session gives a short introduction into calculation views and the development environment BAS followed by a live demo. After the session you should have an understanding how to develop calculation views or HANA database objects in general and what use cases can be covered by them.\n",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "jan.zwickel@sap.com",
+                "firstName": "Jan",
+                "lastName": "Zwickel",
+                "company": "SAP SE",
+                "bio": "After having worked in the global support organization of SAP I joined the SAP HANA Product Management team. Within the product management team I focus on HANA analytic topics, in particular calculation views."
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "15:35",
+        "endTime": "16:00",
+        "location": "room_w1"
     },
     {
         "id": "id-1739975318089-681",
@@ -323,7 +336,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "jonathan.bregler@sap.com",
-                "email": "jonathan.bregler@sap.com",
                 "firstName": "Jonathan",
                 "lastName": "Bregler",
                 "company": "SAP SE",
@@ -331,7 +343,6 @@ const AGENDA_JSON = [
             },
             {
                 "id": "thomas.grimmeisen@sap.com",
-                "email": "thomas.grimmeisen@sap.com",
                 "firstName": "Thomas",
                 "lastName": "Grimmeisen",
                 "company": "SAP SE",
@@ -355,7 +366,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "rebecca.fondermann@sap.com",
-                "email": "rebecca.fondermann@sap.com",
                 "firstName": "Rebecca",
                 "lastName": "Fondermann",
                 "company": "SAP SE",
@@ -369,38 +379,6 @@ const AGENDA_JSON = [
         "location": "audimax"
     },
     {
-        "id": "id-1741351434928-954",
-        "title": "Making the power of HANA the SMArt Core of a better ETM",
-        "description": "Throughout the lifecycle of any kind of a constriction site item - we call them articles - we need to know where it is and how much we need to charge for it. So, we need to Simply Manage Articles (SMArt) and decided to make it instead of buying another ETM solution.\nThe Core of our SMArt is build on HANA Cloud, with a Data Lake inside having the data modeled via CDS with simple Fiori Elements Apps on top. There also are many free style SAP UI5 Apps for business processes, but those shall not be the focus of this session.\nInside of this SMArt Core we have implemented many features of HANA Cloud:\n- Using Smart Data Access for a self-managed delta replication from an on-prem S/4 HANA via DPA and HANA Adapter V2\n- Using the HANA Hierarchy Functions to leverage flexible folder structures by inheriting Instance-Based authorization checks, default values, price records and custom fields\n- Using DB Triggers to enable an automated versioning, archiving or even updating of relevant dependent data\n- Using the HANA Stored Procedure in ASYNC mode as advanced Tasking\n- Using the HANA Data Lake to keep the HANA Cloud space lean and efficient\n\nWithin this session we would like to show the details how we - Leonhard Weiss, one of the 10 largest construction companies in Germany and even Nr. 3 when it comes to German Railways - are working with SMArt and how we did implement those features with our implementation partner cbs.",
-        "type": "presentation_long",
-        "extraInfo": "",
-        "accepted": true,
-        "confirmed": false,
-        "speakers": [
-            {
-                "id": "j.conchagarcia@leonhard-weiss.com",
-                "email": "j.conchagarcia@leonhard-weiss.com",
-                "firstName": "Juan",
-                "lastName": "Garcia",
-                "company": "Leonhard Weiss",
-                "bio": ""
-            },
-            {
-                "id": "julian.mayer@cbs-consulting.de",
-                "email": "julian.mayer@cbs-consulting.de",
-                "firstName": "Julian",
-                "lastName": "Mayer",
-                "company": "cbs Corporate Business Solutions",
-                "bio": ""
-            }
-        ],
-        "associatedSpeakers": "",
-        "presentationLinks": [],
-        "startTime": "15:15",
-        "endTime": "16:00",
-        "location": "audimax"
-    },
-    {
         "id": "id-1741372190857-704",
         "title": "Cluster Analysis with SQL Notebooks and Calculation Views",
         "description": "The new SQL Notebook in Business Application Studio allows execution of SQLScript and SQL statements in an interactive way similar to Jupyter Notebook for Python scripts. I will show how a cluster analysis of customer data using PAL (Predictive Analysis Library) procedures can be executed in a SQL Notebook. \n\nResults of the cluster analysis will then be enriched and prepared using Calculation Views for further evaluation and visualisation.\nIn particular, advanced modeling functions of Calculation Views like Window Functions are applied.\n\nFurthermore, I will emphasize on the role of HDI container based development in the context of Machine Learning and Data Analysis with SAP HANA.\n\nReference: \n- Blog Cluster-Analysen mit Calculation Views: https://www.brandeis.de/blog/2025/cluster-analysen-calculation-views\n- Vortrag auf Hana Tech Night: https://www.brandeis.de/blog/events/htn-10-recap",
@@ -411,7 +389,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "benedict.baur@mail.de",
-                "email": "benedict.baur@mail.de",
                 "firstName": "Benedict",
                 "lastName": "Baur",
                 "company": "Dr. Baur Consulting",
@@ -435,7 +412,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "phani.mallavarapu@gmail.com",
-                "email": "phani.mallavarapu@gmail.com",
                 "firstName": "Aditya",
                 "lastName": "Mallavarapu",
                 "company": "",
@@ -446,7 +422,7 @@ const AGENDA_JSON = [
         "presentationLinks": [],
         "startTime": "15:15",
         "endTime": "15:40",
-        "location": "room_w1"
+        "location": "audimax"
     },
     {
         "id": "id-1741457353972-404",
@@ -459,7 +435,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "timo.wagner@outlook.com",
-                "email": "timo.wagner@outlook.com",
                 "firstName": "Timo",
                 "lastName": "Wagner",
                 "company": "",
@@ -483,11 +458,10 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "lyubov.nakryyko@sap.com",
-                "email": "lyubov.nakryyko@sap.com",
                 "firstName": "Lyubov",
                 "lastName": "Nakryyko",
                 "company": "SAP SE",
-                "bio": ""
+                "bio": "Lyubov Nakryyko\nAI Architect, SAP SE\nAs of January 2024, I have been serving as an AI Architect within the Premium Engagement Area, where I am dedicated to helping our largest customers leverage artificial intelligence to enhance business value and streamline processes. We deliver AI-empowering services, such as AI strategy, and conduct proof of concepts to assess the feasibility of AI solutions, demonstrating their potential impact.\nPreviously, I focused on Data Volume Management at SAP, assisting clients in managing data growth through strategies like data avoidance and archiving.\nAs a Product Owner of Data Science Solutions in the SAP EarlyWatch Alert Application Area, I utilized machine learning and data science to automate processes, ensuring product success and stakeholder satisfaction.\nFrom 2014 to 2021, I worked as a Senior Support Engineer at the CoE EMEA Databases and HANA Platform Team, where I provided technical expertise and support for database solutions.\nMy journey at SAP began in 2010 as a Working Student.\nMy academic background includes a Master of Arts and a Bachelor of Arts in Computational Linguistics from the University of Heidelberg, Germany, and a Bachelor of Arts in English Philology from Ivan Franko National University of Lviv, Ukraine.\nOutside of my professional pursuits, I enjoy running, tennis, climbing, hiking, and yoga, reflecting my active and adventurous spirit.\n"
             }
         ],
         "associatedSpeakers": "",
@@ -507,7 +481,6 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "mingqian.zhong@sap.com",
-                "email": "mingqian.zhong@sap.com",
                 "firstName": "Tim",
                 "lastName": "Zhong",
                 "company": "SAP",
@@ -518,7 +491,7 @@ const AGENDA_JSON = [
         "presentationLinks": [],
         "startTime": "15:40",
         "endTime": "16:00",
-        "location": "room_w1"
+        "location": "audimax"
     },
     {
         "id": "id-1741610619483-304",
@@ -531,11 +504,10 @@ const AGENDA_JSON = [
         "speakers": [
             {
                 "id": "sushil.jain01@sap.com",
-                "email": "sushil.jain01@sap.com",
                 "firstName": "Sushil",
                 "lastName": "Jain",
                 "company": "SAP SE",
-                "bio": ""
+                "bio": "I develop the developer tools around SAP HANA Cloud database."
             }
         ],
         "associatedSpeakers": "",
@@ -545,9 +517,39 @@ const AGENDA_JSON = [
         "location": "room_w1"
     },
     {
+        "id": "id-1741641304296-956",
+        "title": "Formula modeler",
+        "description": "Business users are often required to maintain formulas in a web application and have the execution of these formulas pushed down to the database on published datasets(calc. views) without engaging IT teams.\n\nThis presentation demonstrates such a utility, delving into the following sub-topics\n* The data-model in HANA cloud to catalog formulas and consume these formulas on published hana-views\n* The end-to-end application hosted on SAP BTP to maintain the repository\n* Logging and reporting\n* Use cases",
+        "type": "demo",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "prabhu.dc@sposea.com",
+                "firstName": "Prabhu",
+                "lastName": "Dassan",
+                "company": "SPOSEA B.V.",
+                "bio": "SAP Analytics Developer by career | Armchair history-buff. | Gaming on rainy days."
+            },
+            {
+                "id": "ravi.ramachandrula@sposea.com",
+                "firstName": "Ravi",
+                "lastName": "Ramachandrula",
+                "company": "SPOSEA B.V.",
+                "bio": ""
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "15:15",
+        "endTime": "15:35",
+        "location": "room_w1"
+    },
+    {
         "id": "id-1742397081762-199",
         "title": "Opening Keynote",
-        "description": "Placeholder for Opening Keynote by Organizers and Stefan Bäuerle",
+        "description": "Opening Keynote by Organizers and Stefan Bäuerle",
         "type": "opening_note",
         "extraInfo": "",
         "accepted": true,
@@ -562,7 +564,7 @@ const AGENDA_JSON = [
     {
         "id": "id-1742397155243-287",
         "title": "Closing Note",
-        "description": "Placeholder for Closing Note",
+        "description": "Closing Note",
         "type": "closing_note",
         "extraInfo": "",
         "accepted": true,
@@ -573,6 +575,36 @@ const AGENDA_JSON = [
         "startTime": "17:15",
         "endTime": "17:30",
         "location": "audimax"
+    },
+    {
+        "id": "id-1742910586692-523",
+        "title": "Lunch Break",
+        "description": "Different Lunch options will be served at the nearby canteen",
+        "type": "lunch_break",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "12:30",
+        "endTime": "13:30",
+        "location": "canteen"
+    },
+    {
+        "id": "id-1742911472729-852",
+        "title": "Coffee Break",
+        "description": "Small snacks will be served.",
+        "type": "coffee_break",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "14:45",
+        "endTime": "15:15",
+        "location": "canteen"
     }
 ]
 //--------------------------------------------------------------------------------------------------
@@ -585,12 +617,14 @@ const ROOM_NAME_MAPPING = {
     "audimax": "Audimax",
     "room_w1": "Room W1",
     "room_w2": "Room W2",
+    "canteen": "Canteen"
 };
 //--------------------------------------------------------------------------------------------------
 const ROOM_TRACK_MAPPING = {
     "audimax": "track-1",
     "room_w1": "track-2",
     "room_w2": "track-2",
+    "canteen": "track-1"
 };
 //--------------------------------------------------------------------------------------------------
 function getConferenceUnixTime(hour = 9, minute = 0) {
@@ -708,7 +742,7 @@ function buildAgenda() {
         let isEventOver = Math.floor(Date.now() / 1000) > getConferenceUnixTime(eventHour, eventMin);
 
         // Extract basic information
-        let isMultiTrackEvent = obj.type.includes('note');
+        let isMultiTrackEvent = obj.type.includes('note') || obj.type.includes("lunch_break") || obj.type.includes('coffee_break');
         let track = ROOM_TRACK_MAPPING[obj.location];
         let gridCol = isMultiTrackEvent ? 'track-1-start / track-2-end' : track;
         let startTimeAdj = obj.startTime.replace(':', '');
@@ -724,6 +758,9 @@ function buildAgenda() {
         let speakersAcc = speakerNames.join(', ');
         if (speakersAcc === "") {
             speakersAcc = "TBD";
+        }
+        if (obj.type.includes('lunch_break') || obj.type.includes('coffee_break')) {
+            speakersAcc = "-";
         }
 
         // Ensure correct format of time
