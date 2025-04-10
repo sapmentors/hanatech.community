@@ -714,7 +714,7 @@ function buildMemberHTML(obj) {
             ${imgStr}
             <div class="htec-jury-member-info">
                 <h3>${obj.name}</h3>
-                <h4>${obj.position !== undefined ? obj.position : ""}${obj.company}</h4>
+                <h4>${obj.position !== undefined ? obj.position + ", " : ""}${obj.company}</h4>
                 ${socialStr}
             </div>
         </div>
