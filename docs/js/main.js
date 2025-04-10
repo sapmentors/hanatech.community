@@ -118,7 +118,8 @@ const AGENDA_JSON = [
                 "firstName": "Sharath",
                 "lastName": "Machenahalli Gangadhara",
                 "company": "NTT Data Business Solutions Ltd",
-                "bio": "I started my career with SAP in 2004 as an intern at IBM and have been with SAP ever since. Other than SAP I have been loyal to my wife(Rosa - Microbiologist  and a Biotech start up founder) who I met 1 year into SAP Career. Infact, I met her on the day of SAP TechEd 2026. I suspect a divine connect with SAP :)\n\nI have spent major part of my career in User Interface(CAF, WD Java, VC, WD ABAP, UI5, Fiori). However every now and then, have tried my hands at SAP BPM, Sybase Mobile and NetWeaver PI. My current area of work is HANA XSA. I am currently looking to HANA developments, Datasphere and little bit of Build process automation. My passion to learn new languages has helped me move from UI to Data modelling to Cloud technologies and now with AI. \n\nI love to garden. I also love to DIY civil and carpentry tasks at home. My passion is to learn - languages and technology. In my free time - I love to watch comedy(Seinfeld and Simpsons) or vacation in midst of nature.  "
+                "bio": "I started my career with SAP in 2004 as an intern at IBM and have been with SAP ever since. Other than SAP I have been loyal to my wife(Rosa - Microbiologist  and a Biotech start up founder) who I met 1 year into SAP Career. Infact, I met her on the day of SAP TechEd 2026. I suspect a divine connect with SAP :)\n\nI have spent major part of my career in User Interface(CAF, WD Java, VC, WD ABAP, UI5, Fiori). However every now and then, have tried my hands at SAP BPM, Sybase Mobile and NetWeaver PI. My current area of work is HANA XSA. I am currently looking to HANA developments, Datasphere and little bit of Build process automation. My passion to learn new languages has helped me move from UI to Data modelling to Cloud technologies and now with AI. \n\nI love to garden. I also love to DIY civil and carpentry tasks at home. My passion is to learn - languages and technology. In my free time - I love to watch comedy(Seinfeld and Simpsons) or vacation in midst of nature.  ",
+                "hash": "7d8a7faeca882966f576030556f12ffd7a5d7cbc"
             }
         ],
         "associatedSpeakers": "",
@@ -130,7 +131,7 @@ const AGENDA_JSON = [
     {
         "id": "id-1739261333784-69",
         "title": "Open Source Tools to work with HANA's Multi-model Engines",
-        "description": "Tools that possibly can be covered:\n- LangChain\n- QGIS\n- Tegola\n- GDAL\n- DBeaver\n- GeoServer\n- Cytoscape",
+        "description": "Get to know about existing integrations of SAP HANA into Open Source clients--especially in the context of multi-model engines. The session will give a high-level overview of clients like LangChain, QGIS, Tegola, GDAL, DBeaver, GeoServer, and Cytoscape.",
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
@@ -141,7 +142,8 @@ const AGENDA_JSON = [
                 "firstName": "Mathias",
                 "lastName": "Kemeter",
                 "company": "SAP SE",
-                "bio": "Within SAP’s database development unit, Mathias is responsible for SAP HANA’s multi-model engines. In his role is leading the development behind the spatial, graph, hierarchies, and vector engines as well as the JSON document store."
+                "bio": "Until recently, Mathias was part of the database development unit at SAP. He has been responsible for SAP HANA’s multi-model engines and led the development behind the spatial, graph, hierarchies, and vector engines as well as the JSON document store. Today, he is part of SAP's Business AI unit--but still personally connected to the SAP HANA community.",
+                "hash": "d0b38dfb9848d5b3fee78423ca9359611bf7dcaf"
             }
         ],
         "associatedSpeakers": "",
@@ -164,7 +166,8 @@ const AGENDA_JSON = [
                 "firstName": "Bastian",
                 "lastName": "Bremerich",
                 "company": "SAP SE",
-                "bio": "Bastian Bremerich works as Product Expert in SAP HANA Development. As part of the Database Competence Center he has been supporting strategic customers and internal stakeholders for 10 years. His focus is on analytical scenarios on HANA &amp; HANA Cloud."
+                "bio": "Bastian Bremerich works as Product Expert in SAP HANA Development. As part of the Database Competence Center he has been supporting strategic customers and internal stakeholders for 10 years. His focus is on analytical scenarios on HANA &amp; HANA Cloud.",
+                "hash": "80b3598ab8331b13adeca3a9cd8bfe2c7af31e76"
             }
         ],
         "associatedSpeakers": "",
@@ -187,7 +190,8 @@ const AGENDA_JSON = [
                 "firstName": "Matthias",
                 "lastName": "Sander",
                 "company": "XLC - Crossload Consulting GmbH",
-                "bio": "I have been working in SAP Basis since 2005 and have specialized in SAP HANA for 10 years. As a book author on HANA, I enjoy diving deep into technical details and analyzing complex issues. Honestly, I sometimes enjoy solving tricky HANA problems on a weekend more than watching Netflix."
+                "bio": "I have been working in SAP Basis since 2005 and have specialized in SAP HANA for 10 years. As a book author on HANA, I enjoy diving deep into technical details and analyzing complex issues. Honestly, I sometimes enjoy solving tricky HANA problems on a weekend more than watching Netflix.",
+                "hash": "d4097bd5fec52c913f2601ddec0b403216171b5e"
             }
         ],
         "associatedSpeakers": "",
@@ -198,7 +202,7 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1739806461731-129",
-        "title": "Mastering HANA Performance: The Impact of Workload Management Partitioning",
+        "title": "Mastering HANA Performance: Impact of Workload Management Partitioning",
         "description": "Partitioning in SAP HANA is often regarded as a necessity to circumvent the well-known 2-billion-row limit—but its full potential for performance optimization is frequently underestimated. In this session, we’ll demonstrate how smart partitioning strategies can dramatically improve query performance, reduce memory consumption, and enhance system scalability.\n\nBased on real-world customer scenarios, we go beyond the standard guidance from SAP Note 2044468 and explore advanced techniques such as RANGE-HASH partitioning—using hands-on examples like ACDOCA. We’ll also take a closer look at Partition Pruning: how it works, when it works, and how much of a performance boost it can actually provide. Tools like PlanViz and the EXPLAIN function will be used live to analyze and validate partitioning effectiveness.\n\nIn the second part of the session, we turn our attention to a topic that many HANA professionals have heard of but few have fully leveraged: HANA Workload Management. We’ll begin with an overview of its core features and recent enhancements introduced in HANA 2.0 SPS07, followed by a deep dive into real-world use cases to illustrate how effective workload control can stabilize systems and improve overall performance.\n\nKey topics include:\n\n- Parent and Child Workload Classes – Structuring and optimizing workload distribution\n- Analyzing Load within a Class – Identifying bottlenecks and imbalances\n- Mapping &amp; Implementation Best Practices – Assigning workloads effectively\n- Restricting Specific Application Groups – Managing targeted resource usage\n- Workarounds &amp; Temporary Fixes – Bridging the gap until a long-term solution is in place\n\nPerformance tuning doesn’t always come down to better ABAP code or application-side logic. Sometimes, the key lies in the database layer—and this is where HANA Workload Management becomes an invaluable tool. It offers immediate control and mitigation options when quick action is needed, and it complements more permanent solutions still in development.",
         "type": "presentation_detailed",
         "extraInfo": "",
@@ -210,7 +214,8 @@ const AGENDA_JSON = [
                 "firstName": "Matthias",
                 "lastName": "Sander",
                 "company": "XLC - Crossload Consulting GmbH",
-                "bio": "I have been working in SAP Basis since 2005 and have specialized in SAP HANA for 10 years. As a book author on HANA, I enjoy diving deep into technical details and analyzing complex issues. Honestly, I sometimes enjoy solving tricky HANA problems on a weekend more than watching Netflix."
+                "bio": "I have been working in SAP Basis since 2005 and have specialized in SAP HANA for 10 years. As a book author on HANA, I enjoy diving deep into technical details and analyzing complex issues. Honestly, I sometimes enjoy solving tricky HANA problems on a weekend more than watching Netflix.",
+                "hash": "d4097bd5fec52c913f2601ddec0b403216171b5e"
             }
         ],
         "associatedSpeakers": "",
@@ -233,21 +238,24 @@ const AGENDA_JSON = [
                 "firstName": "Mohamed Ali",
                 "lastName": "Chriki",
                 "company": "SAP SE",
-                "bio": "Mohamed Ali Chriki is a Tunisian national who started working for SAP in Paris in 2008. In 2014, he moved to SAP HANA in Walldorf, Germany. Since 2019, Mohamed has been working as a C++ developer in the HANA Calculation Engine team."
+                "bio": "Mohamed Ali Chriki is a Tunisian national who started working for SAP in Paris in 2008. In 2014, he moved to SAP HANA in Walldorf, Germany. Since 2019, Mohamed has been working as a C++ developer in the HANA Calculation Engine team.",
+                "hash": "6cb70af349cdcf84744178af1b71308dd82d398c"
             },
             {
                 "id": "elisabeth.badino@sap.com",
                 "firstName": "Elisabeth",
                 "lastName": "Badino",
                 "company": "SAP SE",
-                "bio": "I started my career with SAP in 2016 in the area of SAP BW, and moved to support our critical customers on SAP HANA in 2020. Since then, I have been part of a team that handles escalations and bugs, as well as programs for early adoption of new technologies within SAP HANA. For the past 2 years, I have exclusively worked with supporting customers on SAP HANA Cloud.\n\nAs a Danish national I studied at the IT University of Copenhagen where I received a B.Sc. in Global Business Informatics and went on to complete my M.Sc. in Information Systems at Hawaii Pacific University, with a semester spent at FH Salzburg.\n\nI look forward to sharing some of the tools with you that we use for troubleshooting in the area of Calculation View queries using the HEX Engine."
+                "bio": "I started my career with SAP in 2016 in the area of SAP BW, and moved to support our critical customers on SAP HANA in 2020. Since then, I have been part of a team that handles escalations and bugs, as well as programs for early adoption of new technologies within SAP HANA. For the past 2 years, I have exclusively worked with supporting customers on SAP HANA Cloud.\n\nAs a Danish national I studied at the IT University of Copenhagen where I received a B.Sc. in Global Business Informatics and went on to complete my M.Sc. in Information Systems at Hawaii Pacific University, with a semester spent at FH Salzburg.\n\nI look forward to sharing some of the tools with you that we use for troubleshooting in the area of Calculation View queries using the HEX Engine.",
+                "hash": "fb669950f98c9fe89eb7756ccf31c0b53c7a122a"
             },
             {
                 "id": "m.mayr@sap.com",
                 "firstName": "Manuel",
                 "lastName": "Mayr",
                 "company": "SAP SE",
-                "bio": "Manuel Mayr is a Development Expert at SAP, where he works on the HANA Execution Engine (HEX) as part of the HANA database core team, focusing on architecture and performance-critical components. With over a decade of experience in enterprise software development, Manuel has held senior engineering roles at both IBM and SAP, contributing to the design and optimization of large-scale data processing systems.\n\nOriginally from South Tyrol, Italy, he holds a Diploma in Computer Science with a minor in Mathematics from the Technical University of Munich, and a doctorate in Computer Science from the University of Tübingen. His academic work explored compiler techniques bridging the gap between object-oriented programming and relational database systems.\n\nManuel is passionate about system internals, performance engineering, and mathematics, and enjoys advancing the boundaries of in-memory database technology."
+                "bio": "Manuel Mayr is a Development Expert at SAP, where he works on the HANA Execution Engine (HEX) as part of the HANA database core team, focusing on architecture and performance-critical components. With over a decade of experience in enterprise software development, Manuel has held senior engineering roles at both IBM and SAP, contributing to the design and optimization of large-scale data processing systems.\n\nOriginally from South Tyrol, Italy, he holds a Diploma in Computer Science with a minor in Mathematics from the Technical University of Munich, and a doctorate in Computer Science from the University of Tübingen. His academic work explored compiler techniques bridging the gap between object-oriented programming and relational database systems.\n\nManuel is passionate about system internals, performance engineering, and mathematics, and enjoys advancing the boundaries of in-memory database technology.",
+                "hash": "fa57a7e3b4d944c6eb411c61195e52176666adf9"
             }
         ],
         "associatedSpeakers": "",
@@ -270,7 +278,8 @@ const AGENDA_JSON = [
                 "firstName": "Kuto",
                 "lastName": "Baran",
                 "company": "AOK Systems GmbH",
-                "bio": "I've been working with HANA for years and mostly support HANA performance issues for our customers. I like to share my experiences (performing workshops, trainings oder presentations) with HANA that I have gained over the last 10 years."
+                "bio": "I've been working with HANA for years and mostly support HANA performance issues for our customers. I like to share my experiences (performing workshops, trainings oder presentations) with HANA that I have gained over the last 10 years.",
+                "hash": "6d8dfa750decdf41dddbab8f869e2772696e393a"
             }
         ],
         "associatedSpeakers": "",
@@ -293,7 +302,8 @@ const AGENDA_JSON = [
                 "firstName": "Johannes",
                 "lastName": "Osterhoff",
                 "company": "SAP SE",
-                "bio": "UX Lead and Manager for HANA Tools"
+                "bio": "UX Lead and Manager for HANA Tools",
+                "hash": "af813ec7f2cb76f13afb519f605bb7ceb073b564"
             }
         ],
         "associatedSpeakers": "",
@@ -316,7 +326,8 @@ const AGENDA_JSON = [
                 "firstName": "Jan",
                 "lastName": "Zwickel",
                 "company": "SAP SE",
-                "bio": "After having worked in the global support organization of SAP I joined the SAP HANA Product Management team. Within the product management team I focus on HANA analytic topics, in particular calculation views."
+                "bio": "After having worked in the global support organization of SAP I joined the SAP HANA Product Management team. Within the product management team I focus on HANA analytic topics, in particular calculation views.",
+                "hash": "25fdb91fd0bdbc031b33d4b0ab2d05c1ddb59edf"
             }
         ],
         "associatedSpeakers": "",
@@ -339,14 +350,16 @@ const AGENDA_JSON = [
                 "firstName": "Jonathan",
                 "lastName": "Bregler",
                 "company": "SAP SE",
-                "bio": "Enabling developers to leverage the full power of SAP HANA Cloud."
+                "bio": "Enabling developers to leverage the full power of SAP HANA Cloud.",
+                "hash": "0cc1543504f5bd4a7a1a110088ccfb5e76962104"
             },
             {
                 "id": "thomas.grimmeisen@sap.com",
                 "firstName": "Thomas",
                 "lastName": "Grimmeisen",
                 "company": "SAP SE",
-                "bio": "I'm a developer working in HANA Developer Experience. I mainly work on providing the Database Explorer Extension to Business Application Studio and Visual Studio Code."
+                "bio": "I'm a developer working in HANA Developer Experience. I mainly work on providing the Database Explorer Extension to Business Application Studio and Visual Studio Code.",
+                "hash": "5ae80798d6b8fd4a67dff83015c3bdd223b51996"
             }
         ],
         "associatedSpeakers": "",
@@ -369,7 +382,8 @@ const AGENDA_JSON = [
                 "firstName": "Rebecca",
                 "lastName": "Fondermann",
                 "company": "SAP SE",
-                "bio": "I joined SAP and the Hana Deployment Infrastructure (HDI) Team on March 1, 2021, where I am working as a C++ Developer on HDI Core. I initially studied chemistry and specialized in theoretical chemistry after completing my undergraduate degree. During my PhD, I learned software development and programming in C++. It was during this time that I discovered a passion for programming, which led me to pursue a career in software development rather than continuing in the field of chemistry after completing my PhD thesis. For the past 10 years, I worked for a company that develops travel search and booking software for internet booking (Player+Hub/Dataprocessing), travel agencies, and tour operators.\n\nOutside of work and programming, I am passionate about sports. Until five years ago, I participated in triathlons. Since then, I swapped the time trial bike for a MTB and now I am riding for a semi-professional team. I also enjoy being in nature through biking or hiking.\n"
+                "bio": "I joined SAP and the Hana Deployment Infrastructure (HDI) Team on March 1, 2021, where I am working as a C++ Developer on HDI Core. I initially studied chemistry and specialized in theoretical chemistry after completing my undergraduate degree. During my PhD, I learned software development and programming in C++. It was during this time that I discovered a passion for programming, which led me to pursue a career in software development rather than continuing in the field of chemistry after completing my PhD thesis. For the past 10 years, I worked for a company that develops travel search and booking software for internet booking (Player+Hub/Dataprocessing), travel agencies, and tour operators.\n\nOutside of work and programming, I am passionate about sports. Until five years ago, I participated in triathlons. Since then, I swapped the time trial bike for a MTB and now I am riding for a semi-professional team. I also enjoy being in nature through biking or hiking.\n",
+                "hash": "4572afa0fd51836b5b701769607fba0beec9e790"
             }
         ],
         "associatedSpeakers": "",
@@ -392,7 +406,8 @@ const AGENDA_JSON = [
                 "firstName": "Benedict",
                 "lastName": "Baur",
                 "company": "Dr. Baur Consulting",
-                "bio": "I am a freelance SAP consultant for SAP BW/4, SAP HANA Cloud and Machine Learning.\nAuthor of the book \"Machine Learning mit SAP HANA\" (Espresso Tutorials, 2022)"
+                "bio": "I am a freelance SAP consultant for SAP BW/4, SAP HANA Cloud and Machine Learning.\nAuthor of the book \"Machine Learning mit SAP HANA\" (Espresso Tutorials, 2022)",
+                "hash": "31c22dd5f95da8399f9331406af759736d7357b4"
             }
         ],
         "associatedSpeakers": "",
@@ -415,7 +430,8 @@ const AGENDA_JSON = [
                 "firstName": "Aditya",
                 "lastName": "Mallavarapu",
                 "company": "",
-                "bio": "Hello Everyone, I am Aditya Mallavarapu, I have over 19 Years of Experience  in the SAP technical space , worked with Global Customers across various Industry sectors throughout my Journey.  I was born and  brought up in India and currently living in Germany for the past 4.5 years working for a German based Large Scale retail company focusing on Architecting &amp; Optimizing the SAP workloads .\n\nI am passionate about SAP's Technical aspects and always curious about the latest Technical innovations. Recently, I've been exploring AI-based SAP/HANA Performance dashboards - an exciting area I believe has great potential to simplify complex System insights.\n\nOutside of work, I'm a happy husband and a proud father of two teenagers  :-) , and I enjoy spending time with my family exploring new travel destinations when I'm not geeking out over SAP \n\nI'm excited to meet passionate people like you in person and looking forward to further extend my Professional Network. Let's talk and share HANA :-)"
+                "bio": "Hello Everyone, I am Aditya Mallavarapu, I have over 19 Years of Experience  in the SAP technical space , worked with Global Customers across various Industry sectors throughout my Journey.  I was born and  brought up in India and currently living in Germany for the past 4.5 years working for a German based Large Scale retail company focusing on Architecting &amp; Optimizing the SAP workloads .\n\nI am passionate about SAP's Technical aspects and always curious about the latest Technical innovations. Recently, I've been exploring AI-based SAP/HANA Performance dashboards - an exciting area I believe has great potential to simplify complex System insights.\n\nOutside of work, I'm a happy husband and a proud father of two teenagers  :-) , and I enjoy spending time with my family exploring new travel destinations when I'm not geeking out over SAP \n\nI'm excited to meet passionate people like you in person and looking forward to further extend my Professional Network. Let's talk and share HANA :-)",
+                "hash": "522619a6abcbd96fab1a97dce334fba42481eb90"
             }
         ],
         "associatedSpeakers": "",
@@ -438,7 +454,8 @@ const AGENDA_JSON = [
                 "firstName": "Timo",
                 "lastName": "Wagner",
                 "company": "",
-                "bio": "Freelance Software Engineer mainly focusing on SAP HANA technologies.\nFormer Developer at SAP working on the SAP HANA Smart Data Integration, Agile Data Preparation and Data Hub/Data Intelligence Products \n-\nStarted my career in the SAP HANA Smart Data Integration team and developed Adapters for the DPAgent.\nWhen Eclipse needed a replacement we've developed WebIDE (XS Classic) editors for Flowgraphs, Reptasks and everything in the Remote Source area. And after a while the same with the subsequent deprecation of XSC in favor for XSA and its new WebIDE."
+                "bio": "Freelance Software Engineer mainly focusing on SAP HANA technologies.\nFormer Developer at SAP working on the SAP HANA Smart Data Integration, Agile Data Preparation and Data Hub/Data Intelligence Products \n-\nStarted my career in the SAP HANA Smart Data Integration team and developed Adapters for the DPAgent.\nWhen Eclipse needed a replacement we've developed WebIDE (XS Classic) editors for Flowgraphs, Reptasks and everything in the Remote Source area. And after a while the same with the subsequent deprecation of XSC in favor for XSA and its new WebIDE.",
+                "hash": "16a5381894b1656ea012e96be98d0ec195943f0a"
             }
         ],
         "associatedSpeakers": "",
@@ -461,7 +478,8 @@ const AGENDA_JSON = [
                 "firstName": "Lyubov",
                 "lastName": "Nakryyko",
                 "company": "SAP SE",
-                "bio": "Lyubov Nakryyko\nAI Architect, SAP SE\nAs of January 2024, I have been serving as an AI Architect within the Premium Engagement Area, where I am dedicated to helping our largest customers leverage artificial intelligence to enhance business value and streamline processes. We deliver AI-empowering services, such as AI strategy, and conduct proof of concepts to assess the feasibility of AI solutions, demonstrating their potential impact.\nPreviously, I focused on Data Volume Management at SAP, assisting clients in managing data growth through strategies like data avoidance and archiving.\nAs a Product Owner of Data Science Solutions in the SAP EarlyWatch Alert Application Area, I utilized machine learning and data science to automate processes, ensuring product success and stakeholder satisfaction.\nFrom 2014 to 2021, I worked as a Senior Support Engineer at the CoE EMEA Databases and HANA Platform Team, where I provided technical expertise and support for database solutions.\nMy journey at SAP began in 2010 as a Working Student.\nMy academic background includes a Master of Arts and a Bachelor of Arts in Computational Linguistics from the University of Heidelberg, Germany, and a Bachelor of Arts in English Philology from Ivan Franko National University of Lviv, Ukraine.\nOutside of my professional pursuits, I enjoy running, tennis, climbing, hiking, and yoga, reflecting my active and adventurous spirit.\n"
+                "bio": "Lyubov Nakryyko\nAI Architect, SAP SE\nAs of January 2024, I have been serving as an AI Architect within the Premium Engagement Area, where I am dedicated to helping our largest customers leverage artificial intelligence to enhance business value and streamline processes. We deliver AI-empowering services, such as AI strategy, and conduct proof of concepts to assess the feasibility of AI solutions, demonstrating their potential impact.\nPreviously, I focused on Data Volume Management at SAP, assisting clients in managing data growth through strategies like data avoidance and archiving.\nAs a Product Owner of Data Science Solutions in the SAP EarlyWatch Alert Application Area, I utilized machine learning and data science to automate processes, ensuring product success and stakeholder satisfaction.\nFrom 2014 to 2021, I worked as a Senior Support Engineer at the CoE EMEA Databases and HANA Platform Team, where I provided technical expertise and support for database solutions.\nMy journey at SAP began in 2010 as a Working Student.\nMy academic background includes a Master of Arts and a Bachelor of Arts in Computational Linguistics from the University of Heidelberg, Germany, and a Bachelor of Arts in English Philology from Ivan Franko National University of Lviv, Ukraine.\nOutside of my professional pursuits, I enjoy running, tennis, climbing, hiking, and yoga, reflecting my active and adventurous spirit.\n",
+                "hash": "ac7421709fc27ab8f8b6cb0a9ade040a64a52357"
             }
         ],
         "associatedSpeakers": "",
@@ -484,7 +502,8 @@ const AGENDA_JSON = [
                 "firstName": "Tim",
                 "lastName": "Zhong",
                 "company": "SAP",
-                "bio": "I am a SAP HANA Database Expert focusing on trouble shooting, performance tunning, configuration optimization, restore/recovery, etc.\nI am working in the SAP MCC (Mission Control Center) helping customers to quickly recover from business down situation and also provide in-depth root cause analysis with SAP HANA database problems.\nCreator of MCC SAP HANA trouble shooting tool \"SAP HANA HotSpots\"\nCreator of MCC SAP HANA tool \"SAP HANA KPI Collector\"\nCreator of SAP HANA training material \"SAP HANA Technical Review\""
+                "bio": "I am a SAP HANA Database Expert focusing on trouble shooting, performance tunning, configuration optimization, restore/recovery, etc.\nI am working in the SAP MCC (Mission Control Center) helping customers to quickly recover from business down situation and also provide in-depth root cause analysis with SAP HANA database problems.\nCreator of MCC SAP HANA trouble shooting tool \"SAP HANA HotSpots\"\nCreator of MCC SAP HANA tool \"SAP HANA KPI Collector\"\nCreator of SAP HANA training material \"SAP HANA Technical Review\"",
+                "hash": "81c5b33ea48fa03490441178a11a7bc184d6a61a"
             }
         ],
         "associatedSpeakers": "",
@@ -507,7 +526,8 @@ const AGENDA_JSON = [
                 "firstName": "Sushil",
                 "lastName": "Jain",
                 "company": "SAP SE",
-                "bio": "I develop the developer tools around SAP HANA Cloud database."
+                "bio": "I develop the developer tools around SAP HANA Cloud database.",
+                "hash": "dd19077863cdaef86136d51f5b30bbb575498917"
             }
         ],
         "associatedSpeakers": "",
@@ -530,14 +550,16 @@ const AGENDA_JSON = [
                 "firstName": "Prabhu",
                 "lastName": "Dassan",
                 "company": "SPOSEA B.V.",
-                "bio": "SAP Analytics Developer by career | Armchair history-buff. | Gaming on rainy days."
+                "bio": "SAP Analytics Developer by career | Armchair history-buff. | Gaming on rainy days.",
+                "hash": "6a1f37ae7677f8767d96e5e4275f6c64f85095e8"
             },
             {
                 "id": "ravi.ramachandrula@sposea.com",
                 "firstName": "Ravi",
                 "lastName": "Ramachandrula",
                 "company": "SPOSEA B.V.",
-                "bio": ""
+                "bio": "",
+                "hash": "c9b40c0338d99727c43241e8cad1d713ac9a4f46"
             }
         ],
         "associatedSpeakers": "",
