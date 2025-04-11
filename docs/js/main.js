@@ -849,7 +849,8 @@ function buildAgenda() {
 function injectAgendaDialogContent(itemId) {
     let agendaObj = AGENDA_DICT[itemId];
     document.getElementById('htec-agenda-dialog-title-inject').innerHTML = agendaObj.title;
-    document.getElementById('htec-agenda-dialog-description-inject').innerHTML = agendaObj.description;
+    document.getElementById('htec-agenda-dialog-description-inject').innerHTML =
+        agendaObj.description.replace(/(?:\r\n|\r|\n)/g, '<br/>');
 
     let speakersListHTML = document.getElementById('htec-agenda-dialog-speakers-inject');
     speakersListHTML.innerHTML = '';
