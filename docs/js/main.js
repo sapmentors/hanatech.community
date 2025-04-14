@@ -576,12 +576,12 @@ const AGENDA_JSON = [
             },
             {
                 "id": "ravi.ramachandrula@sposea.com",
-                "firstName": "Ravi",
+                "firstName": "Ravi kiran",
                 "lastName": "Ramachandrula",
                 "company": "SPOSEA B.V.",
-                "bio": "",
+                "bio": "When I'm not coding solutions to solve the world, I would be doing some art stuff ;-)",
                 "hash": "c9b40c0338d99727c43241e8cad1d713ac9a4f46",
-                "photo": false
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
