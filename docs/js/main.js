@@ -889,10 +889,10 @@ function buildAgenda() {
     let schedule = document.getElementsByClassName('schedule')[0];
 
     // UI Huddle is a special event
-    schedule.innerHTML += `
+    /*schedule.innerHTML += `
     <h2 class="time-slot" style="grid-row: time-0830;">Special Events</h2>
     `;
-    emitAgendaEntry(schedule, AGENDA_UI_HUDDLE, '0830', '0900');
+    emitAgendaEntry(schedule, AGENDA_UI_HUDDLE, '0830', '0900');*/
 
     // All other events
     let lastHour = 9;
