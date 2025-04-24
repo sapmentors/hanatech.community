@@ -221,12 +221,21 @@ const AGENDA_JSON = [
                 "bio": "I have been working in SAP Basis since 2005 and have specialized in SAP HANA for 10 years. As a book author on HANA, I enjoy diving deep into technical details and analyzing complex issues. Honestly, I sometimes enjoy solving tricky HANA problems on a weekend more than watching Netflix.",
                 "hash": "d4097bd5fec52c913f2601ddec0b403216171b5e",
                 "photo": true
+            },
+            {
+                "id": "dominik.fiedler@x-l-c.de",
+                "firstName": "Dominik",
+                "lastName": "Fiedler",
+                "company": "XLC - Crossload Consulting GmbH",
+                "bio": "I started working with SAP in 2003 and with SAP Basis in 2006. After running SAP Systems on Oracle for 10 years, I made my first experiences with HANA in 2016. And after only 3 years, we already replaced all Oracle databases by HANA for our SAP workload. Since this time, HANA topics are part of my daily working challenges.",
+                "hash": "3c6435e4629bbe42f0bbe9a46451be64b502a778",
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "16:10",
-        "endTime": "17:10",
+        "startTime": "16:15",
+        "endTime": "17:15",
         "location": "room_w1"
     },
     {
@@ -343,8 +352,8 @@ const AGENDA_JSON = [
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "15:35",
-        "endTime": "16:00",
+        "startTime": "15:40",
+        "endTime": "16:05",
         "location": "room_w1"
     },
     {
@@ -402,8 +411,8 @@ const AGENDA_JSON = [
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "16:40",
-        "endTime": "17:10",
+        "startTime": "16:45",
+        "endTime": "17:15",
         "location": "audimax"
     },
     {
@@ -477,8 +486,8 @@ const AGENDA_JSON = [
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "16:10",
-        "endTime": "16:35",
+        "startTime": "16:15",
+        "endTime": "16:40",
         "location": "audimax"
     },
     {
@@ -527,8 +536,8 @@ const AGENDA_JSON = [
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "15:40",
-        "endTime": "16:00",
+        "startTime": "15:45",
+        "endTime": "16:05",
         "location": "audimax"
     },
     {
@@ -617,7 +626,7 @@ const AGENDA_JSON = [
         "associatedSpeakers": "",
         "presentationLinks": [],
         "startTime": "17:15",
-        "endTime": "17:30",
+        "endTime": "17:35",
         "location": "audimax"
     },
     {
