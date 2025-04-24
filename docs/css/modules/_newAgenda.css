@@ -4,6 +4,12 @@
         grid-gap: 1em;
         grid-template-rows:
             [tracks] 1fr
+            [time-0830] auto
+            [time-0835] auto
+            [time-0840] auto
+            [time-0845] auto
+            [time-0850] auto
+            [time-0855] auto
             [time-0900] auto
             [time-0905] auto
             [time-0910] auto

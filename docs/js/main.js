@@ -660,6 +660,31 @@ const AGENDA_JSON = [
         "location": "canteen"
     }
 ]
+const AGENDA_UI_HUDDLE = {
+    "id": "id-1739897198550-341",
+    "title": "UI Huddle — Propose enhancements and get them implemented",
+    "description": "The UI Huddle format was shaped to bring small interdisciplinary groups together searching for and helping resolve UI issues. These days, we also use UI Huddles to ideate on new UI features for HANA tools. And during the HANA Tech Con we will run the first UI Huddle in real life with customers.\nJoin our interdisciplinary group of UX designers, UI writers, product managers, and developers to ideate on the enhancements for HANA Cloud Central you always wanted to use but never dared to request.\nDuring a UI Huddle, the interdisciplinary team agrees on UI issues to be resolved and features to be implemented. These issues and features have a fix rate of 100% – guaranteed!  Participate in this highly interactive format, propose an enhancement and we will start implementing some features directly during the UI Huddle at HANA Tech Con!",
+    "type": "workshop",
+    "extraInfo": "Ideally this takes place in a room adjacent to the event.",
+    "accepted": true,
+    "confirmed": false,
+    "speakers": [
+        {
+            "id": "johannes.osterhoff@sap.com",
+            "firstName": "Johannes",
+            "lastName": "Osterhoff",
+            "company": "SAP SE",
+            "bio": "UX Lead and Manager for HANA Tools",
+            "hash": "af813ec7f2cb76f13afb519f605bb7ceb073b564",
+            "photo": true
+        }
+    ],
+    "associatedSpeakers": "",
+    "presentationLinks": [],
+    "startTime": "11:45",
+    "endTime": "14:45",
+    "location": "room_w3"
+}
 //--------------------------------------------------------------------------------------------------
 const AGENDA_DICT = AGENDA_JSON.reduce((dic, obj) => {
     dic[obj.id] = obj;
@@ -670,6 +695,7 @@ const ROOM_NAME_MAPPING = {
     "audimax": "Audimax",
     "room_w1": "Room W1",
     "room_w2": "Room W2",
+    "room_w3": "Room W3",
     "canteen": "Canteen"
 };
 //--------------------------------------------------------------------------------------------------
@@ -773,90 +799,117 @@ function compareTimeSlots(o1, o2) {
     }
 }
 //--------------------------------------------------------------------------------------------------
+function emitAgendaEntry(schedule, obj, startRowOverride=undefined, endRowOverride=undefined) {
+    // Extract time information
+    let eventHour = parseInt(obj.endTime.split(':')[0]);
+    let eventMin = parseInt(obj.endTime.split(':')[1]);
+    let isEventOver = Math.floor(Date.now() / 1000) > getConferenceUnixTime(eventHour, eventMin);
+
+    // Extract basic information
+    let isMultiTrackEvent = obj.type.includes('workshop') || obj.type.includes('note') || obj.type.includes("lunch_break") || obj.type.includes('coffee_break');
+    let track = ROOM_TRACK_MAPPING[obj.location];
+    let gridCol = isMultiTrackEvent ? 'track-1-start / track-2-end' : track;
+    let startTimeAdj = obj.startTime.replace(':', '');
+    let endTimeAdj = obj.endTime.replace(':', '');
+
+    // Extract Speakers and sort alphabetically
+    let speakerNames = obj.speakers.reduce((acc, speaker) => {
+        acc.push(speaker['firstName'] + ' ' + speaker['lastName']);
+        return acc;
+    }, []);
+
+    speakerNames.sort();
+    let speakersAcc = speakerNames.join(', ');
+    if (speakersAcc === "") {
+        speakersAcc = "TBD";
+    }
+    if (obj.type.includes('lunch_break') || obj.type.includes('coffee_break')) {
+        speakersAcc = "-";
+    }
+
+    // Ensure correct format of time
+    if (startTimeAdj.length === 3) {
+        startTimeAdj = '0' + startTimeAdj;
+    }
+    if (endTimeAdj.length === 3) {
+        endTimeAdj = '0' + endTimeAdj;
+    }
+
+    // Respect overrides
+    if (startRowOverride !== undefined) {
+        startTimeAdj = startRowOverride;
+    }
+    if (endRowOverride !== undefined) {
+        endTimeAdj = endRowOverride;
+    }
+
+    // Emit Agenda
+    schedule.innerHTML += `
+    <div class="session ${obj.type.includes('workshop') ? "workshop" : ""} ${isMultiTrackEvent ? "track-multi" : track} ${isEventOver ? "event-over" : ""}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
+        <h3 class="session-title"><a href="#" onclick="showAgendaDialog('${obj.id}'); return false;">${obj.title}</a></h3>
+        <div class="session-info-container">
+            <div class="session-time">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
+                <path fill="currentColor"
+                    d="M10.2 11c-.18 0-.35-.06-.5-.18L7.4 8.96a.792.792 0 0 1-.3-.62V4.8c0-.44.36-.8.8-.8.44 0 .8.36.8.8v3.16l2.01 1.62c.34.28.4.78.12 1.12-.16.2-.39.3-.62.3Zm4.8 1.2V3.8C15 2.26 13.74 1 12.2 1H3.8C2.26 1 1 2.26 1 3.8v8.4C1 13.74 2.26 15 3.8 15h8.4c1.54 0 2.8-1.26 2.8-2.8Zm-2.8-9.6c.66 0 1.2.54 1.2 1.2v8.4c0 .66-.54 1.2-1.2 1.2H3.8c-.66 0-1.2-.54-1.2-1.2V3.8c0-.66.54-1.2 1.2-1.2h8.4Z">
+                </path>
+            </svg>
+            <span ${obj.type.includes('workshop') ? "style=\"font-weight: bold;\"" : ""}>${obj.startTime} - ${obj.endTime}, ${ROOM_NAME_MAPPING[obj.location]}</span>
+            </div>
+            <div class="session-presenter">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" version="1.1" viewBox="0 0 512 512" enable-background="new 0 0 512 512">
+                <g>
+                <g>
+                    <path
+                        d="m439.5,236c0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,70-64,126.9-142.7,126.9-78.7,0-142.7-56.9-142.7-126.9 0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,86.2 71.5,157.4 163.1,166.7v57.5h-23.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-23.6v-57.5c91.6-9.3 163.1-80.5 163.1-166.7z" />
+                    <path
+                        d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z" />
+                </g>
+                </g>
+            </svg>
+            <span>${speakersAcc}</span>
+            </div>
+        </div>
+    </div>`;
+}
+//--------------------------------------------------------------------------------------------------
+function emitTimeSlot(schedule, hour, adjHourOverride) {
+    let adjHour = hour.toString().padStart(2, "0");
+    let adjHourDisplay = `${adjHour}:00`;
+    if (adjHourOverride !== undefined) {
+        adjHourDisplay = adjHourOverride;
+    }
+
+    schedule.innerHTML += `
+    <h2 class="time-slot" style="grid-row: time-${adjHour}00;">${adjHourDisplay}</h2>
+    `;
+}
+//--------------------------------------------------------------------------------------------------
 function buildAgenda() {
     let schedule = document.getElementsByClassName('schedule')[0];
-    let lastHour = 9;
 
+    // UI Huddle is a special event
+    schedule.innerHTML += `
+    <h2 class="time-slot" style="grid-row: time-0830;">Special Events</h2>
+    `;
+    emitAgendaEntry(schedule, AGENDA_UI_HUDDLE, '0830', '0900');
+
+    // All other events
+    let lastHour = 9;
     AGENDA_JSON.sort(compareTimeSlots).forEach(obj => {
         // Emit time slots for the agenda
         let currHour = parseInt(obj.startTime.split(':')[0]);
         while (lastHour <= currHour) {
-            let adjHour = lastHour.toString().padStart(2, "0");
-            schedule.innerHTML += `
-            <h2 class="time-slot" style="grid-row: time-${adjHour}00;">${adjHour}:00</h2>
-            `;
-
+            emitTimeSlot(schedule, lastHour);
             lastHour++;
         }
 
-        // Extract time information
-        let eventHour = parseInt(obj.endTime.split(':')[0]);
-        let eventMin = parseInt(obj.endTime.split(':')[1]);
-        let isEventOver = Math.floor(Date.now() / 1000) > getConferenceUnixTime(eventHour, eventMin);
-
-        // Extract basic information
-        let isMultiTrackEvent = obj.type.includes('note') || obj.type.includes("lunch_break") || obj.type.includes('coffee_break');
-        let track = ROOM_TRACK_MAPPING[obj.location];
-        let gridCol = isMultiTrackEvent ? 'track-1-start / track-2-end' : track;
-        let startTimeAdj = obj.startTime.replace(':', '');
-        let endTimeAdj = obj.endTime.replace(':', '');
-
-        // Extract Speakers and sort alphabetically
-        let speakerNames = obj.speakers.reduce((acc, speaker) => {
-            acc.push(speaker['firstName'] + ' ' + speaker['lastName']);
-            return acc;
-        }, []);
-
-        speakerNames.sort();
-        let speakersAcc = speakerNames.join(', ');
-        if (speakersAcc === "") {
-            speakersAcc = "TBD";
-        }
-        if (obj.type.includes('lunch_break') || obj.type.includes('coffee_break')) {
-            speakersAcc = "-";
-        }
-
-        // Ensure correct format of time
-        if (startTimeAdj.length === 3) {
-            startTimeAdj = '0' + startTimeAdj;
-        }
-        if (endTimeAdj.length === 3) {
-            endTimeAdj = '0' + endTimeAdj;
-        }
-
-        // Emit Agenda
-        schedule.innerHTML += `
-        <div class="session ${isMultiTrackEvent ? "track-multi" : track} ${isEventOver ? "event-over" : ""}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
-            <h3 class="session-title"><a href="#" onclick="showAgendaDialog('${obj.id}'); return false;">${obj.title}</a></h3>
-            <div class="session-info-container">
-              <div class="session-time">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
-                  <path fill="currentColor"
-                        d="M10.2 11c-.18 0-.35-.06-.5-.18L7.4 8.96a.792.792 0 0 1-.3-.62V4.8c0-.44.36-.8.8-.8.44 0 .8.36.8.8v3.16l2.01 1.62c.34.28.4.78.12 1.12-.16.2-.39.3-.62.3Zm4.8 1.2V3.8C15 2.26 13.74 1 12.2 1H3.8C2.26 1 1 2.26 1 3.8v8.4C1 13.74 2.26 15 3.8 15h8.4c1.54 0 2.8-1.26 2.8-2.8Zm-2.8-9.6c.66 0 1.2.54 1.2 1.2v8.4c0 .66-.54 1.2-1.2 1.2H3.8c-.66 0-1.2-.54-1.2-1.2V3.8c0-.66.54-1.2 1.2-1.2h8.4Z">
-                  </path>
-                </svg>
-                <span>${obj.startTime} - ${obj.endTime}, ${ROOM_NAME_MAPPING[obj.location]}</span>
-              </div>
-              <div class="session-presenter">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" version="1.1" viewBox="0 0 512 512" enable-background="new 0 0 512 512">
-                  <g>
-                    <g>
-                      <path
-                            d="m439.5,236c0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,70-64,126.9-142.7,126.9-78.7,0-142.7-56.9-142.7-126.9 0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,86.2 71.5,157.4 163.1,166.7v57.5h-23.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-23.6v-57.5c91.6-9.3 163.1-80.5 163.1-166.7z" />
-                      <path
-                            d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z" />
-                    </g>
-                  </g>
-                </svg>
-                <span>${speakersAcc}</span>
-              </div>
-            </div>
-        </div>`
+        emitAgendaEntry(schedule, obj)
     });
 }
 //--------------------------------------------------------------------------------------------------
 function injectAgendaDialogContent(itemId) {
-    let agendaObj = AGENDA_DICT[itemId];
+    let agendaObj = itemId == AGENDA_UI_HUDDLE['id'] ? AGENDA_UI_HUDDLE : AGENDA_DICT[itemId];
     document.getElementById('htec-agenda-dialog-title-inject').innerHTML = agendaObj.title;
     document.getElementById('htec-agenda-dialog-description-inject').innerHTML =
         agendaObj.description.replace(/(?:\r\n|\r|\n)/g, '<br/>');
