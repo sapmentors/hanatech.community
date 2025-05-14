@@ -111,7 +111,7 @@ const AGENDA_JSON = [
         "type": "demo",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "sharath.gangadhara@bs.nttdata.com",
@@ -136,7 +136,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "mathias.kemeter@sap.com",
@@ -145,6 +145,15 @@ const AGENDA_JSON = [
                 "company": "SAP SE",
                 "bio": "Until recently, Mathias was part of the database development unit at SAP. He has been responsible for SAP HANA’s multi-model engines and led the development behind the spatial, graph, hierarchies, and vector engines as well as the JSON document store. Today, he is part of SAP's Business AI unit--but still personally connected to the SAP HANA community.",
                 "hash": "d0b38dfb9848d5b3fee78423ca9359611bf7dcaf",
+                "photo": true
+            },
+            {
+                "id": "witalij.rudnicki@sap.com",
+                "firstName": "Vitaliy",
+                "lastName": "Rudnytskiy",
+                "company": "SAP Polska Sp. z o.o.",
+                "bio": "Vitaliy is an Architect in the global Developer Relations team at SAP. His areas of interest include Big Data and Fast Data solutions, analytics, and Data Visualization. He is a graduate of Wrocław University of Science and Technology. He gained professional experience as a technology consultant first in Poland and then in the USA in Silicon Valley.",
+                "hash": "b84d3bb54897aa5d8cc6cf8abb6b7b807011eadb",
                 "photo": true
             }
         ],
@@ -161,7 +170,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "bastian.bremerich@sap.com",
@@ -186,7 +195,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "matthias.sander@x-l-c.de",
@@ -211,7 +220,7 @@ const AGENDA_JSON = [
         "type": "presentation_detailed",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "matthias.sander@x-l-c.de",
@@ -245,7 +254,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "We will most likely change one of the presenters, due to issues with onsite prescence.\nWe would like to offer a breakout session in the afternoon to also show some demos and have more time for questions.",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "mohamed.ali.chriki@sap.com",
@@ -288,7 +297,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "kutbettin.baran@sys.aok.de",
@@ -313,7 +322,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "Getting back to your idea to speak about HANA Studio :)",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "johannes.osterhoff@sap.com",
@@ -338,7 +347,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "jan.zwickel@sap.com",
@@ -363,7 +372,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "jonathan.bregler@sap.com",
@@ -397,7 +406,7 @@ const AGENDA_JSON = [
         "type": "other",
         "extraInfo": "It's more a 30 min Talk than a 20 min Talk, that's why I chose A. If it doesn't fit into the agenda, I can of course shorten it to a 20 min Spot Talk\n\nHere the \"basics\" of HDI are presented. The talk / proposal https://hanatech.cfapps.eu12.hana.ondemand.com/?sessionKey=D1w8U1uloPcvHizI&amp;viewSession=true should be planed as a Follow Up or Deep Dive session to this one, in the case that both proposals are accepted.",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "rebecca.fondermann@sap.com",
@@ -422,7 +431,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "benedict.baur@mail.de",
@@ -447,7 +456,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "Hello Team, \n\nGiven a chance, i would like to share my experiences of handling HANA sizing topics in a Large scale Industry sector scenarios using a Spot talk of 20 min.\nI would like to have not more than 10  to 12 slides with an average o 2 min talk for about each slide.\nDue to sensitivity of information, I will not be able to do any screen share sessions nor disclose any Client specific information but would rather keep it as general as possible .",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "phani.mallavarapu@gmail.com",
@@ -472,7 +481,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "I'm speaking partly as a former SAP Dev that had the pleasure of porting multiple editors from the old XSC world to the new one, as well as a developer freelancing on different customer projects that involve(d) XSA. ",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "timo.wagner@outlook.com",
@@ -497,7 +506,7 @@ const AGENDA_JSON = [
         "type": "demo",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "lyubov.nakryyko@sap.com",
@@ -522,7 +531,7 @@ const AGENDA_JSON = [
         "type": "demo",
         "extraInfo": "This tool is already used by many teams in the SAP e.g. Ariba, ECS, DLM, CoE, MCC, HANA PS for troubleshooting and daily monitoring of the system. The feedback is very positive.  I would like to present the latest development progress and also promote it to the whole HANA community. Thanks!",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "mingqian.zhong@sap.com",
@@ -547,7 +556,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "sushil.jain01@sap.com",
@@ -572,7 +581,7 @@ const AGENDA_JSON = [
         "type": "demo",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "prabhu.dc@sposea.com",
@@ -606,7 +615,7 @@ const AGENDA_JSON = [
         "type": "opening_note",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [],
         "associatedSpeakers": "",
         "presentationLinks": [],
@@ -621,7 +630,7 @@ const AGENDA_JSON = [
         "type": "closing_note",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [],
         "associatedSpeakers": "",
         "presentationLinks": [],
@@ -636,7 +645,7 @@ const AGENDA_JSON = [
         "type": "lunch_break",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [],
         "associatedSpeakers": "",
         "presentationLinks": [],
@@ -651,7 +660,7 @@ const AGENDA_JSON = [
         "type": "coffee_break",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [],
         "associatedSpeakers": "",
         "presentationLinks": [],
