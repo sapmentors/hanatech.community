@@ -246,18 +246,28 @@
     font-weight: bold;
 }
 
-.track-1 {
-    background-color: var(--brand-color-ui5con);
+.location-audimax {
+    background-color: var(--location-audimax);
     color: #fff;
 }
 
-.track-2 {
-    background-color: var(--brand-color-recap);
+.location-canteen {
+    background-color: var(--location-canteen);
     color: #fff;
 }
 
-.track-multi {
-    background-image: linear-gradient(35deg, var(--brand-color), var(--brand-color-alt));
+.location-room_w1 {
+    background-color: var(--location-w1);
+    color: #fff;
+}
+
+.location-room_w2 {
+    background-color: var(--location-w2);
+    color: #fff;
+}
+
+.location-room_w3 {
+    background-color: var(--location-w3);
     color: #fff;
 }
 

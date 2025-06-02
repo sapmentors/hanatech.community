@@ -854,7 +854,7 @@ function emitAgendaEntry(schedule, obj, startRowOverride=undefined, endRowOverri
 
     // Emit Agenda
     schedule.innerHTML += `
-    <div class="session ${obj.type.includes('workshop') ? "workshop" : ""} ${isMultiTrackEvent ? "track-multi" : track} ${isEventOver ? "event-over" : ""}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
+    <div class="session ${obj.type.includes('workshop') ? "workshop" : ""} location-${obj.location} ${isMultiTrackEvent ? "track-multi" : track} ${isEventOver ? "event-over" : ""}" style="grid-column: ${gridCol}; grid-row: time-${startTimeAdj} / time-${endTimeAdj};">
         <h3 class="session-title"><a href="#" onclick="showAgendaDialog('${obj.id}'); return false;">${obj.title}</a></h3>
         <div class="session-info-container">
             <div class="session-time">

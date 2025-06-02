@@ -19,6 +19,12 @@
   --brand-color-hana: #BA066C;
   --brand-color-codejam: #9D6B57;
 
+  --location-audimax: rgb(196, 187, 53);
+  --location-w1: rgb(37, 144, 191);
+  --location-w2: rgb(37, 144, 191);
+  --location-w3: rgb(243, 121, 2);
+  --location-canteen: rgb(112, 76, 121);
+
   --type-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
   --type-1: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
   --type-2: clamp(1.44rem, 1.2934rem + 0.733vw, 1.9531rem);
