@@ -105,31 +105,6 @@ const JURY_JSON = [
 //--------------------------------------------------------------------------------------------------
 const AGENDA_JSON = [
     {
-        "id": "id-1738091132702-565",
-        "title": "NSE and Replication Filters - Optimize the data stored on HANA",
-        "description": "We used NSE and Date Filters in Replication tasks to optimize the data stored on HANA from the remote tables. \n\nWe saved a lot of cost in terms of storage without compromising on the expected output. ",
-        "type": "demo",
-        "extraInfo": "",
-        "accepted": true,
-        "confirmed": true,
-        "speakers": [
-            {
-                "id": "sharath.gangadhara@bs.nttdata.com",
-                "firstName": "Sharath",
-                "lastName": "Machenahalli Gangadhara",
-                "company": "NTT Data Business Solutions Ltd",
-                "bio": "I started my career with SAP in 2004 as an intern at IBM and have been with SAP ever since. Other than SAP I have been loyal to my wife(Rosa - Microbiologist  and a Biotech start up founder) who I met 1 year into SAP Career. Infact, I met her on the day of SAP TechEd 2026. I suspect a divine connect with SAP :)\n\nI have spent major part of my career in User Interface(CAF, WD Java, VC, WD ABAP, UI5, Fiori). However every now and then, have tried my hands at SAP BPM, Sybase Mobile and NetWeaver PI. My current area of work is HANA XSA. I am currently looking to HANA developments, Datasphere and little bit of Build process automation. My passion to learn new languages has helped me move from UI to Data modelling to Cloud technologies and now with AI. \n\nI love to garden. I also love to DIY civil and carpentry tasks at home. My passion is to learn - languages and technology. In my free time - I love to watch comedy(Seinfeld and Simpsons) or vacation in midst of nature.  ",
-                "hash": "7d8a7faeca882966f576030556f12ffd7a5d7cbc",
-                "photo": true
-            }
-        ],
-        "associatedSpeakers": "",
-        "presentationLinks": [],
-        "startTime": "10:50",
-        "endTime": "11:10",
-        "location": "room_w1"
-    },
-    {
         "id": "id-1739261333784-69",
         "title": "Open Source Tools to work with HANA's Multi-model Engines",
         "description": "Get to know about existing integrations of SAP HANA into Open Source clients--especially in the context of multi-model engines. The session will give a high-level overview of clients like LangChain, QGIS, Tegola, GDAL, DBeaver, GeoServer, and Cytoscape.",
@@ -179,7 +154,7 @@ const AGENDA_JSON = [
                 "company": "SAP SE",
                 "bio": "Bastian Bremerich works as Product Expert in SAP HANA Development. As part of the Database Competence Center he has been supporting strategic customers and internal stakeholders for 10 years. His focus is on analytical scenarios on HANA &amp; HANA Cloud.",
                 "hash": "80b3598ab8331b13adeca3a9cd8bfe2c7af31e76",
-                "photo": false
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
@@ -306,7 +281,7 @@ const AGENDA_JSON = [
                 "company": "AOK Systems GmbH",
                 "bio": "I've been working with HANA for years and mostly support HANA performance issues for our customers. I like to share my experiences (performing workshops, trainings oder presentations) with HANA that I have gained over the last 10 years.",
                 "hash": "6d8dfa750decdf41dddbab8f869e2772696e393a",
-                "photo": false
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
@@ -490,7 +465,7 @@ const AGENDA_JSON = [
                 "company": "",
                 "bio": "Freelance Software Engineer mainly focusing on SAP HANA technologies.\nFormer Developer at SAP working on the SAP HANA Smart Data Integration, Agile Data Preparation and Data Hub/Data Intelligence Products \n-\nStarted my career in the SAP HANA Smart Data Integration team and developed Adapters for the DPAgent.\nWhen Eclipse needed a replacement we've developed WebIDE (XS Classic) editors for Flowgraphs, Reptasks and everything in the Remote Source area. And after a while the same with the subsequent deprecation of XSC in favor for XSA and its new WebIDE.",
                 "hash": "16a5381894b1656ea012e96be98d0ec195943f0a",
-                "photo": false
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
@@ -563,9 +538,9 @@ const AGENDA_JSON = [
                 "firstName": "Sushil",
                 "lastName": "Jain",
                 "company": "SAP SE",
-                "bio": "I develop the developer tools around SAP HANA Cloud database.",
+                "bio": "I develop the developer tools around the SAP HANA Cloud database.",
                 "hash": "dd19077863cdaef86136d51f5b30bbb575498917",
-                "photo": false
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
@@ -612,7 +587,7 @@ const AGENDA_JSON = [
         "id": "id-1742397081762-199",
         "title": "Opening Keynote",
         "description": "Opening Keynote by Organizers and Stefan Bäuerle",
-        "type": "opening_note",
+        "type": "keynote",
         "extraInfo": "",
         "accepted": true,
         "confirmed": true,
@@ -627,14 +602,14 @@ const AGENDA_JSON = [
         "id": "id-1742397155243-287",
         "title": "Closing Note",
         "description": "Closing Note",
-        "type": "closing_note",
+        "type": "keynote",
         "extraInfo": "",
         "accepted": true,
         "confirmed": true,
         "speakers": [],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "17:15",
+        "startTime": "17:20",
         "endTime": "17:35",
         "location": "audimax"
     },
@@ -642,7 +617,7 @@ const AGENDA_JSON = [
         "id": "id-1742910586692-523",
         "title": "Lunch Break",
         "description": "Different Lunch options will be served at the nearby canteen",
-        "type": "lunch_break",
+        "type": "catering",
         "extraInfo": "",
         "accepted": true,
         "confirmed": true,
@@ -657,7 +632,7 @@ const AGENDA_JSON = [
         "id": "id-1742911472729-852",
         "title": "Coffee Break",
         "description": "Small snacks will be served.",
-        "type": "coffee_break",
+        "type": "catering",
         "extraInfo": "",
         "accepted": true,
         "confirmed": true,
@@ -667,6 +642,31 @@ const AGENDA_JSON = [
         "startTime": "14:45",
         "endTime": "15:15",
         "location": "canteen"
+    },
+    {
+        "id": "id-1749641950328-15",
+        "title": "You Think You’re Optimizing? HANA Thinks Otherwise. ",
+        "description": "This article provides some insights into how the way in which SQLScript code is written influences the execution plan.",
+        "type": "demo",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "joerg@brandeis.de",
+                "firstName": "Jörg",
+                "lastName": "Brandeis",
+                "company": "Brandeis Consulting GmbH",
+                "bio": "Trainer &amp; SAP Development expert | Author of “SQLScript for SAP HANA”\n\nJörg Brandeis is a proven expert for SAP HANA and SQLScript. As a trainer for many years, he provides in-depth technical know-how on SAP HANA data modeling, performance optimization and SQLScript development. He is the author of the reference book “SQLScript for SAP HANA”, which has established itself as a standard work. In his presentations, he combines technical depth with high practical relevance.",
+                "hash": "d22a02213f1d054c8f376ecfd5e85189c2bea06b",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "10:50",
+        "endTime": "11:10",
+        "location": "room_w1"
     }
 ]
 const AGENDA_UI_HUDDLE = {
@@ -815,7 +815,12 @@ function emitAgendaEntry(schedule, obj, startRowOverride=undefined, endRowOverri
     let isEventOver = Math.floor(Date.now() / 1000) > getConferenceUnixTime(eventHour, eventMin);
 
     // Extract basic information
-    let isMultiTrackEvent = obj.type.includes('workshop') || obj.type.includes('note') || obj.type.includes("lunch_break") || obj.type.includes('coffee_break');
+    let isMultiTrackEvent =
+        obj.type.includes('workshop') ||
+        obj.type.includes('note') ||
+        obj.type.includes("lunch_break") ||
+        obj.type.includes('coffee_break') ||
+        obj.type.includes('catering');
     let track = ROOM_TRACK_MAPPING[obj.location];
     let gridCol = isMultiTrackEvent ? 'track-1-start / track-2-end' : track;
     let startTimeAdj = obj.startTime.replace(':', '');
@@ -832,7 +837,7 @@ function emitAgendaEntry(schedule, obj, startRowOverride=undefined, endRowOverri
     if (speakersAcc === "") {
         speakersAcc = "TBD";
     }
-    if (obj.type.includes('lunch_break') || obj.type.includes('coffee_break')) {
+    if (obj.type.includes('catering') || obj.type.includes('lunch_break') || obj.type.includes('coffee_break')) {
         speakersAcc = "-";
     }
 
