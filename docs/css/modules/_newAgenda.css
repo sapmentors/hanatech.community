@@ -1,3 +1,76 @@
+/* ------------------------- Virtual Event Table -------------------------  */
+
+.htec-btn.track-A {
+    background-image: linear-gradient(0deg, var(--location-audimax), var(--location-audimax));
+}
+
+.htec-btn.track-B {
+    background-image: linear-gradient(0deg, var(--location-w1), var(--location-w1));
+}
+
+.htec-virtual-event-table .htec-btn {
+    margin: 1rem;
+    margin-bottom: 0;
+}
+
+.htec-virtual-event-table {
+    font-size: var(--type-0);
+    margin: auto;
+}
+
+.htec-virtual-event-table tr {
+    height: 3rem;
+}
+
+.htec-virtual-event-table thead th {
+    line-height: 1.75;
+    border-bottom: 1px solid var(--logo-color);
+}
+
+.htec-virtual-event-table th:first-child {
+    padding-inline-start: 0;
+}
+
+.htec-virtual-event-table tbody th {
+    text-align: center;
+}
+
+.htec-virtual-event-table th,
+.htec-virtual-event-table td {
+    line-height: 1.5;
+}
+
+.htec-virtual-event-table td {
+    text-align: center;
+}
+
+.htec-virtual-event-table-bleft {
+    border-left: 1px solid var(--logo-color);
+}
+
+@media only screen and (min-width: 600px) {
+
+    .htec-virtual-event-table th,
+    .htec-virtual-event-table td {
+        padding-block: .2rem;
+        padding-inline: .5rem;
+    }
+
+    .htec-virtual-event-table td {
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    .htec-virtual-event-table th,
+    .htec-virtual-event-table td {
+        padding-block: .5rem;
+        padding-inline: 1rem;
+    } }
+
+/* ------------------------- Agenda Table -------------------------  */
+
 @media screen and (min-width:700px) {
     .schedule {
         display: grid;
