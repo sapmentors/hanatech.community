@@ -674,6 +674,10 @@ main {
   text-align: center;
 }
 
+.htec-wrap.small-margin {
+  padding-block: 2rem;
+}
+
 .htec-wrap h2 {
   text-align: center;
 }
@@ -1371,6 +1375,28 @@ footer a:is(:hover, :focus) svg {
   white-space: nowrap;
   flex-wrap: wrap;
   flex: 1 0 0;
+}
+
+/* Getting Here */
+.htec-getting-here h3 {
+  color: var(--logo-color);
+  font-size: var(--type-1);
+  text-align: left;
+  margin: 1rem;
+}
+
+.htec-getting-here p {
+  text-align: left;
+}
+
+.htec-getting-here-list {
+  list-style-type: square;
+  display: inline-block;
+  text-align: left;
+}
+
+.htec-getting-here-list li::marker {
+  color: var(--brand-color)
 }
 
 /* ---------------------------- Dark Mode ----------------------------  */
