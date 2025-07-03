@@ -591,7 +591,17 @@ const AGENDA_JSON = [
         "extraInfo": "",
         "accepted": true,
         "confirmed": true,
-        "speakers": [],
+        "speakers": [
+            {
+                "id": "stefan.bäuerle@sap.com",
+                "firstName": "Stefan",
+                "lastName": "Bäuerle",
+                "company": "SAP SE",
+                "bio": "Stefan Bäuerle is Head of BTP HANA & Persistency with engineering responsibility for the development, strategy, and vision of all Database assets at SAP, such as SAP HANA, SAP HANA Cloud and the Sybase portfolio. He is leading a global and diverse team, with great emphasis on innovation, cloud service deployments and customer centricity. With a history of 25 years at SAP, Stefan held various senior leadership roles throughout his career. Amongst others, in software development, roles of architectural nature as well as in managerial executive positions. Previously to his current role, Stefan was leading the Technology Office at SAP HANA Database & Analytics, defining the technology strategy for data management and analytics across the portfolio, including SAP HANA, SAP Analytics Cloud and SAP Data Warehouse Cloud, amongst others.",
+                "hash": "sb",
+                "photo": true
+            }
+        ],
         "associatedSpeakers": "",
         "presentationLinks": [],
         "startTime": "9:00",
