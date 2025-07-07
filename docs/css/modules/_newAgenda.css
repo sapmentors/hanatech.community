@@ -196,7 +196,8 @@
         grid-template-columns:
             [times] 4em
             [track-1-start] minmax(0, 1fr)
-            [track-1-end track-2-start] minmax(0, 1fr);
+            [track-1-end track-2-start] minmax(0, 1fr)
+            [track-2-end track-3-start] minmax(0, 1fr)
     }
 }
 
@@ -340,6 +341,11 @@
 }
 
 .location-room_w3 {
+    background-color: var(--location-w3);
+    color: #fff;
+}
+
+.location-experts_1 {
     background-color: var(--location-w3);
     color: #fff;
 }

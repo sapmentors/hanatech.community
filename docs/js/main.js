@@ -593,12 +593,12 @@ const AGENDA_JSON = [
         "confirmed": true,
         "speakers": [
             {
-                "id": "stefan.bäuerle@sap.com",
+                "id": "stefan.baeuerle@sap.com",
                 "firstName": "Stefan",
                 "lastName": "Bäuerle",
                 "company": "SAP SE",
-                "bio": "Stefan Bäuerle is Head of BTP HANA & Persistency with engineering responsibility for the development, strategy, and vision of all Database assets at SAP, such as SAP HANA, SAP HANA Cloud and the Sybase portfolio. He is leading a global and diverse team, with great emphasis on innovation, cloud service deployments and customer centricity. With a history of 25 years at SAP, Stefan held various senior leadership roles throughout his career. Amongst others, in software development, roles of architectural nature as well as in managerial executive positions. Previously to his current role, Stefan was leading the Technology Office at SAP HANA Database & Analytics, defining the technology strategy for data management and analytics across the portfolio, including SAP HANA, SAP Analytics Cloud and SAP Data Warehouse Cloud, amongst others.",
-                "hash": "sb",
+                "bio": "Stefan Bäuerle is Head of BTP HANA &amp; Persistency with engineering responsibility for the development, strategy, and vision of all Database assets at SAP, such as SAP HANA, SAP HANA Cloud and the Sybase portfolio. He is leading a global and diverse team, with great emphasis on innovation, cloud service deployments and customer centricity.",
+                "hash": "c16b4307d5e21b91ccea80896ae905588663d7f6",
                 "photo": true
             }
         ],
@@ -610,13 +610,23 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1742397155243-287",
-        "title": "Closing Note",
-        "description": "Closing Note",
+        "title": "Closing Note: Expanding Your Comfort Zone",
+        "description": "Over the years, I’ve been presented with several opportunities that were equal parts amazing and terrifying. With each new experience, no matter the result, I grew more confident and,\nspoiler alert, expanded my comfort zone. I’d love to share my experience, the good and the bad, and help you do the same. Here's to the power of saying \"Yes, I can!\"",
         "type": "keynote",
         "extraInfo": "",
         "accepted": true,
         "confirmed": true,
-        "speakers": [],
+        "speakers": [
+            {
+                "id": "ceci.huergo@sap.com",
+                "firstName": "Ceci",
+                "lastName": "Huergo",
+                "company": "SAP SE",
+                "bio": "+7 years of experience at SAP, supporting all things SAP BTP. From strategy and road map presentations, to clean core examples, to  creating awareness and enablement initiatives to support customers and partners with their SAP BTP journey.",
+                "hash": "b77398632ce62d28a486fce2ee0c9c7b71db9eb1",
+                "photo": true
+            }
+        ],
         "associatedSpeakers": "",
         "presentationLinks": [],
         "startTime": "17:20",
@@ -660,7 +670,7 @@ const AGENDA_JSON = [
         "type": "demo",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "joerg@brandeis.de",
@@ -677,7 +687,22 @@ const AGENDA_JSON = [
         "startTime": "10:50",
         "endTime": "11:10",
         "location": "room_w1"
-    }
+    },
+    {
+        "id": "id-1750154514911-756",
+        "title": "Meet the Expert",
+        "description": "General Slot for Expert Corners in the 1 Floor (Lobby/Atrium)",
+        "type": "expert_corner",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "10:00",
+        "endTime": "17:00",
+        "location": "experts_1"
+    },
 ]
 const AGENDA_UI_HUDDLE = {
     "id": "id-1739897198550-341",
@@ -715,14 +740,16 @@ const ROOM_NAME_MAPPING = {
     "room_w1": "Room W1",
     "room_w2": "Room W2",
     "room_w3": "Room W3",
-    "canteen": "Canteen"
+    "canteen": "Canteen",
+    "experts_1": "Expert Corner"
 };
 //--------------------------------------------------------------------------------------------------
 const ROOM_TRACK_MAPPING = {
     "audimax": "track-1",
     "room_w1": "track-2",
     "room_w2": "track-2",
-    "canteen": "track-1"
+    "canteen": "track-1",
+    "experts_1": "track-3"
 };
 //--------------------------------------------------------------------------------------------------
 function getConferenceUnixTime(hour = 9, minute = 0) {
@@ -832,9 +859,12 @@ function emitAgendaEntry(schedule, obj, startRowOverride=undefined, endRowOverri
         obj.type.includes('coffee_break') ||
         obj.type.includes('catering');
     let track = ROOM_TRACK_MAPPING[obj.location];
-    let gridCol = isMultiTrackEvent ? 'track-1-start / track-2-end' : track;
     let startTimeAdj = obj.startTime.replace(':', '');
     let endTimeAdj = obj.endTime.replace(':', '');
+    let gridCol = isMultiTrackEvent ? 'track-1-start / track-2-end' : track;
+
+    if (isMultiTrackEvent && obj.type.includes('note'))
+        gridCol = "track-1-start / track-3-end";
 
     // Extract Speakers and sort alphabetically
     let speakerNames = obj.speakers.reduce((acc, speaker) => {
@@ -847,7 +877,7 @@ function emitAgendaEntry(schedule, obj, startRowOverride=undefined, endRowOverri
     if (speakersAcc === "") {
         speakersAcc = "TBD";
     }
-    if (obj.type.includes('catering') || obj.type.includes('lunch_break') || obj.type.includes('coffee_break')) {
+    if (obj.type.includes('catering') || obj.type.includes('lunch_break') || obj.type.includes('coffee_break') || obj.type.includes('expert')) {
         speakersAcc = "-";
     }
 
