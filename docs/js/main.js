@@ -1023,7 +1023,7 @@ function buildAgenda() {
 }
 //--------------------------------------------------------------------------------------------------
 function injectAgendaDialogContent(itemId) {
-    let agendaObj = itemId == AGENDA_UI_HUDDLE['id'] ? AGENDA_UI_HUDDLE : AGENDA_DICT[itemId];
+    let agendaObj = AGENDA_DICT[itemId];
     document.getElementById('htec-agenda-dialog-title-inject').innerHTML = agendaObj.title;
     document.getElementById('htec-agenda-dialog-description-inject').innerHTML =
         agendaObj.description.replace(/(?:\r\n|\r|\n)/g, '<br/>');
