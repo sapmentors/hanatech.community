@@ -689,46 +689,106 @@ const AGENDA_JSON = [
         "location": "room_w1"
     },
     {
-        "id": "id-1750154514911-756",
-        "title": "Meet the Expert",
-        "description": "General Slot for Expert Corners in the 1 Floor (Lobby/Atrium)",
-        "type": "expert_corner",
+        "id": "id-1751538918786-862",
+        "title": "UI Huddle Intro A",
+        "description": "Tell us your feature suggestions for the HANA tools and any pain points you’ve experienced while using them.​ During the UI Huddle Hackathon, our interdisciplinary group of SAP HANA Cloud experts gathers your feedback, and replies with a quick turnaround: we hack, prototype, and design based on your feedback and present our achievement at the end of the HANA Tech Con.\n \nThis slot is “UI Huddle Intro A” with a quick explanation of the process\n \nMore Intro Sessions will take place during the day upon requests.",
+        "type": "other",
         "extraInfo": "",
         "accepted": true,
         "confirmed": true,
-        "speakers": [],
+        "speakers": [
+            {
+                "id": "johannes.osterhoff@sap.com",
+                "firstName": "Johannes",
+                "lastName": "Osterhoff",
+                "company": "SAP SE",
+                "bio": "UX Lead and Manager for HANA Tools",
+                "hash": "af813ec7f2cb76f13afb519f605bb7ceb073b564",
+                "photo": true
+            }
+        ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "10:00",
-        "endTime": "17:00",
-        "location": "experts_1"
+        "startTime": "9:55",
+        "endTime": "10:40",
+        "location": "room_w3"
     },
+    {
+        "id": "id-1751538966394-612",
+        "title": "UI Huddle Intro B",
+        "description": "Tell us your feature suggestions for the HANA tools and any pain points you’ve experienced while using them.​ During the UI Huddle Hackathon, our interdisciplinary group of SAP HANA Cloud experts gathers your feedback, and replies with a quick turnaround: we hack, prototype, and design based on your feedback and present our achievement at the end of the HANA Tech Con.\n \nThis slot is “UI Huddle Intro B” with a quick explanation of the process\n \nMore Intro Sessions will take place during the day upon requests.",
+        "type": "other",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [
+            {
+                "id": "april.luo@sap.com",
+                "firstName": "April",
+                "lastName": "Luo",
+                "company": "SAP SE",
+                "bio": "As a UX designer at SAP HANA Cloud, I specialize in designing intuitive and impactful features for HANA Cloud Central. I lead the coordination of our team's innovation project, the UI Huddle, and actively drive other forward-thinking initiatives. ",
+                "hash": "ae3caf133812478e21dc1198319b90359972fbc2",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "10:50",
+        "endTime": "11:35",
+        "location": "room_w3"
+    },
+    {
+        "id": "id-1751539076123-313",
+        "title": "UI Huddle: Hacking, prototyping, designing - Join any time!",
+        "description": "Hacking, prototyping, designing of features and solutions based on your feedback – join any time!\nConstant UI Huddle Intros upon request.\n\nTell us your feature suggestions for the HANA tools and any pain points you’ve experienced while using them.​ During the UI Huddle Hackathon, our interdisciplinary group of SAP HANA Cloud experts gathers your feedback, and replies with a quick turnaround: we hack, prototype, and design based on your feedback and present our achievement at the end of the HANA Tech Con.",
+        "type": "other",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [
+            {
+                "id": "johannes.osterhoff@sap.com",
+                "firstName": "Johannes",
+                "lastName": "Osterhoff",
+                "company": "SAP SE",
+                "bio": "UX Lead and Manager for HANA Tools",
+                "hash": "af813ec7f2cb76f13afb519f605bb7ceb073b564",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "11:45",
+        "endTime": "16:05",
+        "location": "room_w3"
+    },
+    {
+        "id": "id-1751539145377-650",
+        "title": "UI Huddle Closure",
+        "description": "Let us see what we have achieved during the day.\n\nThis is the presentation where we show what had been prototyped and designed during the UI Huddle Hackathon.",
+        "type": "other",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [
+            {
+                "id": "johannes.osterhoff@sap.com",
+                "firstName": "Johannes",
+                "lastName": "Osterhoff",
+                "company": "SAP SE",
+                "bio": "UX Lead and Manager for HANA Tools",
+                "hash": "af813ec7f2cb76f13afb519f605bb7ceb073b564",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "16:15",
+        "endTime": "17:15",
+        "location": "room_w3"
+    }
 ]
-const AGENDA_UI_HUDDLE = {
-    "id": "id-1739897198550-341",
-    "title": "UI Huddle — Propose enhancements and get them implemented",
-    "description": "The UI Huddle format was shaped to bring small interdisciplinary groups together searching for and helping resolve UI issues. These days, we also use UI Huddles to ideate on new UI features for HANA tools. And during the HANA Tech Con we will run the first UI Huddle in real life with customers.\nJoin our interdisciplinary group of UX designers, UI writers, product managers, and developers to ideate on the enhancements for HANA Cloud Central you always wanted to use but never dared to request.\nDuring a UI Huddle, the interdisciplinary team agrees on UI issues to be resolved and features to be implemented. These issues and features have a fix rate of 100% – guaranteed!  Participate in this highly interactive format, propose an enhancement and we will start implementing some features directly during the UI Huddle at HANA Tech Con!",
-    "type": "workshop",
-    "extraInfo": "Ideally this takes place in a room adjacent to the event.",
-    "accepted": true,
-    "confirmed": false,
-    "speakers": [
-        {
-            "id": "johannes.osterhoff@sap.com",
-            "firstName": "Johannes",
-            "lastName": "Osterhoff",
-            "company": "SAP SE",
-            "bio": "UX Lead and Manager for HANA Tools",
-            "hash": "af813ec7f2cb76f13afb519f605bb7ceb073b564",
-            "photo": true
-        }
-    ],
-    "associatedSpeakers": "",
-    "presentationLinks": [],
-    "startTime": "11:45",
-    "endTime": "14:45",
-    "location": "room_w3"
-}
 //--------------------------------------------------------------------------------------------------
 const AGENDA_DICT = AGENDA_JSON.reduce((dic, obj) => {
     dic[obj.id] = obj;
@@ -748,8 +808,8 @@ const ROOM_TRACK_MAPPING = {
     "audimax": "track-1",
     "room_w1": "track-2",
     "room_w2": "track-2",
+    "room_w3": "track-3",
     "canteen": "track-1",
-    "experts_1": "track-3"
 };
 //--------------------------------------------------------------------------------------------------
 function getConferenceUnixTime(hour = 9, minute = 0) {
