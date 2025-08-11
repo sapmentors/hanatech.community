@@ -1,0 +1,22 @@
+About me:
+ZHONG, Mingqian (Tim)
+
+I am a SAP HANA Database Expert focusing on trouble shooting,
+performance tunning, configuration optimization, etc.
+
+I am working as DEA (De Escalation Architect) in the 
+SAP MCC (Mission Control Center) helping customers to quickly recover from 
+business down situation and also provide in-depth root cause analysis with
+SAP HANA database problems. 
+
+I am the creator of SAP MCC HANA tool "SAP HANA KPI Collector"
+I am the creator of SAP MCC HANA trouble shooting tool "SAP HANA HotSpots"
+
+
+Notes:
+2899330 - FAQ: SAP HANA KPI Collector (https://me.sap.com/notes/2899330)
+2927209 - FAQ: SAP HANA HotSpots (https://me.sap.com/notes/2927209)
+
+Document:
+https://pages.github.tools.sap/mcc/hsdoc/
+
