@@ -1,0 +1,118 @@
+/* Sticky Navigation */
+.htec-sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--background-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.htec-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.htec-nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.htec-nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.htec-nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.htec-nav-menu a {
+    text-decoration: none;
+    color: var(--logo-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.htec-nav-menu a:hover,
+.htec-nav-menu a.active {
+    color: var(--brand-color);
+}
+
+/* Burger Menu */
+.htec-burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.htec-burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: var(--logo-color);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.htec-burger-menu[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.htec-burger-menu[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.htec-burger-menu[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .htec-burger-menu {
+        display: flex;
+    }
+
+    .htec-nav-menu {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--background-color);
+        padding: 2rem;
+        gap: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .htec-nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .htec-nav-menu li {
+        text-align: center;
+    }
+
+    .htec-nav-container {
+        padding: 0 1rem;
+    }
+}
