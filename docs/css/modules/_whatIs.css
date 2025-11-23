@@ -10,7 +10,7 @@
 .htec-whatis-feature-icon {
     width: 48px;
     height: 48px;
-    color: var(--htec-primary-color, #FF5D17);
+    color: var(--brand-color);
     margin-bottom: 1rem;
 }
 
