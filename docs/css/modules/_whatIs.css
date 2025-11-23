@@ -1,0 +1,55 @@
+.htec-whatis-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.htec-whatis-feature-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--htec-primary-color, #FF5D17);
+    margin-bottom: 1rem;
+}
+
+.htec-whatis-feature h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.htec-whatis-feature p {
+    margin: 0;
+    color: var(--htec-logo);
+    line-height: 1.6;
+}
+
+.htec-whatis-feature-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.htec-whatis-feature-list > li {
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+@media (max-width: 768px) {
+    header .htec-wrap ul {
+        grid-template-columns: 1fr;
+    }
+
+    .htec-whatis-feature {
+        padding: 1rem;
+    }
+}

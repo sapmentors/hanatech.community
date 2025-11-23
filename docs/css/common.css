@@ -589,9 +589,11 @@ a:is(.active) {
   padding-block: 0.75rem;
   padding-inline: 1rem;
   background-image: linear-gradient(45deg, var(--brand-color-alt), var(--brand-color));
-  border-radius: 0.6rem;
+  /*border-radius: 0.6rem;*/
+  outline: 1px solid white;
+  border: 1px solid white;
+  outline-offset: -.2rem;
   color: var(--white);
-  border: 0;
   font-size: var(--type-0);
   font-weight: 700;
   text-decoration: none;
