@@ -207,3 +207,92 @@ document.addEventListener('DOMContentLoaded', () => {
     if (clock.length > 0)
         updateTime();
 });
+//--------------------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.htec-burger-menu');
+    const menu = document.getElementById('site-menu');
+
+    if (!burger || !menu) return;
+
+    // Initial state
+    burger.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('data-menu-collapsible', 'true');
+
+    function openMenu() {
+        menu.classList.add('is-open');
+        burger.classList.add('is-active');
+        burger.setAttribute('aria-expanded', 'true');
+
+        // Prevent background scroll
+        document.documentElement.classList.add('nav-open');
+
+        // Focus first link for accessibility
+        const firstLink = menu.querySelector('a');
+        if (firstLink) firstLink.focus();
+        trapFocus(true);
+    }
+
+    function closeMenu() {
+        menu.classList.remove('is-open');
+        burger.classList.remove('is-active');
+        burger.setAttribute('aria-expanded', 'false');
+        document.documentElement.classList.remove('nav-open');
+        trapFocus(false);
+    }
+
+    function toggleMenu() {
+        const isOpen = burger.getAttribute('aria-expanded') === 'true';
+        isOpen ? closeMenu() : openMenu();
+    }
+
+    burger.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+            closeMenu();
+            burger.focus();
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (burger.getAttribute('aria-expanded') === 'true') {
+            if (!menu.contains(e.target) && !burger.contains(e.target)) {
+                closeMenu();
+            }
+        }
+    });
+
+    // Simple focus trap while menu is open (optional)
+    let focusable = [];
+    function trapFocus(enable) {
+        if (!enable) {
+            document.removeEventListener('keydown', handleTab);
+            return;
+        }
+        focusable = Array.from(
+            menu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])')
+        );
+        if (focusable.length) {
+            document.addEventListener('keydown', handleTab);
+        }
+    }
+
+    function handleTab(e) {
+        if (e.key !== 'Tab') return;
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    }
+});
