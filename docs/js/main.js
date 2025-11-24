@@ -102,7 +102,7 @@ const JURY_JSON = [
 function getConferenceUnixTime(hour = 9, minute = 0) {
     hour = hour.toString().padStart(2, "0");
     minute = minute.toString().padStart(2, "0");
-    return Math.floor(Date.parse(`2025-07-10T${hour}:${minute}:00+02:00`) / 1000);
+    return Math.floor(Date.parse(`2026-01-01T${hour}:${minute}:00+02:00`) / 1000);
 }
 //--------------------------------------------------------------------------------------------------
 function buildSocialHTML(obj) {
