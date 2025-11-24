@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Simple focus trap while menu is open (optional)
+    // Simple focus trap while menu is open
     let focusable = [];
     function trapFocus(enable) {
         if (!enable) {
