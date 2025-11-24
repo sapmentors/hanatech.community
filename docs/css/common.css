@@ -1112,9 +1112,12 @@ main {
   bottom: 2rem;
   right: 2rem;
   background-color: var(--brand-color);
-  border: 0.25rem solid var(--brand-color);
-  border-radius: 1em;
+  /* border: 0.25rem solid var(--brand-color); */
+  outline: 2px solid white;
+  border: 2px solid white;
+  outline-offset: -.35rem;
   padding: 15px;
+  opacity: .85;
 }
 
 .htec-location-desc h2 {

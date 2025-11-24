@@ -1,0 +1,53 @@
+.htec-impressions-sec {
+    width: 100%;
+    background-image: linear-gradient(45deg, var(--brand-color-alt), var(--brand-color));
+}
+
+.htec-impressions-sec > h3 {
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    margin: 0;
+}
+
+.htec-impressions-gal {
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 0em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+}
+
+.htec-impressions-gal > img {
+    box-sizing: border-box;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+    position: relative;
+}
+
+.htec-impressions-gal > img:hover {
+    filter: none;
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.htec-impressions-gal > img.four-grid-cells {
+    grid-row: span 2 / auto;
+    grid-column: span 2 / auto;
+}
+
+.htec-impressions-gal > img.wide-image {
+    grid-column: span 2 / auto;
+}
+
+.htec-impressions-gal>img.tall-image {
+    grid-row: span 2 / auto;
+}
