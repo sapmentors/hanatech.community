@@ -51,20 +51,12 @@ const JURY_JSON = [
         ]
     },
     {
-        "name": "Mathias Kemeter",
-        "position": "Software Development Manager",
+        "name": "Rebecca Fondermann",
+        "position": "C++ Senior Developer",
         "company": "SAP",
-        "image": "images/jury/mathias_kemeter.webp",
-        "bio": "Within SAP’s database development unit, Mathias is responsible for SAP HANA’s multi-model engines. In his role is leading the development behind the spatial, graph, hierarchies, and vector engines as well as the JSON document store.",
+        "image": "images/jury/rebecca_fondermann.webp",
+        "bio": "I joined SAP and the Hana Deployment Infrastructure (HDI) Team on March 1, 2021, where I am working as C++ Senior Developer on HDI Core. I initially studied chemistry and specialized in theoretical chemistry after completing my undergraduate degree. During my PhD, I learned software development and programming in C++. It was during this time that I discovered a passion for programming, which led me to pursue a career in software development rather than continuing in the field of chemistry after completing my PhD thesis.",
         "socials": [
-            {
-                "type": "linkedin",
-                "url": "https://www.linkedin.com/in/mathiaskemeter/"
-            },
-            {
-                "type": "bluesky",
-                "url": "https://bsky.app/profile/kemeter.rocks"
-            }
         ]
     },
     {
@@ -95,6 +87,15 @@ const JURY_JSON = [
                 "type": "bluesky",
                 "url": "https://bsky.app/profile/sygyzmundovych.bsky.social"
             }
+        ]
+    },
+    {
+        "name": "Alexander Boehm",
+        "position": "HANA Chief Architect",
+        "company": "SAP",
+        "image": "images/jury/boehm.webp",
+        "bio": "Dr. Alexander Böhm is a Distinguished Engineer at SAP and one of the chief architects for the SAP HANA Cloud database management system. His specific focus is on system performance and core database topics. He drives strategic, tactical, and operational projects, including design and architectural changes of the database kernel for key stakeholders, i.e. SAP S/4HANA. Additionally, he is overseeing the evolution of the HANA core database management system with respect to novel hardware and technology as well as cloud-based system deployments.",
+        "socials": [
         ]
     }
 ]
