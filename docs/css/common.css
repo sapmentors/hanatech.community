@@ -602,6 +602,12 @@ a:is(.active) {
   box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
 }
 
+.htec-btn-center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .htec-btn.small {
   display: block;
   margin: 0 auto;
@@ -1402,6 +1408,26 @@ footer a:is(:hover, :focus) svg {
 
 .htec-getting-here-list li::marker {
   color: var(--brand-color)
+}
+
+.htec-thick-box {
+  max-width: 1440px;
+  margin-block: 0;
+  margin-inline: auto;
+  padding-block: 3rem;
+  padding-inline: 3vw;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.htec-thick-box h1, h2, h3, h4, h5 {
+  color: var(--brand-color);
+}
+
+.htec-thick-box h1, h2, h3 {
+  text-align: center;
+  padding-top: 0;
+  padding: .5rem;
 }
 
 /* ---------------------------- Dark Mode ----------------------------  */
