@@ -421,3 +421,87 @@ svg.avantra {
   text-align: left;
   margin-block: .5rem;
 }
+
+/* ------------------------- Sponsors Table -------------------------  */
+
+/* Desktop: klassische Tabelle */
+.htec-sponsors-new-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.htec-sponsors-new-table th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.htec-sponsors-new-table th {
+  background: var(--brand-color);
+  font-size: 1.1rem;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.check {
+  color: var(--sucess-color) !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.cross {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/* MOBILE MODE: Tabelle ausblenden, Karten anzeigen */
+.htec-sponsors-new-cards {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .htec-sponsors-new-table {
+    display: none;
+  }
+
+  .htec-sponsors-new-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .htec-sponsors-new-card {
+    z-index: 100;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    /*border: 1px solid var(--logo-color);
+    border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .htec-sponsors-new-card table {
+    border-radius: 10px;
+    align-self: center;
+    overflow: hidden;
+    border-collapse: collapse;
+  }
+
+  .htec-sponsors-new-card td, tr {
+    color: var(--logo-color);
+    border-right: var(--logo-color);
+    border-bottom: 1px solid #ddd;
+  }
+
+  .htec-sponsors-new-card h2 {
+    text-align: center;
+    color: var(--brand-color);
+  }
+}
