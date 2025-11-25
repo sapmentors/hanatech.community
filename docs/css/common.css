@@ -16,7 +16,7 @@
   --code-connect-brand-color: #3B4673;
   --brand-color-recap: #0090DA;
   --brand-color-ui5con: #FF5D17;
-  --brand-color-hana: #BA066C;
+  --brand-color-hana: oklch(51.614% 0.20889 355.801);
   --brand-color-codejam: #9D6B57;
 
   --location-audimax: rgb(196, 187, 53);
@@ -716,8 +716,15 @@ main {
 .htec-site-header {
   min-height: 55vh;
   position: relative;
-  background: linear-gradient(to bottom, var(--white) 20%, rgba(255,255,255,.0));
-  text-align: center;
+  /*background-image: linear-gradient(to bottom, rgba(50, 50, 50, 1), rgba(255,255,255,.0))*/
+  background-image: url('../images/impressions/audimax.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* rgb(186, 6, 108) */
+  background-color: rgba(255, 255, 255, 0.65);
+  background-blend-mode: lighten;
 }
 
 .htec-site-header .htec-wrap {
@@ -748,17 +755,17 @@ main {
   text-align: center;
 }
 
-.htec-site-header h1 {
+.htec-site-header h2 {
   display: flex;
   flex-direction: column;
 }
 
-.htec-site-header h1 span:first-child {
+.htec-site-header h2 span:first-child {
   font-size: clamp(8rem, 20vw, 15rem);
   line-height: 1;
 }
 
-.htec-site-header h1 span:last-child {
+.htec-site-header h2 span:last-child {
   font-size: clamp(2.6rem, 7vw, 5rem);
   color: var(--brand-color);
 }
@@ -958,9 +965,9 @@ main {
 
 .clock-label {
   color: var(--brand-color);
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 825px) {
@@ -1105,6 +1112,7 @@ main {
   min-height: 664px;
   padding: 0px;
   margin: 0px;
+  background-image: url('../images/impressions/venue.webp');
 }
 
 .htec-location {
@@ -1430,6 +1438,10 @@ footer a:is(:hover, :focus) svg {
   padding: .5rem;
 }
 
+.deferred {
+  background-image: none !important;
+}
+
 /* ---------------------------- Dark Mode ----------------------------  */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -1438,12 +1450,8 @@ footer a:is(:hover, :focus) svg {
     --text-color: #fff;
     --code-connect-color: var(--brand-color-alt);
     --logo-color: #fff;
-    --backdrop-color: rgba(36, 36, 36, 0.8);
+    --backdrop-color: rgba(36, 36, 36, 0.65);
     --modala-shadow: .1rem .1rem 1rem var(--brand-color-alt);
-  }
-
-  .htec-site-header {
-    background-image: linear-gradient(to bottom, rgba(50, 50, 50, 1), rgba(255,255,255,.0))
   }
 
   .htec-btn,
@@ -1462,5 +1470,10 @@ footer a:is(:hover, :focus) svg {
   #jssoft {
     --js-color-1: var(--logo-color);
     --js-color-2: var(--logo-color);
+  }
+
+  .htec-site-header {
+      background-color: rgba(0, 0, 0, 0.79);
+      background-blend-mode: darken;
   }
 }

@@ -19,7 +19,7 @@
     grid-auto-flow: dense;
 }
 
-.htec-impressions-gal > img {
+.htec-impressions-gal > div {
     box-sizing: border-box;
     display: block;
     object-fit: cover;
@@ -32,22 +32,67 @@
     position: relative;
 }
 
-.htec-impressions-gal > img:hover {
+.htec-impressions-gal img {
+    box-sizing: border-box;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: relative;
+}
+
+.htec-impressions-gal span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+    height: auto;
+
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s linear;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    font-weight: bold;
+    background-color: rgba(186, 6, 108, 0.6);
+}
+
+.htec-impressions-gal div:hover {
     filter: none;
     transform: scale(1.02) translateY(-2px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-.htec-impressions-gal > img.four-grid-cells {
+.htec-impressions-gal div:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+.htec-impressions-gal div.four-grid-cells {
     grid-row: span 2 / auto;
     grid-column: span 2 / auto;
 }
 
-.htec-impressions-gal > img.wide-image {
+.htec-impressions-gal div.wide-image {
     grid-column: span 2 / auto;
 }
 
-.htec-impressions-gal>img.tall-image {
+.htec-impressions-gal div.tall-image {
     grid-row: span 2 / auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .htec-impressions-gal span {
+        display: none;
+    }
+
+    .htec-impressions-gal div:hover span {
+        display: none;
+    }
 }

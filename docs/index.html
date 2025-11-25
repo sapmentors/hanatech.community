@@ -29,15 +29,15 @@
   <link rel="stylesheet" href="./css/modules.css" />
 
   <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>-->
-  <script
+  <!--<script
           defer
           src="https://cdn.jsdelivr.net/npm/a11y-dialog@8/dist/a11y-dialog.min.js"></script>
-  <script src="https://js.tito.io/v2/with/inline" async></script>
+  <script src="https://js.tito.io/v2/with/inline" async></script>-->
   <script src="./js/main.js"></script>
 </head>
 
 <body>
-  <header class="htec-site-header" id="header">
+  <header class="htec-site-header deferred" id="header">
     <nav class="htec-sticky-nav" aria-label="Main navigation">
       <div class="htec-nav-container">
         <a href="index.html" class="htec-nav-logo">
@@ -62,9 +62,9 @@
     </nav>
     <div class="htec-wrap">
       <div class="htec-countdown-container">
-        <h1>
-          Join us soon!
-        </h1>
+        <h2>
+          Join us on July 16, 2026
+        </h2>
         <div class="clock-container">
           <div class="clock-col">
             <p class="clock-day clock-timer">
@@ -136,7 +136,7 @@
   </header>
 
   <main id="main">
-    <section class="htec-wrap" style="padding-top: 0;">
+    <section class="htec-wrap">
       <h3 style="text-align: center;">Call for Content has started!</h3>
       <p>Share your expertise with the HANA community! We're looking for passionate speakers to present at HANA Tech Con 2026. Whether you're working with SAP HANA, cloud technologies, or innovative data solutions - we want to hear from you. Submit your session proposal and be part of this amazing community event!</p>
       <div class="htec-btn-center-container">
@@ -147,48 +147,84 @@
     <section class="htec-impressions-sec" id="impressions">
       <h3>Impressions from previous year!</h3>
       <div class="htec-impressions-gal">
-        <img class="four-grid-cells" loading="lazy"
-             src="Images/impressions/audimax.webp"
-             alt="The Audimax filled will people during the opening keynote" />
-        <img class="tall-image" loading="lazy"
-             src="Images/impressions/corner.webp"
-             alt="People talking with each other on small tables" />
-        <img loading="lazy"
-             src="Images/impressions/cozy.webp"
-             alt="People sitting on chairs in cozy corner" />
-        <img loading="lazy"
-             src="Images/impressions/food.webp"
-             alt="Food that got served during breakfast" />
-        <img loading="lazy"
-             src="Images/impressions/beer.webp"
-             alt="A barre of beer" />
-        <img loading="lazy"
-             src="Images/impressions/getconnected.webp"
-             alt="A large sticker on the floor saying 'Get Connected'" />
-        <img loading="lazy"
-             src="Images/impressions/presenter.webp"
-             alt="A speaker giving a talk on the main stage" />
-        <img loading="lazy"
-             src="Images/impressions/room.webp"
-             alt="A room" />
-        <img class="tall-image" loading="lazy"
-             src="Images/impressions/selfie.webp"
-             alt="A person doing a selfie with another person" />
-        <img loading="lazy"
-             src="Images/impressions/talk.webp"
-             alt="A man standing in front of a projector and giving a talk" />
-        <img loading="lazy"
-             src="Images/impressions/smalltalk.webp"
-             alt="People talking and laughing" />
-        <img loading="lazy"
-             src="Images/impressions/shirt.webp"
-             alt="A person with a 'Do What you Love' shirt" />
+        <div class="four-grid-cells">
+          <img loading="lazy"
+               src="Images/impressions/audimax.webp"
+               alt="The Audimax filled will people during the opening keynote" />
+          <span>The Audimax during the opening keynote</span>
+        </div>
+        <div class="tall-image">
+          <img loading="lazy"
+               src="Images/impressions/corner.webp"
+               alt="People talking with each other on small tables" />
+          <span>Networking opportunities in-between sessions</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/cozy.webp"
+               alt="People sitting on chairs in cozy corner" />
+          <span>We also have cozy corners for relaxation</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/food.webp"
+               alt="Food that got served during breakfast" />
+          <span>Delicious food served during breakfast</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/beer.webp"
+               alt="A barre of beer" />
+          <span>Refreshing beer during the after-party</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/getconnected.webp"
+               alt="A large sticker on the floor saying 'Get Connected'" />
+          <span>What the conference is all about: getting connected</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/presenter.webp"
+               alt="A speaker giving a talk on the main stage" />
+          <span>A speaker giving a talk on the main stage</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/room.webp"
+               alt="A room" />
+          <span>A session room during a presentation</span>
+        </div>
+        <div>
+          <img class="tall-image" loading="lazy"
+               src="Images/impressions/selfie.webp"
+               alt="A person doing a selfie with another person" />
+          <span>Meeting new friends and colleagues</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/talk.webp"
+               alt="A man standing in front of a projector and giving a talk" />
+          <span>Share knowledge and insights</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/smalltalk.webp"
+               alt="People talking and laughing" />
+          <span>Engaging in small talk and networking in-between sessions</span>
+        </div>
+        <div>
+          <img loading="lazy"
+               src="Images/impressions/shirt.webp"
+               alt="A person with a 'Do What you Love' shirt" />
+          <span>Do what you love!</span>
+        </div>
       </div>
     </section>
 
     <section>
       <div class="htec-location" id="location">
-        <div class="htec-map" style="background-image: url('./images/impressions/venue.webp');">
+        <div class="htec-map deferred">
         </div>
         <div class="htec-location-desc">
           <h2>Location</h2>
@@ -206,13 +242,15 @@
     </section>
 
     <section>
-      <div class="htec-wrap" style="text-align: center;">
-        <h3 id="become-sponsor">Interested in sponsoring?</h3>
+      <div class="htec-wrap">
+        <h3 id="become-sponsor" style="text-align: center;">Interested in sponsoring?</h3>
         <p>Do you want to help shape the future and make a lasting impact on the developer community? HANA Tech Con is
           looking for visionary sponsors to join us in creating an exceptional event that will drive innovation, enhance
-          skills, and foster professional connections.</p>
-        <p>Learn more about our sponsorship opportunities by visiting our <a href="sponsors.html"
+          skills, and foster professional connections. Learn more about our sponsorship opportunities by visiting our <a href="sponsors.html"
              class="htec-email-link">sponsorship page</a>!</p>
+        <div class="htec-btn-center-container">
+          <a href="sponsors.html" aria-label="Link to sponsorship information" hreflang="en" class="htec-btn">Become a sponsor</a>
+        </div>
       </div>
     </section>
 

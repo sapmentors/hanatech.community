@@ -297,3 +297,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+//--------------------------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  // selects and stores the deferred elements
+  const deferredElements = document.querySelectorAll(".deferred");
+
+  // creates the observer
+  const elementObserver = new IntersectionObserver(
+    (entries, observer) =>
+      // callback function
+      {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("deferred");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+
+    // properties of the observer
+    {
+      root: null,
+      rootMargin: "200px 0px",
+      threshold: 0,
+    }
+  );
+
+  // starts observing the deferred elements
+  deferredElements.forEach((element) => elementObserver.observe(element));
+});
