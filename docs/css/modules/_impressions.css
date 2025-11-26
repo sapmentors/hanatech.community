@@ -3,11 +3,18 @@
     background-image: linear-gradient(45deg, var(--brand-color-alt), var(--brand-color));
 }
 
-.htec-impressions-sec > h3 {
+.htec-impressions-sec > h2 {
     text-align: center;
     padding: 2rem;
     color: #fff;
     margin: 0;
+}
+
+.htec-impressions-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .htec-impressions-gal {
@@ -72,6 +79,7 @@
 .htec-impressions-gal div:hover span {
     visibility: visible;
     opacity: 1;
+    color: #fff;
 }
 
 .htec-impressions-gal div.four-grid-cells {

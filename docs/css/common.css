@@ -550,10 +550,16 @@ a:is(.active) {
   text-decoration-color: var(--text-color);
 }
 
+.htec-link-color {
+  display: inline-flex;
+  gap: 0;
+  color: var(--brand-color);
+  font-size: var(--type-0);
+}
+
 .htec-email-link {
   display: inline-flex;
   white-space: nowrap;
-  display: inline;
   color: var(--brand-color);
   font-size: var(--type-0);
 }
@@ -606,6 +612,11 @@ a:is(.active) {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.htec-btn.tiny {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
 }
 
 .htec-btn.small {
@@ -856,7 +867,7 @@ main {
   gap: 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .htec-teaser-container > div {
@@ -873,7 +884,9 @@ main {
 }
 
 .htec-teaser p {
-  white-space: nowrap;
+  white-space: normal;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .htec-teaser ul {
@@ -940,7 +953,7 @@ main {
 .clock-col:not(:last-child):before,
 .clock-col:not(:last-child):after {
   content: "";
-  background-color: color-mix(in srgb, var(--logo-color), transparent 70%);
+  background-color: color-mix(in srgb, var(--logo-color), transparent 20%);
   height: 5px;
   width: 5px;
   border-radius: 50%;
@@ -950,11 +963,11 @@ main {
 }
 
 .clock-col:not(:last-child):before {
-  top: 35%;
+  top: 30%;
 }
 
 .clock-col:not(:last-child):after {
-  top: 50%;
+  top: 45%;
 }
 
 .clock-timer:before {
@@ -967,7 +980,7 @@ main {
   color: var(--brand-color);
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 825px) {
