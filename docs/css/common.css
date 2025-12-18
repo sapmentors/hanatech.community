@@ -863,6 +863,10 @@ main {
 }
 
 /* ---------------------------- Teaser ----------------------------  */
+.htec-save-the-date-list a {
+  color: var(--text-color);
+}
+
 .htec-teaser-container {
   gap: 4rem;
   display: flex;

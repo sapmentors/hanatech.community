@@ -57,18 +57,9 @@ const JURY_JSON = [
         "image": "images/jury/rebecca_fondermann.webp",
         "bio": "I joined SAP and the Hana Deployment Infrastructure (HDI) Team on March 1, 2021, where I am working as C++ Senior Developer on HDI Core. I initially studied chemistry and specialized in theoretical chemistry after completing my undergraduate degree. During my PhD, I learned software development and programming in C++. It was during this time that I discovered a passion for programming, which led me to pursue a career in software development rather than continuing in the field of chemistry after completing my PhD thesis.",
         "socials": [
-        ]
-    },
-    {
-        "name": "Susen Poppe",
-        "position": "SAP HANA Product Manager",
-        "company": "SAP",
-        "image": "images/jury/susen_poppe.webp",
-        "bio": "Susen is part of the product management team responsible for SAP HANA and SAP HANA Cloud. Within the team she focusses on product roll-out and awareness topics.",
-        "socials": [
             {
                 "type": "linkedin",
-                "url": "https://www.linkedin.com/in/susen-poppe"
+                "url": "https://www.linkedin.com/in/rebecca-fondermann-42859a154/"
             }
         ]
     },
@@ -96,6 +87,10 @@ const JURY_JSON = [
         "image": "images/jury/boehm.webp",
         "bio": "Dr. Alexander Böhm is a Distinguished Engineer at SAP and one of the chief architects for the SAP HANA Cloud database management system. His specific focus is on system performance and core database topics. He drives strategic, tactical, and operational projects, including design and architectural changes of the database kernel for key stakeholders, i.e. SAP S/4HANA. Additionally, he is overseeing the evolution of the HANA core database management system with respect to novel hardware and technology as well as cloud-based system deployments.",
         "socials": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/alexanderb42/"
+            }
         ]
     }
 ]
@@ -103,7 +98,7 @@ const JURY_JSON = [
 function getConferenceUnixTime(hour = 9, minute = 0) {
     hour = hour.toString().padStart(2, "0");
     minute = minute.toString().padStart(2, "0");
-    return Math.floor(Date.parse(`2026-01-01T${hour}:${minute}:00+02:00`) / 1000);
+    return Math.floor(Date.parse(`2026-07-16+-T${hour}:${minute}:00+02:00`) / 1000);
 }
 //--------------------------------------------------------------------------------------------------
 function buildSocialHTML(obj) {
@@ -171,7 +166,7 @@ function buildJury() {
  * CONFERENCE CLOCK
  */
 //--------------------------------------------------------------------------------------------------
-const CONFERENCE_TIME = Date.parse('2026-01-01T00:10:00.000+01:00');
+const CONFERENCE_TIME = Date.parse('2026-07-16T00:10:00.000+01:00');
 //--------------------------------------------------------------------------------------------------
 function ensureTwoDigits(time) {
     return time.toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });

@@ -443,6 +443,7 @@ svg.avantra {
 .htec-sponsors-new-table th {
   background: var(--brand-color);
   font-size: 1.1rem;
+  color: white;
 }
 
 .price {
