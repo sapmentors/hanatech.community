@@ -55,7 +55,7 @@ const JURY_JSON = [
         "position": "C++ Senior Developer",
         "company": "SAP",
         "image": "images/jury/rebecca_fondermann.webp",
-        "bio": "I joined SAP and the Hana Deployment Infrastructure (HDI) Team on March 1, 2021, where I am working as C++ Senior Developer on HDI Core. I initially studied chemistry and specialized in theoretical chemistry after completing my undergraduate degree. During my PhD, I learned software development and programming in C++. It was during this time that I discovered a passion for programming, which led me to pursue a career in software development rather than continuing in the field of chemistry after completing my PhD thesis.",
+        "bio": "Rebecca joined SAP and the Hana Deployment Infrastructure (HDI) Team on March 1, 2021, where she is working as C++ Senior Developer on HDI Core. She initially studied chemistry and specialized in theoretical chemistry after completing her undergraduate degree. During her PhD, she learned software development and programming in C++. It was during this time that Rebecca discovered a passion for programming, which led her to pursue a career in software development rather than continuing in the field of chemistry after completing her PhD thesis.",
         "socials": [
             {
                 "type": "linkedin",
