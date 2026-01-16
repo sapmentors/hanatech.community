@@ -1,12 +1,12 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
-UID:2025-12-18T15:33:21.719Z@calendarlinkgenerator.com
-DTSTAMP:20251218T153321Z
-DTSTART:20251218T150000Z
-DTEND:20251218T160000Z
-SUMMARY:Untitled Event
-DESCRIPTION:<p>Stay Connected! </p><p></p><p>If there is anything about SAP HANA you always wanted to know but never dared to ask - this is the place for you! Be part of the community of development experts, users and partners to exchange, ignite and delight.</p><p></p><p>Get Involved! If you want to speak up in your own session worthwhile to be shared with this great community. Looking forward to see you there soon!</p><p></p><p>This year's event will take place in St. Leon-Rot (Germany) on July 16, 2026. Ticket reservation is not open yet. Follow us on social media to stay up-to-date!</p><p></p><p>https://<a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline" href="http://hanatech.community">hanatech.community</a></p><p><a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline" href="https://bsky.app/profile/hanatech.community">https://bsky.app/profile/hanatech.community</a></p><p>https://www.linkedin.com/company/hana-tech-con/posts/</p>
-LOCATION:
+UID:2026-01-16T10:45:50.456Z@calendarlinkgenerator.com
+DTSTAMP:20260116T104550Z
+DTSTART:20260716
+DTEND:20260717
+SUMMARY:HANA Tech Con 2026
+DESCRIPTION:<p>Stay Connected!</p><p>If there is anything about SAP HANA you always wanted to know but never dared to ask - this is the place for you! Be part of the community of development experts, users and partners to exchange, ignite and delight.</p><p>Get Involved! If you want to speak up in your own session worthwhile to be shared with this great community. Looking forward to see you there soon!</p><p>This year's event will take place in St. Leon-Rot (Germany) on July 16, 2026. Ticket reservation is not open yet. Follow us on social media to stay up-to-date!</p><p><a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline" href="https://hanatech.community">https://hanatech.community</a></p><p><a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline" href="https://bsky.app/profile/hanatech.community">https://bsky.app/profile/hanatech.community</a></p><p><a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline" href="https://www.linkedin.com/company/hana-tech-con/posts/">https://www.linkedin.com/company/hana-tech-con/posts/</a></p>
+LOCATION:St. Leon-Rot (Germany)
 END:VEVENT
 END:VCALENDAR
