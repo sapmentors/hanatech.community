@@ -56,6 +56,9 @@
 
 .htec-sponsors-list h3 {
   color: var(--text-color);
+  text-align: left;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .htec-sponsors-logo {
@@ -216,6 +219,9 @@ svg.avantra {
 @media only screen and (max-width: 750px) {
   .htec-sponsors-table {
     font-size: .85rem;
+  }
+  .htec-sponsors-list h3 {
+    text-align: center;
   }
 }
 
