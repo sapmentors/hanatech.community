@@ -89,6 +89,10 @@
     color: var(--text-color);
 }
 
+.htec-list-done {
+    opacity: .6;
+}
+
 /*.htec-jury-list>li:is(:hover, :focus-within) {
     filter: none;
     transform: scale(1.02) translateY(-2px);
