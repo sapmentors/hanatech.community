@@ -166,6 +166,10 @@ svg.avantra {
   color: #001c4e;
 }
 
+svg.metaphacts {
+  color: #1d1d1b;
+}
+
 @media (prefers-color-scheme: dark) {
 
   .htec-sponsors-badge.diamond,
@@ -204,6 +208,10 @@ svg.avantra {
   }
 
   svg.avantra {
+    color: #fff;
+  }
+
+  svg.metaphacts {
     color: #fff;
   }
 }
