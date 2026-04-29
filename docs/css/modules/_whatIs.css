@@ -5,12 +5,30 @@
     text-align: center;
     padding: 2rem;
     gap: 1rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(186, 6, 108, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.htec-whatis-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(186, 6, 108, 0.12);
+    border-color: rgba(186, 6, 108, 0.2);
 }
 
 .htec-whatis-feature-icon {
     width: 48px;
     height: 48px;
     color: var(--brand-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.htec-whatis-feature:hover .htec-whatis-feature-icon {
+    transform: scale(1.15);
+    color: var(--brand-color-alt);
 }
 
 .htec-whatis-feature h3 {
@@ -49,6 +67,18 @@
 @media (prefers-color-scheme: light) {
     .htec-whatis-feature span {
         font-weight: 600;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .htec-whatis-feature {
+        background: linear-gradient(135deg, rgba(46,46,46,0.8), rgba(36,36,36,0.6));
+        border-color: rgba(186, 6, 108, 0.15);
+    }
+
+    .htec-whatis-feature:hover {
+        border-color: rgba(186, 6, 108, 0.35);
+        box-shadow: 0 12px 24px rgba(186, 6, 108, 0.2);
     }
 }
 

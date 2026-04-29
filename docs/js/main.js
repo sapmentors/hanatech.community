@@ -320,4 +320,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // starts observing the deferred elements
   deferredElements.forEach((element) => elementObserver.observe(element));
+
+  // Fade-in on scroll for sections
+  const fadeInSections = document.querySelectorAll(".fade-in-section");
+  if (fadeInSections.length > 0) {
+    const fadeObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -60px 0px",
+        threshold: 0.1,
+      }
+    );
+    fadeInSections.forEach((el) => fadeObserver.observe(el));
+  }
+
+  // Staggered fade-in for impressions gallery items
+  const galleryItems = document.querySelectorAll(".htec-impressions-gal > div");
+  if (galleryItems.length > 0) {
+    const galleryObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -30px 0px",
+        threshold: 0.05,
+      }
+    );
+    galleryItems.forEach((el) => galleryObserver.observe(el));
+  }
 });

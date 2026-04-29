@@ -23,6 +23,13 @@
   color: var(--logo-color);
   display: block;
   height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: grayscale(90%);
+}
+
+.htec-sponsors-logos li:hover svg {
+  filter: grayscale(0%);
+  transform: scale(1.08);
 }
 
 /* ------------------------- Sponsors Page -------------------------  */
