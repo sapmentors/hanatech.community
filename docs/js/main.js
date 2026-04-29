@@ -95,11 +95,583 @@ const JURY_JSON = [
     }
 ]
 //--------------------------------------------------------------------------------------------------
-function getConferenceUnixTime(hour = 9, minute = 0) {
-    hour = hour.toString().padStart(2, "0");
-    minute = minute.toString().padStart(2, "0");
-    return Math.floor(Date.parse(`2026-07-16+-T${hour}:${minute}:00+02:00`) / 1000);
-}
+const AGENDA_JSON = [
+    {
+        "id": "id-1769565509149-977",
+        "title": "SAP and Databricks: A Bold New Era of Data and AI",
+        "description": "The friction between HANA's rigid data structures and the flexibility of the Databricks Lakehouse has historically been a roadblock for data teams. That friction ends now. In this technical deep dive, Christopher Carter (CEO, Approyo &amp; AI Expert) deconstructs the architecture required to unify SAP S/4HANA with the Databricks Data Intelligence Platform. We will cut through the marketing hype to examine the mechanics of data federation, semantic layer preservation, and the specific pipelines that enable high-speed AI ingestion from HANA. If you are an architect or engineer tired of brittle connectors and stale data, this is the blueprint you’ve been waiting for.",
+        "type": "presentation_short",
+        "extraInfo": "Christopher Carter is a globally recognized SAP and AI Expert, CEO of Approyo, and the founder of MugatuAI. A best-selling author of 17 books (including the Mastering SAP series), Chris has spent over three decades helping businesses navigate the complex intersection of enterprise ERP and emerging technology. Known for his ability to transform complex technical challenges into engaging stories, Chris is a frequent keynote speaker and media contributor who advises leaders on how to harness the power of Artificial Intelligence without breaking their business foundation. He brings a \"bold,\" future-forward perspective to the often-conservative world of enterprise data.",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "cc@approyo.com",
+                "firstName": "Christopher",
+                "lastName": "CARTER",
+                "company": "Approyo",
+                "bio": "",
+                "hash": "cbf8d7fc10add274500f893cd0d8838f499d53fcc20040d7b7d6109a08d3d758",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "16:00",
+        "endTime": "16:25",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1771346373249-652",
+        "title": "Bridging Python and SAP HANA: Inside the sqlalchemy-hana Open-Source Dialec",
+        "description": "SQLAlchemy is Python's standard database toolkit and ORM. Alembic provides version-controlled schema migrations. sqlalchemy-hana is the open-source dialect that brings SAP HANA support to both tools.\n\nIn this session, we will explain how sqlalchemy-hana connects Python applications to SAP HANA. You'll learn how the dialect translates SQLAlchemy's database-agnostic API into HANA-specific SQL, and how we handle the quirks that make HANA unique.\n\nTopics covered:\n• What sqlalchemy-hana does and how it integrates with SQLAlchemy's architecture\n• Alembic support: Running schema migrations against SAP HANA databases\n• Async support: How we added aiohdbcli for non-blocking database operations\n• Vector support: Working with HANA's REAL_VECTOR type for modern workloads\n\nWhether you're a Python developer working with SAP HANA or curious about how database dialects work, this session will give you practical insights into bridging two different technology worlds.\n ",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "kai.harder@sap.com",
+                "firstName": "Kai",
+                "lastName": "Harder",
+                "company": "SAP",
+                "bio": "Passionate python developer",
+                "hash": "a0bbe54727cf99557dff48bc1810b235dad75d48e489f3c99dff1002caa62696",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "15:25",
+        "endTime": "15:50",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1770973129667-534",
+        "title": "Real World Uses Cases of HANA Cloud",
+        "description": "SAP HANA Cloud is more than a managed database—it is a multi-model data platform supporting transactional, analytical, and hybrid workloads at scale. But how does it perform under real production constraints?\n\nThis session presents real-world implementations across industries, focusing on architecture blueprints, workload management strategies, data integration patterns, and performance optimization in live enterprise landscapes. We will discuss concrete design decisions, trade-offs, sizing considerations, and operational challenges encountered in production environments.\n\nAlthough structured around business use cases, this is a technically deep session aimed at architects and engineers who want practical, production-grade insights into scaling and operating SAP HANA Cloud successfully.",
+        "type": "presentation_long",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "matthias.stemmler@sap.com",
+                "firstName": "matthias",
+                "lastName": "stemmler",
+                "company": "SAP Deutschland SE &amp; Co KG",
+                "bio": "I have been working in the data space for over 27 years, helping organizations design and implement modern data architectures—from traditional data warehouses to data lakes and cloud-based platforms.\n\nThroughout my career, I have taken on roles as a technical consultant, project manager, and architect, delivering numerous data platform initiatives with a strong focus on making data truly usable and valuable for the business.\n\nI have been involved with SAP HANA since its early days and have led the implementation of native HANA solutions for several customers. Today, I am responsible for the go-to-market for SAP HANA Cloud in the Middle &amp; Eastern Europe (MEE) region, supporting organizations in transforming their data strategies towards the cloud.\n\nIn my sessions, I share practical insights from real-world projects, discuss challenges and lessons learned, and value open, experience-driven exchange.",
+                "hash": "0b075b3c99919a43ec23403cac88e009b9c1dbbb3675bf2c0edcf8037e6c7e53",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "14:05",
+        "endTime": "14:50",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1772647796084-672",
+        "title": "Simplify HANA Central Administration using Joule - for Free",
+        "description": "We demonstrate the free availability of Joule for HANA administration\nDemonstrate the reduction in barrier to know HANA concepts to perform HANA administration ex: Alert monitoring\nUsage of Joule assistant to build complex SQL queries and query SAP knowledgebase",
+        "type": "presentation_long",
+        "extraInfo": "The idea is to keep it as a live demo. \nWe can use a trial account and use the option to manually trigger alert and demo same using the AI assitant",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "sharath.gangadhara@nttdata.com",
+                "firstName": "Sharath ",
+                "lastName": "M Gangadhara",
+                "company": "NTT Data Business Solutions Ltd",
+                "bio": "Speaker and technology practitioner focused on applying AI in SAP HANA Cloud. Passionate about translating emerging AI capabilities into practical solutions that enhance efficiency, insight, and user experience.",
+                "hash": "02c41255f3c8e124354f4173c967c8e9705f48d650c1f928bda8415d398b245f",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "9:50",
+        "endTime": "10:35",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1772707351922-907",
+        "title": "Selective Data Replication from S/4 HANA into HANA Cloud",
+        "description": "On a big Project at Leonhard Weiss (potantial co-speaker) we implemented a replacement of SAP ETM which retired end of 2025.\nFor this full fledged BTP Custom Software solution we made use of the power of HANA (with SDA) by Replicating a selective subset of Master Data from S/4 HANA into our very own HANA Cloud while converting, matching, delta detecting and updating our own records.\nWe are happy to share what we did, what we learned and how other similar projects could benefit from it.",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "julian.mayer@cbs-consulting.de",
+                "firstName": "Julian",
+                "lastName": "Mayer",
+                "company": "cbs Corporate Business Solutions Unternehmensberatung GmbH",
+                "bio": "Cloud Solution Architect envisioning and Implementing real SAP BTP Cloud Solutions not just on SAP HANA Cloud but rather leveraging the power of HANA Cloud",
+                "hash": "9c8e667bafac6890a98955911d51ce4e9542b5545aa862c4fb12dc32235d8190",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "11:00",
+        "endTime": "11:25",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1772827366833-466",
+        "title": "SDI and SDQ - Forgotten Knowledge?",
+        "description": "While their sister product Smart Data Access (SDA) is quite known in the HANA world, Smart Data Integration (SDI) and especially Smart Data Quality (SDQ) seem to be living a far less glamorous life.\nIn this session, I will give you a glimpse into what those are about and how you can start using them.\nWith SDI, I will show you what you can do with it in regards to connectivity to foreign sources (e.g. other relational databases, OData or files) as well as how to move data in batches or real-time using hdbreptasks and hdbflowgraphs.\nI will show some architectural and practical differences to SDA and where you can start in case the right set of adapters isn't available for your connectivity needs. The SDI Adapter SDK has been around for quite some time and is also used by 3rd parties to build and sell custom adapters (e.g. for Kafka).\nAfter moving the data into HANA, we can then further increase its quality with SDQ by applying some Cleansing rules on person names and addresses. Using SDQ, the cleansed data can then be matched and deduplicated to ensure a single source of truth.",
+        "type": "presentation_long",
+        "extraInfo": "This time I will manage to fill the full time of the slot ;) \nIn case you prefer a smaller 20min session I can also just focus on either SDI or SDQ. ",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "timo.wagner@outlook.com",
+                "firstName": "Timo",
+                "lastName": "Wagner",
+                "company": "",
+                "bio": "Freelance Software Engineer mainly focusing on SAP HANA technologies.\nFormer Developer at SAP working on the SAP HANA Smart Data Integration, Agile Data Preparation and Data Hub/Data Intelligence Products\n-\nStarted my career in the SAP HANA Smart Data Integration team and developed Adapters for the DPAgent.\nWhen Eclipse needed a replacement we've developed WebIDE (XS Classic) editors for Flowgraphs, Reptasks and everything in the Remote Source area.\nAnd after a while the same with the subsequent deprecation of XSC in favor for XSA and its new WebIDE.",
+                "hash": "fd7f18f6487faf5f32772932f0b2b75012a3dfb8d25820093a5764c344ba4eb3",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "9:50",
+        "endTime": "10:35",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1773061903699-987",
+        "title": "AI assistance for innovation adoption-SAP tool for Data Capacity Excellence",
+        "description": "AI Assistance for innovation adoption gives you the flexibility to use dashboards focused on high-interest topics, offering issue resolution and optimization recommendations. With predefined key performance indicators (KPIs) and other relevant insights, you can assess the health of your SAP systems, highlight optimization opportunities, and view recommendations with their associated business impact. Awareness alone isn’t enough, so this tool provides guided actions that integrate seamlessly with SAP Cloud ALM for service. Through integration with project and task management in SAP Cloud ALM, it creates tasks that effectively guide issue resolution and feature enhancements, providing step-by-step direction to improve system performance. The dashboards update to reflect the latest status and progress, ensuring a continuous feedback loop.",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "pankaj.acharya@sap.com",
+                "firstName": "Pankaj Kumar",
+                "lastName": "Acharya",
+                "company": "SAP",
+                "bio": "I’m Pankaj Kumar Acharya, and I joined the CoE Data Volume Management team on 1st September. I bring over 17 years of SAP experience across multiple domains and hold a Bachelor of Technology in Computer Science and Engineering. I live in Mülheim an der Ruhr with my wife and our 12‑year‑old daughter, Aaria. \nOutside of work, I enjoy spending time with family and friends; watching Hollywood and Bollywood movies, especially fantasy, action, and sci‑fi; listening to music; trekking; and experimenting in the kitchen to cook new Indian dishes for my daughter. \nA fun fact about me is that I can never remember my own mobile number; I always have to look it up.",
+                "hash": "ef45a6790f582d1b81c84ae823d1615d1b77721b7f107291877f0f60c7ce00f3",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "13:30",
+        "endTime": "13:55",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1773282667527-516",
+        "title": "HANA UI Huddle",
+        "description": "We would like to run a one-day interactive session to facilitate direct conversations between HANA users/partners and HANA designers/developers. HANA designers/developers will organize the session; people can drop by anytime throughout the day and talk with the organizers. They can describe their pain points when using HANA tooling products (such as HANA Cloud Central), propose ideas to improve these products, and also have the opportunity to review new features and provide feedback.\n\nKey Takeaways (our highlights): \n•\tInteractive: Two-way communication between HANA designers/developers and HANA users\n•\tCollaborative: The format allows everyone to participate and contribute to HANA as a product\n•\tInclusive: Potentially everyone has a chance to participate in the activity because it lasts for the whole day\n\nSession Level: Beginner, Intermediate, Advanced\n",
+        "type": "other",
+        "extraInfo": "We would like to request a room for this activity with necessary equipment (tables, projector, stickers, pens); alternatively, a public area easily accessible to all participants with three booths. We also plan to create posters and banners to promote the activity and attract more participants.",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "april.luo@sap.com",
+                "firstName": "April",
+                "lastName": "Luo",
+                "company": "SAP",
+                "bio": "SAP HANA Cloud UX designer.",
+                "hash": "cf6499827a680660034df6841036baf0b4a5a5e4c115542c30213eac73b01fba",
+                "photo": true
+            },
+            {
+                "id": "niamh.leypoldt@sap.com",
+                "firstName": "Niamh",
+                "lastName": "Leypoldt",
+                "company": "SAP",
+                "bio": "",
+                "hash": "c871866950059ff4db6664c85bb6eaff20be0c0e3b353e6347d58af9b63f7585",
+                "photo": true
+            },
+            {
+                "id": "snezhina.velcheva@sap.com",
+                "firstName": "Snezhina",
+                "lastName": "Velcheva",
+                "company": "SAP",
+                "bio": "Snezhina Velcheva is a Senior User Assistance Developer on the PTX HANA Design team. AI is her passion, and she is always looking for smarter, faster ways to work — with a habit of automating everything she can.",
+                "hash": "561b0700326c0badc50b79cdcca9dc9f954760a82b8db1987aee74de128e0b2e",
+                "photo": true
+            },
+            {
+                "id": "iman.ahmadpour@sap.com",
+                "firstName": "Iman",
+                "lastName": "Ahmadpour",
+                "company": "SAP",
+                "bio": "I'm a UX designer with a technical background, having transitioned from the development world to the design realm. Nowadays, I focus on integrating AI tooling into my daily UX design work, enhancing user experiences with innovative solutions.",
+                "hash": "4530f244966c0b1ed7068e836dd375089fb2576b544af8ccfd3e12ebf2999b22",
+                "photo": true
+            },
+            {
+                "id": "vasco.alexander.schmidt@sap.com",
+                "firstName": "Vasco Alexander",
+                "lastName": "Schmidt",
+                "company": "SAP SE",
+                "bio": "Head of Design, SAP HANA",
+                "hash": "22d93019b7f2f68928612d74b6106045b37c8ffcd2d26b0dc6453dcc1797840a",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "09:00",
+        "endTime": "17:00",
+        "location": "room_w3"
+    },
+    {
+        "id": "id-1773304610881-469",
+        "title": "How to secure your SAP HANA Cloud",
+        "description": "Many organizations moving to SAP HANA Cloud assume that security is simply \"handled by SAP.\" After all, infrastructure is managed, patches are applied automatically, and the platform meets enterprise-grade compliance standards. But this assumption, comfortable as it may be, is one of the most dangerous misconceptions in cloud adoption today.\n\nThis session takes a direct, practical look at SAP HANA Cloud security through the lens of real customer projects. Drawing on more than a decade of HANA experience, spanning on-premise deployments, hybrid landscapes, and fully cloud-based environments, the talk unpacks four of the most common security myths that still cause real problems in production systems.",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "anna.hartmann@in4md-service.de",
+                "firstName": "Anna",
+                "lastName": "Hartmann",
+                "company": "in4MD Service GmbH",
+                "bio": "Anna brings expertise from over a decade of working with SAP HANA databases. Since 2017, she has been actively serving as the spokeswoman for the DSAG working group 'HANA Operations,'' sharing her knowledge and experiences with the community. She is also the author of the SAP Press book 'SAP HANA Administration.'",
+                "hash": "6a59537ec8bcc75741e7d20157fc0c37582da3feb61fbeca5d62e6066f264836",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "15:25",
+        "endTime": "15:50",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1773331566604-62",
+        "title": "SAP Reimagined Certifications for SAP HANA - What’s in it for me?",
+        "description": "The SAP Reimagined Certification program changed everything we know about SAP certifications. SAP moved away from 80 theoretical exam questions to a new practical exam setup that is designed to reflect day-to-day project work. The SAP HANA certifications are affected by this change as well.\nIn this spot talk I will explain what is new for the SAP Certified - Database Administrator - SAP HANA (C_DBADM) and SAP Certified - Data Engineer - SAP HANA (C_HAMOD) certification and the Stay Certified assessments for SAP HANA.",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "henricus.bouten@sap.com",
+                "firstName": "Henricus",
+                "lastName": "Bouten",
+                "company": "SAP",
+                "bio": "I’ve spent more than three decades immersed in the SAP ecosystem, witnessing firsthand the shifts that shaped the industry. For the last 15+ years, SAP HANA has been my world; as the owner of the SAP HANA Administration courses and tcertification, I’m committed to empowering the next generation of admins.\n\nWhen the SAP laptop closes, the soldering iron comes out. At home I’m Linux-only advocate, only using Windows to let in fresh air. A re-collector of Commodore computers I owned in the past. Whether I’m deep in a restoration project or firing up my C64 Ultimate Founders Edition, I find my balance in the perfect mix of cutting-edge enterprise tech and classic 8-bit heritage.",
+                "hash": "6aae7c634953c54ead4697879981622685b55b7e8e60a35ca989866fc12a45fc",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "16:00",
+        "endTime": "16:25",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1773349703177-907",
+        "title": "The Role of Indexes in SAP HANA Performance and Memory",
+        "description": "this session explains how indexes influence SAP HANA performance, when it makes sense to create an index, and the distinctions between index types. Through practical examples, attendees will see how different indexing approaches affect query speed, data retrieval, and resource usage in real-world scenarios.",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "kutbettin.baran@sys.aok.de",
+                "firstName": "Kuto",
+                "lastName": "Baran",
+                "company": "AOK Systems GmbH",
+                "bio": "I focus on HANA performance, supporting our customers through troubleshooting and analysis. Beyond the technical work, I enjoy sharing experiences and learning together with the community in workshops and presentations.",
+                "hash": "49ff36d8f0677e813b626b6acebcaec5edaf610a981c83ca8408009951bc040c",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "13:00",
+        "endTime": "13:25",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1773396472377-852",
+        "title": "Combining AI Agents with the power of SAP HANA Predictive Analysis Library",
+        "description": "Discover how to enhance AI agents with SAP HANA's embedded machine learning capabilities. In this session, you'll learn to equip code-based AI agents with predictive models built using the SAP HANA Predictive Analysis Library. See how to integrate custom machine learning models as agent tools, empowering your agents to derive insights from your data and make smarter, data-driven decisions. The technology stack of this agent includes SAP BTP, SAP HANA Cloud and the Python SDKs for both SAP HANA and the Generative AI Hub.",
+        "type": "presentation_long",
+        "extraInfo": "Any of the session types would work for this talk; we can adjust it accordingly :)",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "nora.von.thenen@sap.com",
+                "firstName": "Nora",
+                "lastName": "von Thenen",
+                "company": "SAP SE",
+                "bio": "Nora von Thenen is a Developer Advocate at SAP specializing in AI, with a Master's in Computer Science and Engineering. Since joining SAP in 2017, she has made it her mission to turn complex AI concepts into something developers can actually build with. Through hands-on workshops, CodeJams, and as a speaker at major tech events, including the Developer Keynote at SAP TechEd, she is committed to helping developers make the most of AI. ",
+                "hash": "c6b8a044674f641322e0fc6ed8152c6685d7b479030d6585b93f43aab760e53f",
+                "photo": true
+            },
+            {
+                "id": "witalij.rudnicki@sap.com",
+                "firstName": "Witalij",
+                "lastName": "Rudnicki",
+                "company": "SAP Polska Sp. z o.o.",
+                "bio": "Witalij Rudnicki (aka Vitaliy Rudnytskiy) is a Developer Advocate at SAP. He specializes in Big and Fast Data, AI/ML, and Analytics.",
+                "hash": "ef6c52f753829fa0e2d0ce1d498b5f90c5cb53048a40b36586ef16b7ed5960fc",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "13:00",
+        "endTime": "13:45",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1773410159317-233",
+        "title": "The Hidden Data Science Platform Inside SAP HANA",
+        "description": "SAP HANA is widely known as a high-performance database for enterprise applications, but many developers overlook its built-in capabilities for advanced analytics and machine learning. In many projects, data is exported to external platforms for data science workflows, even though SAP HANA already provides powerful libraries and tools for running machine learning directly where the data lives.\nThis session explores how SAP HANA supports AI and data science through features such as the Predictive Analysis Library (PAL), the Automated Predictive Library (APL), and embedded machine learning scenarios. The talk explains how these capabilities allow developers and data engineers to build predictive models directly inside the database while reducing data movement and improving performance. Through practical architecture patterns and real use cases, the session highlights when it makes sense to run machine learning inside SAP HANA and when external ML platforms are still the better choice.\nKey Takeaways:\nUnderstand the machine learning capabilities built directly into SAP HANA\nLearn when to run machine learning inside HANA versus external platforms\nExplore architecture patterns for combining enterprise data with AI workflows",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "marla.alschweiki@sapfioneer.com",
+                "firstName": "Marla",
+                "lastName": "Alschweiki",
+                "company": "SAP Fioneer",
+                "bio": "I'm a SAP AI Data Engineer and SAP Mentor with over 9 years of hands-on experience. My current playground involves SAP Business Data Cloud (BDC), BTP, SAP HANA Cloud, and SAP Business AI. Beyond the code, I’m an advocate for uplifting and empowering the tech community. I believe that knowledge is most powerful when shared, so I’m dedicated to writing technical blogs, speaking at events, and mentoring. My mission is to make learning accessible and to help others build the confidence they need to grow and lead in tech.\n I’m rarely working alone ,my little puppy, Carlo, is my official co-pilot. While Carlo’s Python skills are still a work in progress, he’s an absolute pro at bringing good vibes wherever he goes. I’m always down to chat about SAP Data and AI, exchange ideas, or, of course, swap puppy photos, so come say hi! ",
+                "hash": "e965ce89b5ad29045d60d29fffc98daab38343f7864b3f54a0fb0856d6adc5ff",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "11:00",
+        "endTime": "11:25",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1773411650077-951",
+        "title": "Real-time Data Integration and Observability",
+        "description": "We would like to share not only our current solution for real-time data integration, FeRDI, previously presented at Madrid Sapphire 2025  but also how the architecture is evolving.\n1) FeRDI : Real-time data repository using SAP HANA Cloud updated by raw data tables from all transactional systems continuously. This scalable solution is the primary source for analytical and some transactional systems, ensuring access to current information. \nSAP Datasphere exposes HANA Cloud &amp; Business Warehouse  data to cloud analytical tools without persistent storage. \nWe are expanding FeRDI within Datasphere to provide not only raw transactional tables (such as VBAK and VBAP), but also Foundational Data Products representing business concepts such as Sales Orders.\n\n2) Near Real-Time Data Observability with dbt and Apache Airflow\nBecause FeRDI integrates enterprise data in real time, it enables near real-time data observability. Using dbt and Apache Airflow, we run operational data quality checks that detect inconsistencies as data enters the platform and notify data creators to correct issues at the source (MVP in progress)\n\nBenefits:\nMinimizes bad data exposure\nReduces costly downstream corrections\nCreates immediate feedback loops for faster issue resolution\n\nSession Level: Intermediate\n\nKey Takeaways\nEnable real-time data accessibility from all transactional systems in a single platform\nEnd-to-end data observability across the enterprise data landscape",
+        "type": "presentation_long",
+        "extraInfo": "We can show demos\nWe are open to a another session format, but given that the topic is a bit complex with the non-SAP tools over HANA Cloud, would be difficult to reduce the time.",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "javier.caycho@zeiss.com",
+                "firstName": "Javier",
+                "lastName": "Caycho",
+                "company": "ZEISS Group",
+                "bio": "",
+                "hash": "135c124588f52cec91b7999a72d295ef18c44869c5ecd926d0ff4bdfc9d3be84",
+                "photo": true
+            },
+            {
+                "id": "kush.kashyap@zeiss.com",
+                "firstName": "Kush ",
+                "lastName": "Kashyap",
+                "company": "ZEISS Group",
+                "bio": "",
+                "hash": "c4f91923ac58b76b922eaa83116236668551b78b445535130750c340b64f9842",
+                "photo": true
+            },
+            {
+                "id": "jacob.pribil@zeiss.com",
+                "firstName": "Jacob",
+                "lastName": "Pribil",
+                "company": "ZEISS Group",
+                "bio": "I am a motivated and curious person with a strong interest in technology and software development. I enjoy solving problems and finding ways to make processes more efficient. Currently we are developing an automated application for executing test cases and assessing data integrity. This application should help save time, reduce manual work, and improve the reliability of source data",
+                "hash": "3ec0065d45074f98d4ca756f5f2d2fe0130a86ae870b69db72996a9a1d3fef91",
+                "photo": true
+            },
+            {
+                "id": "shivanshu.giri@zeiss.com",
+                "firstName": "Shivanshu",
+                "lastName": "Giri",
+                "company": "ZEISS Group",
+                "bio": "Hey, I'm Shivanshu Giri!\n\nBy day, I'm a Data Integration Consultant at Carl Zeiss, where I connect the dots—literally. I build data products, solve integration puzzles, and help turn scattered data into meaningful insights.\nI believe great decisions start with great data, and I love being part of a company that values precision, innovation, and making a real impact.\nWhen I'm not wrangling data, you'll find me exploring new tech, learning something new, or enjoying a good conversation about all things analytics.",
+                "hash": "442140ddcc07a94b033826595f3c3aabf2d41b337e808ccd5729646cf67d8220",
+                "photo": true
+            },
+            {
+                "id": "ashish.yadav@zeiss.com",
+                "firstName": "Ashish Singh",
+                "lastName": "Yadav",
+                "company": "ZEISS Group",
+                "bio": "I’m an SAP Architect with 10+ years of experience working with SAP HANA and enterprise data platforms. I’ve helped organizations design efficient data products, improve performance, and deliver real-time insights. I enjoy breaking down complex topics into practical concepts and sharing real-world experiences with the community.",
+                "hash": "d4ebae44b2f8831c196a8d1ddf17c9afb42efcbed3ef4c75ebe183ed26ad69cb",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "14:05",
+        "endTime": "14:50",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1773433941283-20",
+        "title": "From Data to Meaning- Grounded AI with SAP HANA Cloud Vector Engine",
+        "description": "In this session, we explore how SAP HANA Cloud Vector Engine enables grounded AI using vector embeddings and semantic search. We will see how enterprise data can be transformed into meaningful context for RAG applications. ",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "nil@mindeed.io",
+                "firstName": "Nil",
+                "lastName": "Peksen",
+                "company": "Mindeed B.V",
+                "bio": "Nil Peksen is a freelance SAP Data &amp; Analytics Architect with two decades of experience in the SAP ecosystem. In a world where AI is changing everything, she believes the real value lies in grounding it with the right data and In this talk, she walks through how SAP HANA Cloud Vector Engine enables exactly that, turning raw enterprise data into meaningful, context aware AI.",
+                "hash": "1f22b3c23a08ff816b8a6183a9f3caab823eeec942be318b83a29fbea2bcda17",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "11:35",
+        "endTime": "12:00",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1774941808252-960",
+        "title": "Opening Key-Note [Placeholder - Titel tbd]",
+        "description": "Opening Key-Note",
+        "type": "keynote",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "christian.braukmueller@evonik.com",
+                "firstName": "Christian",
+                "lastName": "Braukmüller",
+                "company": "Evonik Industries AG",
+                "bio": "",
+                "hash": "30d0214c8838c80e6beb4e387d9226d5b65290a3d0e84f8c3d6448a04e3a0db1",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "9:00",
+        "endTime": "9:40",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1774942342225-84",
+        "title": "Closing Key-Note: HANA at 15: Maturity, Modernization, and the AI Era ",
+        "description": "For over 15 years, SAP HANA has been the high-performance engine under the hood of the world’s most critical business processes. But as we move into 2026, the engine is evolving into the brain of the business. This presentation explores the shifting landscape of SAP HANA, moving beyond its role as the foundation of S/4HANA to its emergence as a standalone, agent-ready data platform. We will look at the transition from XSA to BTP and how modern tooling like VS Code is democratizing HANA development. Finally, we’ll discuss the \"memory\" of AI. How HANA ML, Knowledge Graph, and long-term history are turning the database into a living context for the next generation of business applications.",
+        "type": "keynote",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "thomas.jung@sap.com",
+                "firstName": "Thomas",
+                "lastName": "Jung",
+                "company": "SAP Labs, LLC",
+                "bio": "I started as an ABAP developer nearly three decades ago. Over the years, I’ve worn a lot of SAP hats: developer, product expert, book author, and now Head of Developer Advocacy. What ties it all together? Helping other developers make sense of SAP’s ever-evolving tech stack.\n\nThese days, I lead a team focused on making life a little easier for SAP developers. We create tutorials, blog posts, videos, sample code, and show up at in-person events, all aimed at cutting through the noise and helping you actually build things. No fluff. Just tools and content that make you more effective.",
+                "hash": "d190d3884bb7f2d69a23296b5c39ae9d178990d97bde311e80cb258d90e50090",
+                "photo": true
+            },
+            {
+                "id": "witalij.rudnicki@sap.com",
+                "firstName": "Witalij",
+                "lastName": "Rudnicki",
+                "company": "SAP Polska Sp. z o.o.",
+                "bio": "Witalij Rudnicki (aka Vitaliy Rudnytskiy) is a Developer Advocate at SAP. He specializes in Big and Fast Data, AI/ML, and Analytics.",
+                "hash": "ef6c52f753829fa0e2d0ce1d498b5f90c5cb53048a40b36586ef16b7ed5960fc",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "16:40",
+        "endTime": "17:20",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1775060242937-366",
+        "title": "Coffee Break",
+        "description": "Time to network",
+        "type": "catering",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "10:30",
+        "endTime": "11:00",
+        "location": "canteen"
+    },
+    {
+        "id": "id-1742910586692-523",
+        "title": "Lunch Break",
+        "description": "Different Lunch options will be served at the nearby canteen",
+        "type": "catering",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "location": "canteen"
+    },
+    {
+        "id": "id-1742911472729-852",
+        "title": "Coffee Break",
+        "description": "Small snacks will be served.",
+        "type": "catering",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "14:50",
+        "endTime": "15:20",
+        "location": "canteen"
+    },
+    {
+        "id": "id-1750154514911-756",
+        "title": "Meet the Expert",
+        "description": "General Slot for Expert Corners in the 1 Floor (Lobby/Atrium)",
+        "type": "expert_corner",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "09:00",
+        "endTime": "17:00",
+        "location": "experts_1"
+    }
+]
 //--------------------------------------------------------------------------------------------------
 function buildSocialHTML(obj) {
     let ret = '';

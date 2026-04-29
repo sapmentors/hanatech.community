@@ -28,10 +28,10 @@
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/modules.css" />
 
-  <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>-->
-  <!--<script
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script
           defer
-          src="https://cdn.jsdelivr.net/npm/a11y-dialog@8/dist/a11y-dialog.min.js"></script>-->
+          src="https://cdn.jsdelivr.net/npm/a11y-dialog@8/dist/a11y-dialog.min.js"></script>
   <script src="https://js.tito.io/v2/with/inline" async></script>
   <script src="./js/main.js"></script>
 </head>
@@ -190,6 +190,12 @@
           <a href="mailto:info@hanatech.community?subject=[HANA Tech Con 2026] Sponsoring"
               aria-label="Link to sponsorship information" hreflang="en" class="htec-btn">Become a Sponsor</a>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="htec-wrap" id="agenda" style="padding-top: 0;">
+        <div id="agenda-app"></div>
       </div>
     </section>
 
@@ -522,6 +528,7 @@
   </footer>
 
   <script src="./js/luxon.min.js"></script>
+  <script src="./js/agenda-app.js"></script>
   <!--<script src="./js/agenda.js"></script>-->
 </body>
 
