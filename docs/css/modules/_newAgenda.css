@@ -197,7 +197,8 @@
             [times] 4em
             [track-1-start] minmax(0, 1fr)
             [track-1-end track-2-start] minmax(0, 1fr)
-            [track-2-end track-3-start] minmax(0, 1fr)
+            [track-2-end track-3-start] minmax(0, 0.5fr)
+            [track-3-end track-4-start] minmax(0, 0.5fr)
     }
 }
 
@@ -221,10 +222,11 @@
             display: block;
             padding: 10px 5px 5px;
             position: sticky;
-            top: 0;
             z-index: 1000;
-            border-radius: 6px;
-            background-color: var(--brand-color);
+            font-weight: 700;
+            border-radius: 14px;
+            background: linear-gradient(90deg, var(--brand-color), var(--brand-color-alt));
+            text-align: center;
         }
     }
 }
@@ -243,7 +245,7 @@
 
 .session {
     padding: 1rem;
-    border-radius: 0px;
+    border-radius: 14px;
     font-size: 14px;
     display: flex;
     flex-direction: column;
@@ -251,7 +253,7 @@
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);*/
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
     &::before {
@@ -263,15 +265,6 @@
         height: 4px;
         background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.1));
         border-radius: 10px 10px 0 0;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
-        pointer-events: none;
-        border-radius: 10px;
     }
 
     &:hover {

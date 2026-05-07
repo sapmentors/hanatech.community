@@ -7,8 +7,10 @@
 .dialog-container {
     z-index: 2000;
     display: flex;
-    margin-right: 10%;
-    margin-left: 10%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: dialogFadeIn 0.25s ease-out;
 }
 
 .dialog-container[aria-hidden='true'] {
@@ -16,77 +18,347 @@
 }
 
 .dialog-overlay {
-    background-color: rgb(43 46 56 / 0.9);
+    background-color: rgba(10, 10, 20, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
+/* Content Box */
 .dialog-content {
-    margin: auto;
-    z-index: 2000;
+    z-index: 2001;
     position: relative;
-    overflow: auto;
-    max-height: 90vh;
-    background-color: var(--background-color);
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 85vh;
+    max-width: 720px;
+    width: 100%;
+    background: var(--background-color);
+    border-radius: 16px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 2px 8px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: dialogSlideIn 0.3s ease-out;
 }
 
 .dialog-content > * {
-    max-width: 90%;
+    max-width: 100%;
 }
 
-.dialog-content h3 {
-    text-align: center;
+/* Dialog Header Area */
+.dialog-content .htec-agenda-dialog-thick-box:first-of-type {
+    position: relative;
     margin: 0;
-    padding: 1.5em;
-    font-size: var(--type-2);
-    color: var(--brand-color);
+    padding: 2.5rem 2rem 2rem;
+    border-radius: 16px 16px 0 0;
+    background: linear-gradient(135deg, var(--brand-color) 0%, var(--brand-color-alt) 100%);
+    box-shadow: none;
 }
 
-.dialog-content p:not(.htec-agenda-bio-text) {
-    font-size: var(--type-0);
-    padding: 1em;
-    color: var(--text-color);
-}
-
-.htec-agenda-bio-text {
-    padding-left: 0px;
-    font-size: var(--type-0);
-    color: var(--text-color);
-    margin-bottom: 2.5em;
-}
-
-.dialog-close {
+.dialog-content .htec-agenda-dialog-thick-box:first-of-type::after {
+    content: '';
     position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    border: 0;
-    padding: 0.25em;
-    background-color: transparent;
-    font-size: 1.5em;
-    width: 1.5em;
-    height: 1.5em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+/* Dialog Meta Info (Badge, Time, Room) */
+.dialog-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.dialog-meta-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.dialog-meta-time,
+.dialog-meta-room {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dialog-content .htec-agenda-dialog-thick-box:first-of-type h3 {
+    color: #fff;
+    background: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    font-size: var(--type-2);
+    font-weight: 700;
     text-align: center;
-    cursor: pointer;
-    transition: 0.15s;
-    border-radius: 50%;
-    color: var(--logo-color);
+    padding: 0;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.dialog-close:hover {
-    background-color: rgb(50 50 0 / 0.15);
+.dialog-content .htec-agenda-dialog-thick-box:first-of-type p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--type-0);
+    line-height: 1.7;
+    padding: 1.5rem 0 0;
+    margin: 0;
+    text-align: left;
 }
 
+/* Speaker Section */
+.dialog-content .htec-agenda-dialog-thick-box.agenda-dialog-speakers {
+    margin: 0;
+    padding: 2rem;
+    box-shadow: none;
+    border-radius: 0 0 16px 16px;
+}
+
+.dialog-content .htec-agenda-dialog-thick-box.agenda-dialog-speakers h3 {
+    font-size: var(--type-1);
+    text-align: left;
+    padding: 0;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--brand-color);
+    display: inline-block;
+}
+
+/* Speaker List */
 .agenda-dialog-speakers-list {
     list-style-type: none;
-    margin: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .agenda-dialog-speakers-list li {
-    margin-top: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: var(--background-color-alt);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.agenda-dialog-speakers-list li:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.agenda-dialog-speakers-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Speaker Quick Info */
+.htec-dialog-speaker-member-quick {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.htec-dialog-speaker-member-quick img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--brand-color);
+    box-shadow: 0 2px 8px rgba(186, 6, 108, 0.2);
+    flex-shrink: 0;
+}
+
+.htec-dialog-speaker-member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.htec-dialog-speaker-member-info h3 {
+    font-size: var(--type-0);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.htec-dialog-speaker-member-info h4 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin: 0;
+    color: var(--logo-color);
+    opacity: 0.7;
+}
+
+/* Speaker Bio */
+.htec-dialog-speaker-member-bio {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.htec-agenda-bio-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.85;
+    margin: 0;
+    padding: 0;
+}
+
+/* Close Button */
+.dialog-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    border: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dialog-close:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.dialog-close:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 2px;
+}
+
+.dialog-close .svg-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/* Thick Box override for dialog */
 .htec-agenda-dialog-thick-box {
-    margin-block: 2rem;
-    margin-inline: auto;
-    padding-block: 3rem;
-    padding-inline: 3vw;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    box-shadow: none;
+}
+
+/* Animations */
+@keyframes dialogFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dialogSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Scrollbar styling for dialog */
+.dialog-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dialog-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dialog-content::-webkit-scrollbar-thumb {
+    background: rgba(186, 6, 108, 0.3);
+    border-radius: 3px;
+}
+
+.dialog-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(186, 6, 108, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    .dialog-overlay {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .dialog-content {
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.6),
+            0 2px 8px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .agenda-dialog-speakers-list li {
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .htec-dialog-speaker-member-bio {
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .dialog-content .htec-agenda-dialog-thick-box:first-of-type p {
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
+
+@media (max-width: 600px) {
+    .dialog-container {
+        padding: 1rem;
+    }
+
+    .dialog-content {
+        max-height: 90vh;
+        border-radius: 12px;
+    }
+
+    .dialog-content .htec-agenda-dialog-thick-box:first-of-type {
+        padding: 2rem 1.25rem 1.5rem;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .dialog-content .htec-agenda-dialog-thick-box.agenda-dialog-speakers {
+        padding: 1.5rem 1.25rem;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .agenda-dialog-speakers-list li {
+        padding: 1rem;
+    }
+
+    .htec-dialog-speaker-member-quick img {
+        width: 48px;
+        height: 48px;
+    }
 }
