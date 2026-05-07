@@ -14,7 +14,7 @@ const ROOM_NAME_MAP = {
 const ROOM_TRACK_MAP = {
     "audimax": "track-1",
     "room_w1": "track-2",
-    "room_w2": "track-2",
+    "experts_1": "track-4",
     "room_w3": "track-3",
     "canteen": "track-1",
 };
@@ -23,6 +23,14 @@ function getConfUnixTime(hour = 9, minute = 0) {
     const h = hour.toString().padStart(2, "0");
     const m = minute.toString().padStart(2, "0");
     return Math.floor(Date.parse(`2026-07-16T${h}:${m}:00+02:00`) / 1000);
+}
+//--------------------------------------------------------------------------------------------------
+function wallclockToHour(wallclock) {
+    return parseInt(wallclock.split(':')[0])
+}
+//--------------------------------------------------------------------------------------------------
+function wallclockToMinutes(wallclock) {
+    return parseInt(wallclock.split(':')[1])
 }
 //--------------------------------------------------------------------------------------------------
 // AgendaSession
@@ -46,7 +54,7 @@ const AgendaSession = {
             return ROOM_TRACK_MAP[this.session.location] || 'track-1';
         },
         gridColumn() {
-            if (this.isMultiTrack && this.isKeynote) return 'track-1-start / track-3-end';
+            if (this.isMultiTrack && this.isKeynote) return 'track-1-start / track-2-end';
             if (this.isMultiTrack) return 'track-1-start / track-2-end';
             return this.track;
         },
@@ -142,7 +150,7 @@ const AgendaSession = {
     },
     template: `
         <div :class="sessionClasses" :style="gridStyle">
-            <span v-if="badgeLabel" :class="badgeClass">{{ badgeLabel }}</span>
+            <!--<span v-if="badgeLabel" :class="badgeClass">{{ badgeLabel }}</span>-->
             <h3 class="session-title">
                 <a href="#" @click="handleClick">{{ session.title }}</a>
             </h3>
@@ -154,7 +162,8 @@ const AgendaSession = {
                                 d="M10.2 11c-.18 0-.35-.06-.5-.18L7.4 8.96a.792.792 0 0 1-.3-.62V4.8c0-.44.36-.8.8-.8.44 0 .8.36.8.8v3.16l2.01 1.62c.34.28.4.78.12 1.12-.16.2-.39.3-.62.3Zm4.8 1.2V3.8C15 2.26 13.74 1 12.2 1H3.8C2.26 1 1 2.26 1 3.8v8.4C1 13.74 2.26 15 3.8 15h8.4c1.54 0 2.8-1.26 2.8-2.8Zm-2.8-9.6c.66 0 1.2.54 1.2 1.2v8.4c0 .66-.54 1.2-1.2 1.2H3.8c-.66 0-1.2-.54-1.2-1.2V3.8c0-.66.54-1.2 1.2-1.2h8.4Z">
                             </path>
                         </svg>
-                        <span>{{ session.startTime }} - {{ session.endTime }}</span>
+                        <span v-if="session.displayStartTime">{{ session.displayStartTime }} - {{ session.endTime }}</span>
+                        <span v-else>{{ session.startTime }} - {{ session.endTime }}</span>
                     </div>
                     <div class="session-room-chip">
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16" width="14" height="14">
@@ -194,6 +203,21 @@ const AgendaDialog = {
         },
         hasSpeakers() {
             return this.session && this.session.speakers && this.session.speakers.length > 0;
+        },
+        sessionTypeLabel() {
+            if (!this.session) return '';
+            const t = this.session.type;
+            if (t.includes('keynote')) return 'Keynote';
+            if (t.includes('workshop')) return 'Workshop';
+            if (t.includes('presentation_long')) return 'Deep Dive (45 min)';
+            if (t.includes('presentation_short')) return 'Spot Talk (25 min)';
+            if (t.includes('presentation_detailed')) return 'Detailed Session';
+            if (t.includes('expert')) return 'Expert Corner';
+            if (t.includes('catering')) return 'Break';
+            return '';
+        },
+        roomName() {
+            return ROOM_NAME_MAP[this.session?.location] || '';
         }
     },
     methods: {
@@ -230,6 +254,13 @@ const AgendaDialog = {
                 </button>
 
                 <div class="htec-agenda-dialog-thick-box">
+                    <div class="dialog-meta" v-if="sessionTypeLabel || session.startTime">
+                        <span class="dialog-meta-badge" v-if="sessionTypeLabel">{{ sessionTypeLabel }}</span>
+                        <span class="dialog-meta-time" v-if="session.startTime">
+                            {{ session.startTime }} - {{ session.endTime }}
+                        </span>
+                        <span class="dialog-meta-room" v-if="roomName">{{ roomName }}</span>
+                    </div>
                     <h3 id="agenda-dialog-title">{{ session.title }}</h3>
                     <p id="agenda-dialog-desc" v-html="formattedDescription"></p>
                 </div>
@@ -238,16 +269,16 @@ const AgendaDialog = {
                     <h3>Speakers</h3>
                     <ul class="agenda-dialog-speakers-list">
                         <li v-for="speaker in session.speakers" :key="speaker.id || speaker.hash">
-                            <div class="htec-jury-member-quick">
+                            <div class="htec-dialog-speaker-member-quick">
                                 <img aria-hidden="true"
                                      :src="getSpeakerImage(speaker)"
                                      :alt="'Image of ' + getSpeakerFullName(speaker)" />
-                                <div class="htec-jury-member-info">
+                                <div class="htec-dialog-speaker-member-info">
                                     <h3>{{ getSpeakerFullName(speaker) }}</h3>
                                     <h4>{{ speaker.company }}</h4>
                                 </div>
                             </div>
-                            <div class="htec-jury-member-bio" v-if="speaker.bio">
+                            <div class="htec-dialog-speaker-member-bio" v-if="speaker.bio">
                                 <p class="htec-agenda-bio-text">{{ speaker.bio }}</p>
                             </div>
                         </li>
@@ -258,28 +289,82 @@ const AgendaDialog = {
     `
 };
 //--------------------------------------------------------------------------------------------------
+// Time Slot
+//--------------------------------------------------------------------------------------------------
+function genTimeSlotArray(sessions, index) {
+    const session = sessions[index]
+    let startHour = wallclockToHour(sessions[0].startTime) - 1;
+    if (index !== 0) {
+        startHour = wallclockToHour(sessions[index - 1].startTime);
+    }
+
+    const res = [];
+    const endHour = wallclockToHour(session.startTime);
+    print(startHour, endHour);
+    while (startHour < endHour) {
+        startHour++;
+        res.push(startHour);
+    }
+
+    return res;
+}
+//--------------------------------------------------------------------------------------------------
+const TimeSlotEmitter = {
+    props: ['sessions', 'index'],
+    computed: {
+        timeSlots() {
+            return genTimeSlotArray(this.sessions, this.index);
+        }
+    },
+    methods: {
+        formatHour(hour) {
+            return hour.toString().padStart(2, '0') + ':00';
+        },
+        hourGridRow(hour) {
+            const adj = hour.toString().padStart(2, '0');
+            return { gridRow: `time-${adj}00` };
+        },
+    },
+    template: `
+        <template v-for="hour in timeSlots">
+            <h2 class="time-slot" :style="hourGridRow(hour)">{{ formatHour(hour) }}</h2>
+        </template>
+    `
+};
+//--------------------------------------------------------------------------------------------------
 // Main App
+//--------------------------------------------------------------------------------------------------
+function compareSessions(a, b) {
+    const [h1, m1] = a.startTime.split(':').map(Number);
+    const [h2, m2] = b.startTime.split(':').map(Number);
+
+    if (h1 !== h2) return h1 - h2;
+    if (m1 !== m2) return m1 - m2;
+
+    if (a.type === b.type) {
+        return 0;
+    } else if (a.type < b.type) {
+        return -1;
+    }
+    return 1;
+}
 //--------------------------------------------------------------------------------------------------
 const AgendaApp = {
     components: {
         'agenda-session': AgendaSession,
         'agenda-dialog': AgendaDialog,
+        'agenda-time-slot-emitter': TimeSlotEmitter
     },
     data() {
         return {
-            sessions: AGENDA_JSON,
+            sessions_raw: AGENDA_JSON,
             selectedSession: null,
             showDialog: false
         };
     },
     computed: {
         sortedSessions() {
-            return [...this.sessions].sort((a, b) => {
-                const [h1, m1] = a.startTime.split(':').map(Number);
-                const [h2, m2] = b.startTime.split(':').map(Number);
-                if (h1 !== h2) return h1 - h2;
-                return m1 - m2;
-            });
+            return [...this.sessions_raw].sort(compareSessions);
         },
         timeSlots() {
             const hours = new Set();
@@ -299,13 +384,6 @@ const AgendaApp = {
             this.showDialog = false;
             this.selectedSession = null;
         },
-        formatHour(hour) {
-            return hour.toString().padStart(2, '0') + ':00';
-        },
-        hourGridRow(hour) {
-            const adj = hour.toString().padStart(2, '0');
-            return { gridRow: `time-${adj}00` };
-        },
     },
     template: `
         <h3 id="Agenda" style="text-align: center;">Agenda</h3>
@@ -313,12 +391,13 @@ const AgendaApp = {
             <span class="track-slot" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;">Track A</span>
             <span class="track-slot" aria-hidden="true" style="grid-column: track-2; grid-row: tracks;">Track B</span>
             <span class="track-slot" aria-hidden="true" style="grid-column: track-3; grid-row: tracks;">Track C</span>
+            <span class="track-slot" aria-hidden="true" style="grid-column: track-4; grid-row: tracks;">Track D</span>
 
-            <template v-for="hour in timeSlots" :key="hour">
-                <h2 class="time-slot" :style="hourGridRow(hour)">{{ formatHour(hour) }}</h2>
-            </template>
-
-            <template v-for="session in sortedSessions">
+            <template v-for="(session, index) in sortedSessions">
+                <agenda-time-slot-emitter
+                    :sessions="sortedSessions",
+                    :index="index"
+                />
                 <agenda-session
                     :session="session"
                     :key="session.id"

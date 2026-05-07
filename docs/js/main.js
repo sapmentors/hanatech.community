@@ -622,7 +622,8 @@ const AGENDA_JSON = [
         "speakers": [],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "10:30",
+        "displayStartTime": "10:30",
+        "startTime": "10:40",
         "endTime": "11:00",
         "location": "canteen"
     },
