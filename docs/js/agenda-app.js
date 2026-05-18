@@ -300,7 +300,6 @@ function genTimeSlotArray(sessions, index) {
 
     const res = [];
     const endHour = wallclockToHour(session.startTime);
-    print(startHour, endHour);
     while (startHour < endHour) {
         startHour++;
         res.push(startHour);
@@ -418,10 +417,10 @@ const AgendaApp = {
 //--------------------------------------------------------------------------------------------------
 // Mount when index.html is ready...
 //--------------------------------------------------------------------------------------------------
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const mountPoint = document.getElementById('agenda-app');
     if (mountPoint) {
-        const { createApp } = Vue;
+        const { createApp } = await import('https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js');
         createApp(AgendaApp).mount('#agenda-app');
     }
 });

@@ -242,9 +242,9 @@ const AGENDA_JSON = [
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "9:50",
-        "endTime": "10:35",
-        "location": "audimax"
+        "startTime": "13:00",
+        "endTime": "13:45",
+        "location": "room_w1"
     },
     {
         "id": "id-1773061903699-987",
@@ -287,7 +287,7 @@ const AGENDA_JSON = [
                 "company": "SAP",
                 "bio": "SAP HANA Cloud UX designer.",
                 "hash": "cf6499827a680660034df6841036baf0b4a5a5e4c115542c30213eac73b01fba",
-                "photo": true
+                "photo": false
             },
             {
                 "id": "niamh.leypoldt@sap.com",
@@ -323,7 +323,7 @@ const AGENDA_JSON = [
                 "company": "SAP SE",
                 "bio": "Head of Design, SAP HANA",
                 "hash": "22d93019b7f2f68928612d74b6106045b37c8ffcd2d26b0dc6453dcc1797840a",
-                "photo": true
+                "photo": false
             }
         ],
         "associatedSpeakers": "",
@@ -437,9 +437,34 @@ const AGENDA_JSON = [
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "13:00",
-        "endTime": "13:45",
-        "location": "room_w1"
+        "startTime": "9:50",
+        "endTime": "10:35",
+        "location": "audimax"
+    },
+    {
+        "id": "id-1773398365690-567",
+        "title": "Adaptive Dictionary Scan in HEX: Smarter Column Store Queries in SAP HANA",
+        "description": "The HANA Execution Engine (HEX) is the modern SQL processing engine designed to deliver\nhigh performance and scalability for SAP HANA workloads. Over the past years, HEX has\nexpanded its capabilities and has become the default engine for SAP HANA Cloud.\n \nWith SAP HANA Cloud 2025.QRC4 the adaptive dictionary scan has been introduced to the\ncolumn store table scan in HEX as another mechanism for more adaptive filter predicate\nevaluation to further improve performance of query plans with changing query parameters\non a skewed data distribution.\n \nIn this session, we explain the various access paths into the column store data structures,\nand introduce the motivation and concept of the adaptive dictionary scan.\nWe will discuss how it integrates with other runtime adaptive mechanisms and what benefits\ncan be expected.\n \nThe session will cover:\n- A short technical deep dive into the processing of a search on a column store table\n- What role do the actual data distribution and query parameters play\n- How do adaptive mechanisms improve query performance\n- Practical guidance for understanding how a query has been processed by analyzing the query plan\n \nJoin us to learn how the adaptive dictionary scan completes the runtime adaptivity in the column\nstore table scan in the continuous evolution of SAP HANA's query processing technology.",
+        "type": "presentation_short",
+        "extraInfo": "",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "oliver.horn@sap.com",
+                "firstName": "Oliver",
+                "lastName": "Horn",
+                "company": "SAP SE",
+                "bio": "",
+                "hash": "df6ee634a0e15683dd44995ed66e8d97f62b246a70010a35c493e39b75694236",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "11:35",
+        "endTime": "12:00",
+        "location": "audimax"
     },
     {
         "id": "id-1773410159317-233",
@@ -482,7 +507,7 @@ const AGENDA_JSON = [
                 "company": "ZEISS Group",
                 "bio": "",
                 "hash": "135c124588f52cec91b7999a72d295ef18c44869c5ecd926d0ff4bdfc9d3be84",
-                "photo": true
+                "photo": false
             },
             {
                 "id": "kush.kashyap@zeiss.com",
@@ -491,7 +516,7 @@ const AGENDA_JSON = [
                 "company": "ZEISS Group",
                 "bio": "",
                 "hash": "c4f91923ac58b76b922eaa83116236668551b78b445535130750c340b64f9842",
-                "photo": true
+                "photo": false
             },
             {
                 "id": "jacob.pribil@zeiss.com",
@@ -554,7 +579,7 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1774941808252-960",
-        "title": "Opening Key-Note [Placeholder - Titel tbd]",
+        "title": "Opening Key-Note",
         "description": "Opening Key-Note",
         "type": "keynote",
         "extraInfo": "",
@@ -568,7 +593,7 @@ const AGENDA_JSON = [
                 "company": "Evonik Industries AG",
                 "bio": "",
                 "hash": "30d0214c8838c80e6beb4e387d9226d5b65290a3d0e84f8c3d6448a04e3a0db1",
-                "photo": true
+                "photo": false
             }
         ],
         "associatedSpeakers": "",
