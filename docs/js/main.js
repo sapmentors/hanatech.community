@@ -103,14 +103,14 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "Christopher Carter is a globally recognized SAP and AI Expert, CEO of Approyo, and the founder of MugatuAI. A best-selling author of 17 books (including the Mastering SAP series), Chris has spent over three decades helping businesses navigate the complex intersection of enterprise ERP and emerging technology. Known for his ability to transform complex technical challenges into engaging stories, Chris is a frequent keynote speaker and media contributor who advises leaders on how to harness the power of Artificial Intelligence without breaking their business foundation. He brings a \"bold,\" future-forward perspective to the often-conservative world of enterprise data.",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "cc@approyo.com",
                 "firstName": "Christopher",
                 "lastName": "CARTER",
                 "company": "Approyo",
-                "bio": "",
+                "bio": "Since 2011, Carter's has worked with companies in over 55+ different industries. His advice has been featured on Inc., Forbes, ASUG.com, Tech Target, Entrepreneur, CRN, and many others around the world. \n\nSome other personal highlights include:\n✓ Founder of one of the “Best Sap companies to work with” Philippe Chaudron KPMG\n✓ Named as \"One of America's Top 10 Industry Influencers\" - MirrorReview\n✓ Go-To contributor for Newsmax-TV for Technology\n✓ A four-time best-selling Amazon author, “The #1 Book series “Mastering SAP.\" ✓ ACQ Award winner for SAP services\n\nServices include SAP, Cloud AI, Security, Oracle, ServiceNow, and Technology. ",
                 "hash": "cbf8d7fc10add274500f893cd0d8838f499d53fcc20040d7b7d6109a08d3d758",
                 "photo": true
             }
@@ -128,7 +128,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "kai.harder@sap.com",
@@ -153,7 +153,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "matthias.stemmler@sap.com",
@@ -203,7 +203,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "julian.mayer@cbs-consulting.de",
@@ -278,17 +278,8 @@ const AGENDA_JSON = [
         "type": "other",
         "extraInfo": "We would like to request a room for this activity with necessary equipment (tables, projector, stickers, pens); alternatively, a public area easily accessible to all participants with three booths. We also plan to create posters and banners to promote the activity and attract more participants.",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
-            {
-                "id": "april.luo@sap.com",
-                "firstName": "April",
-                "lastName": "Luo",
-                "company": "SAP",
-                "bio": "SAP HANA Cloud UX designer.",
-                "hash": "cf6499827a680660034df6841036baf0b4a5a5e4c115542c30213eac73b01fba",
-                "photo": false
-            },
             {
                 "id": "niamh.leypoldt@sap.com",
                 "firstName": "Niamh",
@@ -324,6 +315,15 @@ const AGENDA_JSON = [
                 "bio": "Head of Design, SAP HANA",
                 "hash": "22d93019b7f2f68928612d74b6106045b37c8ffcd2d26b0dc6453dcc1797840a",
                 "photo": false
+            },
+            {
+                "id": "vivian.nagel@sap.com",
+                "firstName": "Vivian",
+                "lastName": "Nagel",
+                "company": "SAP SE",
+                "bio": "I’m a dual student at SAP in the field of Digital Media.\nDuring my 2,5 years at SAP, I’ve had the opportunity to work across five different teams from Marketing, UX-Design, creating prototypes and user flows in Figma, to User Research, where I conducted projects such as an eye-tracking study for my bachelor’s thesis. I also enjoy video editing and spent an international practical phase in Barcelona optimizing email campaigns.\nOutside of work, I love baking and doing sports, so I’m always up for a Calisthenics, Tennis or Padel session on campus😊\n",
+                "hash": "6eff5cb228b7fc4a211528b23e79d131a37c8aad9c170e81f293c260067eaf57",
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
@@ -364,7 +364,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "henricus.bouten@sap.com",
@@ -389,7 +389,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "kutbettin.baran@sys.aok.de",
@@ -414,7 +414,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "Any of the session types would work for this talk; we can adjust it accordingly :)",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "nora.von.thenen@sap.com",
@@ -448,15 +448,24 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "oliver.horn@sap.com",
                 "firstName": "Oliver",
                 "lastName": "Horn",
                 "company": "SAP SE",
-                "bio": "",
+                "bio": "Equipped with more than 10 years of SAP HANA column store table search experience.",
                 "hash": "df6ee634a0e15683dd44995ed66e8d97f62b246a70010a35c493e39b75694236",
+                "photo": true
+            },
+            {
+                "id": "cheng-lun.li@sap.com",
+                "firstName": "Cheng-Lun",
+                "lastName": "Li",
+                "company": "SAP SE",
+                "bio": "",
+                "hash": "fff30c70bbea44b97371d15246a1b92ca989b81beac7fdde8d2ce12320e4365d",
                 "photo": true
             }
         ],
@@ -469,7 +478,7 @@ const AGENDA_JSON = [
     {
         "id": "id-1773410159317-233",
         "title": "The Hidden Data Science Platform Inside SAP HANA",
-        "description": "SAP HANA is widely known as a high-performance database for enterprise applications, but many developers overlook its built-in capabilities for advanced analytics and machine learning. In many projects, data is exported to external platforms for data science workflows, even though SAP HANA already provides powerful libraries and tools for running machine learning directly where the data lives.\nThis session explores how SAP HANA supports AI and data science through features such as the Predictive Analysis Library (PAL), the Automated Predictive Library (APL), and embedded machine learning scenarios. The talk explains how these capabilities allow developers and data engineers to build predictive models directly inside the database while reducing data movement and improving performance. Through practical architecture patterns and real use cases, the session highlights when it makes sense to run machine learning inside SAP HANA and when external ML platforms are still the better choice.\nKey Takeaways:\nUnderstand the machine learning capabilities built directly into SAP HANA\nLearn when to run machine learning inside HANA versus external platforms\nExplore architecture patterns for combining enterprise data with AI workflows",
+        "description": "SAP HANA is widely known as a high-performance database for enterprise applications, but many developers overlook its built-in capabilities for advanced analytics and machine learning. In many projects, data is exported to external platforms for data science workflows, even though SAP HANA already provides powerful libraries and tools for running machine learning directly where the data lives.\nThis session explores how SAP HANA supports AI and data science through features such as the Predictive Analysis Library (PAL), the Automated Predictive Library (APL), and embedded machine learning scenarios. The session explains how these capabilities allow developers and data engineers to build predictive models directly inside the database while reducing data movement and improving performance. Through practical architecture patterns and real use cases, the session highlights when it makes sense to run machine learning inside SAP HANA and when external ML platforms are still the better choice.\nKey Takeaways:\nUnderstand the machine learning capabilities built directly into SAP HANA\nLearn when to run machine learning inside HANA versus external platforms\nExplore architecture patterns for combining enterprise data with AI workflows",
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
@@ -478,7 +487,7 @@ const AGENDA_JSON = [
             {
                 "id": "marla.alschweiki@sapfioneer.com",
                 "firstName": "Marla",
-                "lastName": "Alschweiki",
+                "lastName": "Ellinger",
                 "company": "SAP Fioneer",
                 "bio": "I'm a SAP AI Data Engineer and SAP Mentor with over 9 years of hands-on experience. My current playground involves SAP Business Data Cloud (BDC), BTP, SAP HANA Cloud, and SAP Business AI. Beyond the code, I’m an advocate for uplifting and empowering the tech community. I believe that knowledge is most powerful when shared, so I’m dedicated to writing technical blogs, speaking at events, and mentoring. My mission is to make learning accessible and to help others build the confidence they need to grow and lead in tech.\n I’m rarely working alone ,my little puppy, Carlo, is my official co-pilot. While Carlo’s Python skills are still a work in progress, he’s an absolute pro at bringing good vibes wherever he goes. I’m always down to chat about SAP Data and AI, exchange ideas, or, of course, swap puppy photos, so come say hi! ",
                 "hash": "e965ce89b5ad29045d60d29fffc98daab38343f7864b3f54a0fb0856d6adc5ff",
@@ -494,29 +503,29 @@ const AGENDA_JSON = [
     {
         "id": "id-1773411650077-951",
         "title": "Real-time Data Integration and Observability",
-        "description": "We would like to share not only our current solution for real-time data integration, FeRDI, previously presented at Madrid Sapphire 2025  but also how the architecture is evolving.\n1) FeRDI : Real-time data repository using SAP HANA Cloud updated by raw data tables from all transactional systems continuously. This scalable solution is the primary source for analytical and some transactional systems, ensuring access to current information. \nSAP Datasphere exposes HANA Cloud &amp; Business Warehouse  data to cloud analytical tools without persistent storage. \nWe are expanding FeRDI within Datasphere to provide not only raw transactional tables (such as VBAK and VBAP), but also Foundational Data Products representing business concepts such as Sales Orders.\n\n2) Near Real-Time Data Observability with dbt and Apache Airflow\nBecause FeRDI integrates enterprise data in real time, it enables near real-time data observability. Using dbt and Apache Airflow, we run operational data quality checks that detect inconsistencies as data enters the platform and notify data creators to correct issues at the source (MVP in progress)\n\nBenefits:\nMinimizes bad data exposure\nReduces costly downstream corrections\nCreates immediate feedback loops for faster issue resolution\n\nSession Level: Intermediate\n\nKey Takeaways\nEnable real-time data accessibility from all transactional systems in a single platform\nEnd-to-end data observability across the enterprise data landscape",
+        "description": "1) FeRDI : Real-time data repository using SAP HANA Cloud updated by raw data tables from all transactional systems continuously. This scalable solution is the primary source for analytical and some transactional systems, ensuring access to current information. \nSAP Datasphere exposes HANA Cloud &amp; Business Warehouse  data to cloud analytical tools without persistent storage. \nDatasphere to provide not only raw transactional tables (such as VBAK and VBAP), but also Foundational Data Products representing business concepts such as Sales Orders.\n\n2) Near Real-Time Data Observability with dbt and Apache Airflow\nBecause FeRDI integrates enterprise data in real time, it enables near real-time data observability. Using dbt and Apache Airflow, ZEISS will run operational data quality checks that detect inconsistencies as data enters the platform and notify data creators to correct issues at the source (MVP in progress)\n\nBenefits:\nMinimizes bad data exposure\nReduces costly downstream corrections\nCreates immediate feedback loops for faster issue resolution\n\nSession Level: Intermediate\n\nKey Takeaways\nEnable real-time data accessibility from all transactional systems in a single platform\nEnd-to-end data observability across the enterprise data landscape",
         "type": "presentation_long",
         "extraInfo": "We can show demos\nWe are open to a another session format, but given that the topic is a bit complex with the non-SAP tools over HANA Cloud, would be difficult to reduce the time.",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "javier.caycho@zeiss.com",
                 "firstName": "Javier",
                 "lastName": "Caycho",
                 "company": "ZEISS Group",
-                "bio": "",
+                "bio": "• Accomplished BI Expert with 24 years of international experience across Europe, Americas and Asia. Successful team leader of global IT projects and Platform/Support areas for large multinationals with full responsibility for Technical Management, Implementation and Rollout. Experience on BI Strategy and Roadmap definition including technical and business value assessment.\n• Broad experience in various industry sectors including optoelectronic, pharmaceuticals, consumer goods and retail. International experiences include Netherlands, Malaysia, Spain, Peru, Switzerland, India and Germany. Implementation experience on Finance, Controlling, HR and Procurement.",
                 "hash": "135c124588f52cec91b7999a72d295ef18c44869c5ecd926d0ff4bdfc9d3be84",
-                "photo": false
+                "photo": true
             },
             {
                 "id": "kush.kashyap@zeiss.com",
                 "firstName": "Kush ",
                 "lastName": "Kashyap",
                 "company": "ZEISS Group",
-                "bio": "",
+                "bio": "BI Architecture &amp; Integration Lead at Carl Zeiss AG",
                 "hash": "c4f91923ac58b76b922eaa83116236668551b78b445535130750c340b64f9842",
-                "photo": false
+                "photo": true
             },
             {
                 "id": "jacob.pribil@zeiss.com",
@@ -579,21 +588,21 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1774941808252-960",
-        "title": "Opening Key-Note",
-        "description": "Opening Key-Note",
+        "title": "From Bold Promises to Operational Reality – A Community-Driven Journey",
+        "description": "SAP HANA: From Bold Promises to Operational Reality – A Community-Driven Journey\n\nWhen SAP HANA was first introduced, it promised a world of dramatically reduced complexity and a new simplicity in database operations—but reality turned out to be far more nuanced and exciting. This keynote takes you on a personal as well as a customer-driven journey from early fascination and community-driven experiences to running mission-critical global landscapes at scale. \nThrough real-world insights from the customer perspective—covering adoption, architecture, performance, automation, and continuous evolution—you’ll discover how HANA reshaped not just technology, but the role of the people behind it.",
         "type": "keynote",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "christian.braukmueller@evonik.com",
                 "firstName": "Christian",
                 "lastName": "Braukmüller",
                 "company": "Evonik Industries AG",
-                "bio": "",
+                "bio": "Fascinated by the energy, openness, and empathy of the global SAP community, Christian actively contributes as an SAP Mentor, frequent conference speaker at events such as SAP TechEd, DSAG and Community driven events.\nFor him, the community is more than a network—it’s a space for reflection, challenge, and continuous growth alongside some of the brightest minds in the field. \nWe all and SAP wouldn't be where they are without this spirit of customers, partners and SAP employees sharing there toughts in fruitful discussions.\nHis journey with SAP HANA began early, working as an independent consultant, helping customers shape and implement their individual HANA strategies—long before many organizations fully realized its potential - or before they just had to make the step to finally get on S/4HANA.\n\nToday, Christian leads an SAP Landscape Architecture team at Evonik,\nThis team is responsible for SAP HANA, hybrid architectures (On-Premise &amp; SAP BTP), automation, and integration. His focus is on building resilient, future-ready SAP environments that bridge innovation with real-world business value.\nEvonik presented their SAP strategy at the last DSAG Userconference (see link)\n\nWhether interacting with SAP as a Customer, DSAG Spokesman, SAP Mentor, organizing community events, speaking on stage, or engaging in peer exchange, Christian remains a community participant at heart—firmly convinced that collaboration is the fastest path to reasonable adoption and innovation.",
                 "hash": "30d0214c8838c80e6beb4e387d9226d5b65290a3d0e84f8c3d6448a04e3a0db1",
-                "photo": false
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
@@ -609,7 +618,7 @@ const AGENDA_JSON = [
         "type": "keynote",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "thomas.jung@sap.com",
