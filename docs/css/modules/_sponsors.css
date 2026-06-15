@@ -136,6 +136,10 @@
 
 /* Sponsor specific */
 
+svg.intel {
+  color: #000;
+}
+
 svg.asbrucon {
   fill: #000;
 }
@@ -184,6 +188,10 @@ svg.metaphacts {
   .htec-sponsors-badge.gold,
   .htec-sponsors-badge.silver {
     color: var(--btn-bg-color);
+  }
+
+  svg.intel {
+    color: #fff;
   }
 
   svg.asbrucon {
