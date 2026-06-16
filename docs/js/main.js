@@ -172,31 +172,6 @@ const AGENDA_JSON = [
         "location": "room_w1"
     },
     {
-        "id": "id-1772647796084-672",
-        "title": "Simplify HANA Central Administration using Joule - for Free",
-        "description": "We demonstrate the free availability of Joule for HANA administration\nDemonstrate the reduction in barrier to know HANA concepts to perform HANA administration ex: Alert monitoring\nUsage of Joule assistant to build complex SQL queries and query SAP knowledgebase",
-        "type": "presentation_long",
-        "extraInfo": "The idea is to keep it as a live demo. \nWe can use a trial account and use the option to manually trigger alert and demo same using the AI assitant",
-        "accepted": true,
-        "confirmed": false,
-        "speakers": [
-            {
-                "id": "sharath.gangadhara@nttdata.com",
-                "firstName": "Sharath ",
-                "lastName": "M Gangadhara",
-                "company": "NTT Data Business Solutions Ltd",
-                "bio": "Speaker and technology practitioner focused on applying AI in SAP HANA Cloud. Passionate about translating emerging AI capabilities into practical solutions that enhance efficiency, insight, and user experience.",
-                "hash": "02c41255f3c8e124354f4173c967c8e9705f48d650c1f928bda8415d398b245f",
-                "photo": true
-            }
-        ],
-        "associatedSpeakers": "",
-        "presentationLinks": [],
-        "startTime": "9:50",
-        "endTime": "10:35",
-        "location": "room_w1"
-    },
-    {
         "id": "id-1772707351922-907",
         "title": "Selective Data Replication from S/4 HANA into HANA Cloud",
         "description": "On a big Project at Leonhard Weiss (potantial co-speaker) we implemented a replacement of SAP ETM which retired end of 2025.\nFor this full fledged BTP Custom Software solution we made use of the power of HANA (with SDA) by Replicating a selective subset of Master Data from S/4 HANA into our very own HANA Cloud while converting, matching, delta detecting and updating our own records.\nWe are happy to share what we did, what we learned and how other similar projects could benefit from it.",
@@ -660,6 +635,40 @@ const AGENDA_JSON = [
         "startTime": "10:40",
         "endTime": "11:00",
         "location": "canteen"
+    },
+    {
+        "id": "id-1781012262388-636",
+        "title": "HC Performance &amp; Scalability: Inside the SAP–Intel Co-Engineering Journey",
+        "description": "SAP HANA Cloud Performance &amp; Scalability: Inside the SAP–Intel Co-Engineering Journey\nSAP and Intel are jointly driving continuous innovation to advance SAP HANA Cloud performance and scalability, enabling enterprises to process ever-growing data volumes with higher efficiency and predictable performance at scale. In this session, we provide an inside look into the co-engineering efforts that translate directly into measurable gains across compute efficiency, memory utilization, and system scalability.\n\nWe will share concrete examples of jointly developed optimizations targeting real-world enterprise workloads, illustrating how customers can accelerate both transactional and analytical processing while maintaining consistent performance under demanding conditions. These optimizations leverage key Intel architecture capabilities, including Intel® AVX-512, Intel® AMX, and Intel® TSX, to maximize throughput, improve parallelism, and enhance efficiency for modern data and AI workloads. A key focus of this session is the ability of SAP HANA Cloud to scale seamlessly across a wide spectrum of deployment sizes—from compact instances with as few as 2 vCPUs to large-scale configurations with up to 12 TB of memory—while delivering consistent and predictable performance characteristics. In addition, we will highlight the SAP Natural Language Processing (NLP) service and demonstrate how developers benefit from running SAP NLP on Intel-optimized platforms, showcasing improvements in performance, efficiency, and responsiveness for AI-driven applications.\n\nJoin us to gain deeper technical insight into how SAP and Intel co-innovate to optimize SAP HANA Cloud, and how these advancements empower developers with high-performance infrastructure for next-generation data processing and AI services.\n",
+        "type": "presentation_long",
+        "extraInfo": "Intel has applied to become a platinum sponsor for HANA Tech Con 2026",
+        "accepted": true,
+        "confirmed": false,
+        "speakers": [
+            {
+                "id": "jan.krueger@intel.com",
+                "firstName": "Jan",
+                "lastName": "Krüger",
+                "company": "Intel Inc.",
+                "bio": "",
+                "hash": "1e4c22c53b86356ce163ea0e60f369396e8ba271a4827681f5373e82aba815b4",
+                "photo": false
+            },
+            {
+                "id": "thomas.willhalm@intel.com",
+                "firstName": "Thomas",
+                "lastName": "Willhalm",
+                "company": "Intel Inc.",
+                "bio": "",
+                "hash": "e9320fd3206fbd782726f755da53ad849f8f7975315cfe9f2a91ed9e7ed014d5",
+                "photo": false
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "9:50",
+        "endTime": "10:35",
+        "location": "room_w1"
     },
     {
         "id": "id-1742910586692-523",
