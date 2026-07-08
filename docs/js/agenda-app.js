@@ -54,7 +54,7 @@ const AgendaSession = {
             return ROOM_TRACK_MAP[this.session.location] || 'track-1';
         },
         gridColumn() {
-            if (this.isMultiTrack && this.isKeynote) return 'track-1-start / track-2-end';
+            if (this.isMultiTrack && this.isKeynote) return 'track-1-start / track-4-end';
             if (this.isMultiTrack) return 'track-1-start / track-2-end';
             return this.track;
         },
