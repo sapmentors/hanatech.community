@@ -99,7 +99,7 @@ const AGENDA_JSON = [
     {
         "id": "id-1769565509149-977",
         "title": "SAP and Databricks: A Bold New Era of Data and AI",
-        "description": "The friction between HANA's rigid data structures and the flexibility of the Databricks Lakehouse has historically been a roadblock for data teams. That friction ends now. In this technical deep dive, Christopher Carter (CEO, Approyo & AI Expert) deconstructs the architecture required to unify SAP S/4HANA with the Databricks Data Intelligence Platform. We will cut through the marketing hype to examine the mechanics of data federation, semantic layer preservation, and the specific pipelines that enable high-speed AI ingestion from HANA. If you are an architect or engineer tired of brittle connectors and stale data, this is the blueprint you’ve been waiting for.",
+        "description": "The friction between HANA's rigid data structures and the flexibility of the Databricks Lakehouse has historically been a roadblock for data teams. That friction ends now. In this technical deep dive, Christopher Carter (CEO, Approyo &amp; AI Expert) deconstructs the architecture required to unify SAP S/4HANA with the Databricks Data Intelligence Platform. We will cut through the marketing hype to examine the mechanics of data federation, semantic layer preservation, and the specific pipelines that enable high-speed AI ingestion from HANA. If you are an architect or engineer tired of brittle connectors and stale data, this is the blueprint you’ve been waiting for.",
         "type": "presentation_short",
         "extraInfo": "Christopher Carter is a globally recognized SAP and AI Expert, CEO of Approyo, and the founder of MugatuAI. A best-selling author of 17 books (including the Mastering SAP series), Chris has spent over three decades helping businesses navigate the complex intersection of enterprise ERP and emerging technology. Known for his ability to transform complex technical challenges into engaging stories, Chris is a frequent keynote speaker and media contributor who advises leaders on how to harness the power of Artificial Intelligence without breaking their business foundation. He brings a \"bold,\" future-forward perspective to the often-conservative world of enterprise data.",
         "accepted": true,
@@ -159,8 +159,8 @@ const AGENDA_JSON = [
                 "id": "matthias.stemmler@sap.com",
                 "firstName": "matthias",
                 "lastName": "stemmler",
-                "company": "SAP Deutschland SE & Co KG",
-                "bio": "I have been working in the data space for over 27 years, helping organizations design and implement modern data architectures—from traditional data warehouses to data lakes and cloud-based platforms.\n\nThroughout my career, I have taken on roles as a technical consultant, project manager, and architect, delivering numerous data platform initiatives with a strong focus on making data truly usable and valuable for the business.\n\nI have been involved with SAP HANA since its early days and have led the implementation of native HANA solutions for several customers. Today, I am responsible for the go-to-market for SAP HANA Cloud in the Middle & Eastern Europe (MEE) region, supporting organizations in transforming their data strategies towards the cloud.\n\nIn my sessions, I share practical insights from real-world projects, discuss challenges and lessons learned, and value open, experience-driven exchange.",
+                "company": "SAP Deutschland SE &amp; Co KG",
+                "bio": "I have been working in the data space for over 27 years, helping organizations design and implement modern data architectures—from traditional data warehouses to data lakes and cloud-based platforms.\n\nThroughout my career, I have taken on roles as a technical consultant, project manager, and architect, delivering numerous data platform initiatives with a strong focus on making data truly usable and valuable for the business.\n\nI have been involved with SAP HANA since its early days and have led the implementation of native HANA solutions for several customers. Today, I am responsible for the go-to-market for SAP HANA Cloud in the Middle &amp; Eastern Europe (MEE) region, supporting organizations in transforming their data strategies towards the cloud.\n\nIn my sessions, I share practical insights from real-world projects, discuss challenges and lessons learned, and value open, experience-driven exchange.",
                 "hash": "0b075b3c99919a43ec23403cac88e009b9c1dbbb3675bf2c0edcf8037e6c7e53",
                 "photo": true
             }
@@ -203,7 +203,7 @@ const AGENDA_JSON = [
         "type": "presentation_long",
         "extraInfo": "This time I will manage to fill the full time of the slot ;) \nIn case you prefer a smaller 20min session I can also just focus on either SDI or SDQ. ",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "timo.wagner@outlook.com",
@@ -228,7 +228,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "pankaj.acharya@sap.com",
@@ -289,7 +289,7 @@ const AGENDA_JSON = [
                 "company": "SAP SE",
                 "bio": "Head of Design, SAP HANA",
                 "hash": "22d93019b7f2f68928612d74b6106045b37c8ffcd2d26b0dc6453dcc1797840a",
-                "photo": false
+                "photo": true
             },
             {
                 "id": "vivian.nagel@sap.com",
@@ -303,8 +303,8 @@ const AGENDA_JSON = [
         ],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "09:00",
-        "endTime": "17:00",
+        "startTime": "09:50",
+        "endTime": "16:25",
         "location": "room_w3"
     },
     {
@@ -314,7 +314,7 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "anna.hartmann@in4md-service.de",
@@ -359,7 +359,7 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1773349703177-907",
-        "title": "The Role of Indexes in SAP HANA Performance and Memory",
+        "title": "The Role of Indexes in SAP HANA Performance",
         "description": "this session explains how indexes influence SAP HANA performance, when it makes sense to create an index, and the distinctions between index types. Through practical examples, attendees will see how different indexing approaches affect query speed, data retrieval, and resource usage in real-world scenarios.",
         "type": "presentation_short",
         "extraInfo": "",
@@ -439,7 +439,7 @@ const AGENDA_JSON = [
                 "firstName": "Cheng-Lun",
                 "lastName": "Li",
                 "company": "SAP SE",
-                "bio": "",
+                "bio": "A normal software engineer",
                 "hash": "fff30c70bbea44b97371d15246a1b92ca989b81beac7fdde8d2ce12320e4365d",
                 "photo": true
             }
@@ -453,19 +453,19 @@ const AGENDA_JSON = [
     {
         "id": "id-1773410159317-233",
         "title": "The Hidden Data Science Platform Inside SAP HANA",
-        "description": "SAP HANA is widely known as a high-performance database for enterprise applications, but many developers overlook its built-in capabilities for advanced analytics and machine learning. In many projects, data is exported to external platforms for data science workflows, even though SAP HANA already provides powerful libraries and tools for running machine learning directly where the data lives.\nThis session explores how SAP HANA supports AI and data science through features such as the Predictive Analysis Library (PAL), the Automated Predictive Library (APL), and embedded machine learning scenarios. The session explains how these capabilities allow developers and data engineers to build predictive models directly inside the database while reducing data movement and improving performance. Through practical architecture patterns and real use cases, the session highlights when it makes sense to run machine learning inside SAP HANA and when external ML platforms are still the better choice.\nKey Takeaways:\nUnderstand the machine learning capabilities built directly into SAP HANA\nLearn when to run machine learning inside HANA versus external platforms\nExplore architecture patterns for combining enterprise data with AI workflows",
+        "description": "SAP HANA is more than a high-performance enterprise database. It also offers built-in capabilities for advanced analytics and machine learning directly where business data lives.\nThis session explores how SAP HANA supports data science through PAL, APL, and embedded ML scenarios. It shows when in-database machine learning makes sense, when external ML platforms are better, and how both can be combined in modern AI architectures.\nKey Takeaways:\nUnderstand SAP HANA’s built-in machine learning capabilities\nLearn when to use HANA ML versus external ML platforms\nExplore architecture patterns for enterprise AI workflows",
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
-                "id": "marla.alschweiki@sapfioneer.com",
+                "id": "marla.ellinger@sapfioneer.com",
                 "firstName": "Marla",
                 "lastName": "Ellinger",
                 "company": "SAP Fioneer",
-                "bio": "I'm a SAP AI Data Engineer and SAP Mentor with over 9 years of hands-on experience. My current playground involves SAP Business Data Cloud (BDC), BTP, SAP HANA Cloud, and SAP Business AI. Beyond the code, I’m an advocate for uplifting and empowering the tech community. I believe that knowledge is most powerful when shared, so I’m dedicated to writing technical blogs, speaking at events, and mentoring. My mission is to make learning accessible and to help others build the confidence they need to grow and lead in tech.\n I’m rarely working alone ,my little puppy, Carlo, is my official co-pilot. While Carlo’s Python skills are still a work in progress, he’s an absolute pro at bringing good vibes wherever he goes. I’m always down to chat about SAP Data and AI, exchange ideas, or, of course, swap puppy photos, so come say hi! ",
-                "hash": "e965ce89b5ad29045d60d29fffc98daab38343f7864b3f54a0fb0856d6adc5ff",
+                "bio": "I'm a SAP AI Data Engineer at SAP Fioneer and a SAP Mentor with over 10 years of hands-on experience. My current playground involves SAP Business Data Cloud (BDC), BTP, SAP HANA Cloud, and SAP Business AI. ",
+                "hash": "8e67c500c4ec404b0ab078480f2a7b5eb6e899ea7f671139dcc7fc25c08b2336",
                 "photo": true
             }
         ],
@@ -478,7 +478,7 @@ const AGENDA_JSON = [
     {
         "id": "id-1773411650077-951",
         "title": "Real-time Data Integration and Observability",
-        "description": "1) FeRDI : Real-time data repository using SAP HANA Cloud updated by raw data tables from all transactional systems continuously. This scalable solution is the primary source for analytical and some transactional systems, ensuring access to current information. \nSAP Datasphere exposes HANA Cloud & Business Warehouse  data to cloud analytical tools without persistent storage. \nDatasphere to provide not only raw transactional tables (such as VBAK and VBAP), but also Foundational Data Products representing business concepts such as Sales Orders.\n\n2) Near Real-Time Data Observability with dbt and Apache Airflow\nBecause FeRDI integrates enterprise data in real time, it enables near real-time data observability. Using dbt and Apache Airflow, ZEISS will run operational data quality checks that detect inconsistencies as data enters the platform and notify data creators to correct issues at the source (MVP in progress)\n\nBenefits:\nMinimizes bad data exposure\nReduces costly downstream corrections\nCreates immediate feedback loops for faster issue resolution\n\nSession Level: Intermediate\n\nKey Takeaways\nEnable real-time data accessibility from all transactional systems in a single platform\nEnd-to-end data observability across the enterprise data landscape",
+        "description": "1) FeRDI : Real-time data repository using SAP HANA Cloud updated by raw data tables from all transactional systems continuously. This scalable solution is the primary source for analytical and some transactional systems, ensuring access to current information. \nSAP Datasphere exposes HANA Cloud &amp; Business Warehouse  data to cloud analytical tools without persistent storage. \nDatasphere to provide not only raw transactional tables (such as VBAK and VBAP), but also Foundational Data Products representing business concepts such as Sales Orders.\n\n2) Near Real-Time Data Observability with dbt and Apache Airflow\nBecause FeRDI integrates enterprise data in real time, it enables near real-time data observability. Using dbt and Apache Airflow, ZEISS will run operational data quality checks that detect inconsistencies as data enters the platform and notify data creators to correct issues at the source (MVP in progress)\n\nBenefits:\nMinimizes bad data exposure\nReduces costly downstream corrections\nCreates immediate feedback loops for faster issue resolution\n\nSession Level: Intermediate\n\nKey Takeaways\nEnable real-time data accessibility from all transactional systems in a single platform\nEnd-to-end data observability across the enterprise data landscape",
         "type": "presentation_long",
         "extraInfo": "We can show demos\nWe are open to a another session format, but given that the topic is a bit complex with the non-SAP tools over HANA Cloud, would be difficult to reduce the time.",
         "accepted": true,
@@ -498,7 +498,7 @@ const AGENDA_JSON = [
                 "firstName": "Kush ",
                 "lastName": "Kashyap",
                 "company": "ZEISS Group",
-                "bio": "BI Architecture & Integration Lead at Carl Zeiss AG",
+                "bio": "BI Architecture &amp; Integration Lead at Carl Zeiss AG",
                 "hash": "c4f91923ac58b76b922eaa83116236668551b78b445535130750c340b64f9842",
                 "photo": true
             },
@@ -543,14 +543,14 @@ const AGENDA_JSON = [
         "type": "presentation_short",
         "extraInfo": "",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "nil@mindeed.io",
                 "firstName": "Nil",
                 "lastName": "Peksen",
                 "company": "Mindeed B.V",
-                "bio": "Nil Peksen is a freelance SAP Data & Analytics Architect with two decades of experience in the SAP ecosystem. In a world where AI is changing everything, she believes the real value lies in grounding it with the right data and In this talk, she walks through how SAP HANA Cloud Vector Engine enables exactly that, turning raw enterprise data into meaningful, context aware AI.",
+                "bio": "Nil Peksen is a freelance SAP Data &amp; Analytics Architect with two decades of experience in the SAP ecosystem. In a world where AI is changing everything, she believes the real value lies in grounding it with the right data and In this talk, she walks through how SAP HANA Cloud Vector Engine enables exactly that, turning raw enterprise data into meaningful, context aware AI.",
                 "hash": "1f22b3c23a08ff816b8a6183a9f3caab823eeec942be318b83a29fbea2bcda17",
                 "photo": true
             }
@@ -575,7 +575,7 @@ const AGENDA_JSON = [
                 "firstName": "Christian",
                 "lastName": "Braukmüller",
                 "company": "Evonik Industries AG",
-                "bio": "Fascinated by the energy, openness, and empathy of the global SAP community, Christian actively contributes as an SAP Mentor, frequent conference speaker at events such as SAP TechEd, DSAG and Community driven events.\nFor him, the community is more than a network—it’s a space for reflection, challenge, and continuous growth alongside some of the brightest minds in the field. \nWe all and SAP wouldn't be where they are without this spirit of customers, partners and SAP employees sharing there toughts in fruitful discussions.\nHis journey with SAP HANA began early, working as an independent consultant, helping customers shape and implement their individual HANA strategies—long before many organizations fully realized its potential - or before they just had to make the step to finally get on S/4HANA.\n\nToday, Christian leads an SAP Landscape Architecture team at Evonik,\nThis team is responsible for SAP HANA, hybrid architectures (On-Premise & SAP BTP), automation, and integration. His focus is on building resilient, future-ready SAP environments that bridge innovation with real-world business value.\nEvonik presented their SAP strategy at the last DSAG Userconference (see link)\n\nWhether interacting with SAP as a Customer, DSAG Spokesman, SAP Mentor, organizing community events, speaking on stage, or engaging in peer exchange, Christian remains a community participant at heart—firmly convinced that collaboration is the fastest path to reasonable adoption and innovation.",
+                "bio": "Fascinated by the energy, openness, and empathy of the global SAP community, Christian actively contributes as an SAP Mentor, frequent conference speaker at events such as SAP TechEd, DSAG and Community driven events.\nFor him, the community is more than a network—it’s a space for reflection, challenge, and continuous growth alongside some of the brightest minds in the field. \nWe all and SAP wouldn't be where they are without this spirit of customers, partners and SAP employees sharing there toughts in fruitful discussions.\nHis journey with SAP HANA began early, working as an independent consultant, helping customers shape and implement their individual HANA strategies—long before many organizations fully realized its potential - or before they just had to make the step to finally get on S/4HANA.\n\nToday, Christian leads an SAP Landscape Architecture team at Evonik,\nThis team is responsible for SAP HANA, hybrid architectures (On-Premise &amp; SAP BTP), automation, and integration. His focus is on building resilient, future-ready SAP environments that bridge innovation with real-world business value.\nEvonik presented their SAP strategy at the last DSAG Userconference (see link)\n\nWhether interacting with SAP as a Customer, DSAG Spokesman, SAP Mentor, organizing community events, speaking on stage, or engaging in peer exchange, Christian remains a community participant at heart—firmly convinced that collaboration is the fastest path to reasonable adoption and innovation.",
                 "hash": "30d0214c8838c80e6beb4e387d9226d5b65290a3d0e84f8c3d6448a04e3a0db1",
                 "photo": true
             }
@@ -638,30 +638,30 @@ const AGENDA_JSON = [
     },
     {
         "id": "id-1781012262388-636",
-        "title": "HC Performance & Scalability: Inside the SAP–Intel Co-Engineering Journey",
-        "description": "SAP HANA Cloud Performance & Scalability: Inside the SAP–Intel Co-Engineering Journey\nSAP and Intel are jointly driving continuous innovation to advance SAP HANA Cloud performance and scalability, enabling enterprises to process ever-growing data volumes with higher efficiency and predictable performance at scale. In this session, we provide an inside look into the co-engineering efforts that translate directly into measurable gains across compute efficiency, memory utilization, and system scalability.\n\nWe will share concrete examples of jointly developed optimizations targeting real-world enterprise workloads, illustrating how customers can accelerate both transactional and analytical processing while maintaining consistent performance under demanding conditions. These optimizations leverage key Intel architecture capabilities, including Intel® AVX-512, Intel® AMX, and Intel® TSX, to maximize throughput, improve parallelism, and enhance efficiency for modern data and AI workloads. A key focus of this session is the ability of SAP HANA Cloud to scale seamlessly across a wide spectrum of deployment sizes—from compact instances with as few as 2 vCPUs to large-scale configurations with up to 12 TB of memory—while delivering consistent and predictable performance characteristics. In addition, we will highlight the SAP Natural Language Processing (NLP) service and demonstrate how developers benefit from running SAP NLP on Intel-optimized platforms, showcasing improvements in performance, efficiency, and responsiveness for AI-driven applications.\n\nJoin us to gain deeper technical insight into how SAP and Intel co-innovate to optimize SAP HANA Cloud, and how these advancements empower developers with high-performance infrastructure for next-generation data processing and AI services.\n",
+        "title": "HC Performance &amp; Scalability: Inside the SAP–Intel Co-Engineering Journey",
+        "description": "SAP HANA Cloud Performance &amp; Scalability: Inside the SAP–Intel Co-Engineering Journey\nSAP and Intel are jointly driving continuous innovation to advance SAP HANA Cloud performance and scalability, enabling enterprises to process ever-growing data volumes with higher efficiency and predictable performance at scale. In this session, we provide an inside look into the co-engineering efforts that translate directly into measurable gains across compute efficiency, memory utilization, and system scalability.\n\nWe will share concrete examples of jointly developed optimizations targeting real-world enterprise workloads, illustrating how customers can accelerate both transactional and analytical processing while maintaining consistent performance under demanding conditions. These optimizations leverage key Intel architecture capabilities, including Intel® AVX-512, Intel® AMX, and Intel® TSX, to maximize throughput, improve parallelism, and enhance efficiency for modern data and AI workloads. A key focus of this session is the ability of SAP HANA Cloud to scale seamlessly across a wide spectrum of deployment sizes—from compact instances with as few as 2 vCPUs to large-scale configurations with up to 12 TB of memory—while delivering consistent and predictable performance characteristics. In addition, we will highlight the SAP Natural Language Processing (NLP) service and demonstrate how developers benefit from running SAP NLP on Intel-optimized platforms, showcasing improvements in performance, efficiency, and responsiveness for AI-driven applications.\n\nJoin us to gain deeper technical insight into how SAP and Intel co-innovate to optimize SAP HANA Cloud, and how these advancements empower developers with high-performance infrastructure for next-generation data processing and AI services.\n",
         "type": "presentation_long",
         "extraInfo": "Intel has applied to become a platinum sponsor for HANA Tech Con 2026",
         "accepted": true,
-        "confirmed": false,
+        "confirmed": true,
         "speakers": [
             {
                 "id": "jan.krueger@intel.com",
                 "firstName": "Jan",
                 "lastName": "Krüger",
                 "company": "Intel Inc.",
-                "bio": "",
+                "bio": "I am a technology leader with over 15 years at Intel, specializing in technical strategy, enterprise software, cloud platforms, and partner management. As Technical Account Director for SAP within Intel’s Partner Sales Group, I coordinate global technical programs and align Intel’s technology roadmap with SAP strategy, driving technology integration, joint solution development, and performance optimization across SAP HANA, S/4HANA, SAP BTP, Cloud ERP, and cloud infrastructure.\n\nI have led strategic initiatives including enabling SAP support for Intel’s latest CPU generations, advancing SAP’s early adoption of Intel Optane Technology, and influencing SAP Cloud Infrastructure strategy. My work has been recognized with multiple Intel Achievement Awards for exceeding performance, innovation, and business impact goals.",
                 "hash": "1e4c22c53b86356ce163ea0e60f369396e8ba271a4827681f5373e82aba815b4",
-                "photo": false
+                "photo": true
             },
             {
                 "id": "thomas.willhalm@intel.com",
                 "firstName": "Thomas",
                 "lastName": "Willhalm",
                 "company": "Intel Inc.",
-                "bio": "",
+                "bio": "Thomas Willhalm is a Senior Principal Engineer at Intel, based at SAP’s headquarters in Walldorf, where he has been working for over two decades. Together with his team, he drives the optimization of SAP software to fully leverage Intel hardware platforms. His work spans both enabling current product performance and shaping future architectures through close collaboration and feedback. Over the years, Thomas has contributed to key innovations including Intel AVX-512, Intel Optane persistent memory, and, most recently, CXL-based memory technologies.",
                 "hash": "e9320fd3206fbd782726f755da53ad849f8f7975315cfe9f2a91ed9e7ed014d5",
-                "photo": false
+                "photo": true
             }
         ],
         "associatedSpeakers": "",
@@ -711,8 +711,8 @@ const AGENDA_JSON = [
         "speakers": [],
         "associatedSpeakers": "",
         "presentationLinks": [],
-        "startTime": "09:00",
-        "endTime": "17:00",
+        "startTime": "09:50",
+        "endTime": "16:25",
         "location": "experts_1"
     }
 ]
