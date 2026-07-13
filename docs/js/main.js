@@ -97,31 +97,6 @@ const JURY_JSON = [
 //--------------------------------------------------------------------------------------------------
 const AGENDA_JSON = [
     {
-        "id": "id-1769565509149-977",
-        "title": "SAP and Databricks: A Bold New Era of Data and AI",
-        "description": "The friction between HANA's rigid data structures and the flexibility of the Databricks Lakehouse has historically been a roadblock for data teams. That friction ends now. In this technical deep dive, Christopher Carter (CEO, Approyo &amp; AI Expert) deconstructs the architecture required to unify SAP S/4HANA with the Databricks Data Intelligence Platform. We will cut through the marketing hype to examine the mechanics of data federation, semantic layer preservation, and the specific pipelines that enable high-speed AI ingestion from HANA. If you are an architect or engineer tired of brittle connectors and stale data, this is the blueprint you’ve been waiting for.",
-        "type": "presentation_short",
-        "extraInfo": "Christopher Carter is a globally recognized SAP and AI Expert, CEO of Approyo, and the founder of MugatuAI. A best-selling author of 17 books (including the Mastering SAP series), Chris has spent over three decades helping businesses navigate the complex intersection of enterprise ERP and emerging technology. Known for his ability to transform complex technical challenges into engaging stories, Chris is a frequent keynote speaker and media contributor who advises leaders on how to harness the power of Artificial Intelligence without breaking their business foundation. He brings a \"bold,\" future-forward perspective to the often-conservative world of enterprise data.",
-        "accepted": true,
-        "confirmed": true,
-        "speakers": [
-            {
-                "id": "cc@approyo.com",
-                "firstName": "Christopher",
-                "lastName": "CARTER",
-                "company": "Approyo",
-                "bio": "Since 2011, Carter's has worked with companies in over 55+ different industries. His advice has been featured on Inc., Forbes, ASUG.com, Tech Target, Entrepreneur, CRN, and many others around the world. \n\nSome other personal highlights include:\n✓ Founder of one of the “Best Sap companies to work with” Philippe Chaudron KPMG\n✓ Named as \"One of America's Top 10 Industry Influencers\" - MirrorReview\n✓ Go-To contributor for Newsmax-TV for Technology\n✓ A four-time best-selling Amazon author, “The #1 Book series “Mastering SAP.\" ✓ ACQ Award winner for SAP services\n\nServices include SAP, Cloud AI, Security, Oracle, ServiceNow, and Technology. ",
-                "hash": "cbf8d7fc10add274500f893cd0d8838f499d53fcc20040d7b7d6109a08d3d758",
-                "photo": true
-            }
-        ],
-        "associatedSpeakers": "",
-        "presentationLinks": [],
-        "startTime": "16:00",
-        "endTime": "16:25",
-        "location": "audimax"
-    },
-    {
         "id": "id-1771346373249-652",
         "title": "Bridging Python and SAP HANA: Inside the sqlalchemy-hana Open-Source Dialec",
         "description": "SQLAlchemy is Python's standard database toolkit and ORM. Alembic provides version-controlled schema migrations. sqlalchemy-hana is the open-source dialect that brings SAP HANA support to both tools.\n\nIn this session, we will explain how sqlalchemy-hana connects Python applications to SAP HANA. You'll learn how the dialect translates SQLAlchemy's database-agnostic API into HANA-specific SQL, and how we handle the quirks that make HANA unique.\n\nTopics covered:\n• What sqlalchemy-hana does and how it integrates with SQLAlchemy's architecture\n• Alembic support: Running schema migrations against SAP HANA databases\n• Async support: How we added aiohdbcli for non-blocking database operations\n• Vector support: Working with HANA's REAL_VECTOR type for modern workloads\n\nWhether you're a Python developer working with SAP HANA or curious about how database dialects work, this session will give you practical insights into bridging two different technology worlds.\n ",
@@ -169,6 +144,31 @@ const AGENDA_JSON = [
         "presentationLinks": [],
         "startTime": "14:05",
         "endTime": "14:50",
+        "location": "room_w1"
+    },
+    {
+        "id": "id-1772647796084-672",
+        "title": "Simplify HANA Central Administration using Joule - for Free",
+        "description": "We demonstrate the free availability of Joule for HANA administration\nDemonstrate the reduction in barrier to know HANA concepts to perform HANA administration ex: Alert monitoring\nUsage of Joule assistant to build complex SQL queries and query SAP knowledgebase",
+        "type": "presentation_short",
+        "extraInfo": "The idea is to keep it as a live demo. \nWe can use a trial account and use the option to manually trigger alert and demo same using the AI assitant",
+        "accepted": true,
+        "confirmed": true,
+        "speakers": [
+            {
+                "id": "sharath.gangadhara@nttdata.com",
+                "firstName": "Sharath ",
+                "lastName": "M Gangadhara",
+                "company": "NTT DATA Business Solutions Private Limited",
+                "bio": "Speaker and technology practitioner focused on applying AI in SAP HANA Cloud. Passionate about translating emerging AI capabilities into practical solutions that enhance efficiency, insight, and user experience.",
+                "hash": "02c41255f3c8e124354f4173c967c8e9705f48d650c1f928bda8415d398b245f",
+                "photo": true
+            }
+        ],
+        "associatedSpeakers": "",
+        "presentationLinks": [],
+        "startTime": "16:00",
+        "endTime": "16:25",
         "location": "room_w1"
     },
     {
@@ -355,7 +355,7 @@ const AGENDA_JSON = [
         "presentationLinks": [],
         "startTime": "16:00",
         "endTime": "16:25",
-        "location": "room_w1"
+        "location": "audimax"
     },
     {
         "id": "id-1773349703177-907",
