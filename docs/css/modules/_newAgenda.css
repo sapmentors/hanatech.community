@@ -13,6 +13,43 @@
     margin-bottom: 0;
 }
 
+/* ------------------------- Track Online Bar (mobile) -------------------------  */
+
+.track-online-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-block-end: 1.5rem;
+}
+
+.track-online-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 2rem;
+}
+
+.track-online-btn--disabled {
+    background-image: none;
+    background-color: #666;
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none !important;
+}
+
+.track-online-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+}
+
+.htec-virtual-event-table .htec-btn {
+    margin: 1rem;
+    margin-bottom: 0;
+}
+
 .htec-virtual-event-table {
     font-size: var(--type-0);
     margin: auto;

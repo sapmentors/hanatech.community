@@ -348,6 +348,11 @@ function compareSessions(a, b) {
     return 1;
 }
 //--------------------------------------------------------------------------------------------------
+const TRACK_TEAMS_LINKS = {
+    'track-1': 'https://teams.microsoft.com/l/meetup-join/PLACEHOLDER_TRACK_A',
+    'track-2': 'https://teams.microsoft.com/l/meetup-join/PLACEHOLDER_TRACK_B',
+};
+//--------------------------------------------------------------------------------------------------
 const AgendaApp = {
     components: {
         'agenda-session': AgendaSession,
@@ -362,6 +367,12 @@ const AgendaApp = {
         };
     },
     computed: {
+        trackLinks() {
+            return TRACK_TEAMS_LINKS;
+        },
+        linksEnabled() {
+            return Date.now() / 1000 >= getConfUnixTime(9, 0);
+        },
         sortedSessions() {
             return [...this.sessions_raw].sort(compareSessions);
         },
@@ -383,9 +394,33 @@ const AgendaApp = {
             this.showDialog = false;
             this.selectedSession = null;
         },
+        handleTrackLinkClick(e, track) {
+            if (!this.linksEnabled) {
+                e.preventDefault();
+                alert('The online stream links will be available on July 16 when the conference starts.');
+            }
+        },
     },
     template: `
         <h3 id="Agenda" style="text-align: center;">Agenda</h3>
+
+        <div class="track-online-bar">
+            <a :href="trackLinks['track-1']" target="_blank" rel="noopener noreferrer"
+               :class="['htec-btn', 'track-A', 'track-online-btn', !linksEnabled && 'track-online-btn--disabled']"
+               @click="handleTrackLinkClick($event, 'track-1')"
+               aria-label="Join Track A online via Microsoft Teams">
+                <svg class="track-online-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 20 11h-1v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8H4a1 1 0 0 1-.707-1.707l7-7zM12 4.414L6.414 10H7v9h10v-9h.586L12 4.414z"/></svg>
+                Track A – Join online
+            </a>
+            <a :href="trackLinks['track-2']" target="_blank" rel="noopener noreferrer"
+               :class="['htec-btn', 'track-B', 'track-online-btn', !linksEnabled && 'track-online-btn--disabled']"
+               @click="handleTrackLinkClick($event, 'track-2')"
+               aria-label="Join Track B online via Microsoft Teams">
+                <svg class="track-online-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 20 11h-1v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8H4a1 1 0 0 1-.707-1.707l7-7zM12 4.414L6.414 10H7v9h10v-9h.586L12 4.414z"/></svg>
+                Track B – Join online
+            </a>
+        </div>
+
         <div class="schedule" aria-labelledby="schedule-heading">
             <span class="track-slot" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;">Track A</span>
             <span class="track-slot" aria-hidden="true" style="grid-column: track-2; grid-row: tracks;">Track B</span>
