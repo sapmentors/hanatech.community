@@ -485,15 +485,6 @@ const AGENDA_JSON = [
         "confirmed": true,
         "speakers": [
             {
-                "id": "javier.caycho@zeiss.com",
-                "firstName": "Javier",
-                "lastName": "Caycho",
-                "company": "ZEISS Group",
-                "bio": "• Accomplished BI Expert with 24 years of international experience across Europe, Americas and Asia. Successful team leader of global IT projects and Platform/Support areas for large multinationals with full responsibility for Technical Management, Implementation and Rollout. Experience on BI Strategy and Roadmap definition including technical and business value assessment.\n• Broad experience in various industry sectors including optoelectronic, pharmaceuticals, consumer goods and retail. International experiences include Netherlands, Malaysia, Spain, Peru, Switzerland, India and Germany. Implementation experience on Finance, Controlling, HR and Procurement.",
-                "hash": "135c124588f52cec91b7999a72d295ef18c44869c5ecd926d0ff4bdfc9d3be84",
-                "photo": true
-            },
-            {
                 "id": "kush.kashyap@zeiss.com",
                 "firstName": "Kush ",
                 "lastName": "Kashyap",
