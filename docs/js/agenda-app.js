@@ -422,10 +422,24 @@ const AgendaApp = {
         </div>
 
         <div class="schedule" aria-labelledby="schedule-heading">
-            <span class="track-slot" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;">Track A</span>
-            <span class="track-slot" aria-hidden="true" style="grid-column: track-2; grid-row: tracks;">Track B</span>
-            <span class="track-slot" aria-hidden="true" style="grid-column: track-3; grid-row: tracks;">Track C</span>
-            <span class="track-slot" aria-hidden="true" style="grid-column: track-4; grid-row: tracks;">Track D</span>
+            <a :href="trackLinks['track-1']" target="_blank" rel="noopener noreferrer"
+               :class="['track-slot', 'track-slot--online', !linksEnabled && 'track-slot--disabled']"
+               style="grid-column: track-1; grid-row: tracks;"
+               @click="handleTrackLinkClick($event, 'track-1')"
+               aria-label="Track A – Join online via Microsoft Teams">
+                Track A
+                <span class="track-slot-online-sub">Join online ↗</span>
+            </a>
+            <a :href="trackLinks['track-2']" target="_blank" rel="noopener noreferrer"
+               :class="['track-slot', 'track-slot--online', !linksEnabled && 'track-slot--disabled']"
+               style="grid-column: track-2; grid-row: tracks;"
+               @click="handleTrackLinkClick($event, 'track-2')"
+               aria-label="Track B – Join online via Microsoft Teams">
+                Track B
+                <span class="track-slot-online-sub">Join online ↗</span>
+            </a>
+            <span class="track-slot" aria-hidden="true" style="grid-column: track-3; grid-row: tracks;">Track C<span class="track-slot-online-sub">On-site only</span></span>
+            <span class="track-slot" aria-hidden="true" style="grid-column: track-4; grid-row: tracks;">Track D<span class="track-slot-online-sub">On-site only</span></span>
 
             <template v-for="(session, index) in sortedSessions">
                 <agenda-time-slot-emitter
