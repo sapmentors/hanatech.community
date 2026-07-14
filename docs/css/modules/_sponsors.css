@@ -463,7 +463,8 @@ svg.metaphacts {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.htec-sponsors-new-table th, td {
+.htec-sponsors-new-table th,
+.htec-sponsors-new-table td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
   text-align: center;
@@ -524,7 +525,7 @@ svg.metaphacts {
     border-collapse: collapse;
   }
 
-  .htec-sponsors-new-card td, tr {
+  .htec-sponsors-new-card td, .htec-sponsors-new-card tr {
     color: var(--logo-color);
     border-right: var(--logo-color);
     border-bottom: 1px solid #ddd;
