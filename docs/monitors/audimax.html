@@ -76,7 +76,7 @@
                     <th scope="col">Location</th>
                     <th scope="col">Session Title</th>
                     <th scope="col">Speaker</th>
-                    <th scope="col">Level</th>
+                    <!--<th scope="col">Level</th>-->
                     <th scope="col">Status</th>
                 </tr>
             </thead>
@@ -103,14 +103,14 @@
                         </span>
                         <span v-else>—</span>
                     </td>
-                    <td>
+                    <!--<td>
                         <span
                               v-if="event.proficiencyLevel"
                               class="agenda-level"
                               :class="event.proficiencyLevel">
                             {{ formatLevel(event.proficiencyLevel) }}
                         </span>
-                    </td>
+                    </td>-->
                     <td>
                         <span v-if="event.isLive" class="active">Live</span>
                         <span v-else-if="event.isPast" style="color: #999;">Past</span>
