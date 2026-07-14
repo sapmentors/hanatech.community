@@ -411,15 +411,6 @@ const AGENDA_JSON = [
                 "photo": true
             },
             {
-                "id": "shivanshu.giri@zeiss.com",
-                "firstName": "Shivanshu",
-                "lastName": "Giri",
-                "company": "ZEISS Group",
-                "bio": "Hey, I'm Shivanshu Giri!\n\nBy day, I'm a Data Integration Consultant at Carl Zeiss, where I connect the dots—literally. I build data products, solve integration puzzles, and help turn scattered data into meaningful insights.\nI believe great decisions start with great data, and I love being part of a company that values precision, innovation, and making a real impact.\nWhen I'm not wrangling data, you'll find me exploring new tech, learning something new, or enjoying a good conversation about all things analytics.",
-                "hash": "442140ddcc07a94b033826595f3c3aabf2d41b337e808ccd5729646cf67d8220",
-                "photo": true
-            },
-            {
                 "id": "ashish.yadav@zeiss.com",
                 "firstName": "Ashish Singh",
                 "lastName": "Yadav",
