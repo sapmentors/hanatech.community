@@ -613,7 +613,7 @@ const API_ENDPOINTS = {
   proposalLineup: `${API_BASE_URL}/proposal/lineup`,
 };
 
-const EVENT_DATE = "2026-07-15";
+const EVENT_DATE = "2026-07-16";
 const EVENT_TIMEZONE = "+02:00";
 const EVENT_START_TIME = `${EVENT_DATE}T02:00:00.000${EVENT_TIMEZONE}`;
 const EVENT_END_TIME = `${EVENT_DATE}T19:00:00.000${EVENT_TIMEZONE}`;
