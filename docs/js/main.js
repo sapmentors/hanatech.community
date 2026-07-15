@@ -764,7 +764,7 @@ function buildJury() {
  * CONFERENCE CLOCK
  */
 //--------------------------------------------------------------------------------------------------
-const CONFERENCE_TIME = Date.parse('2026-07-16T00:10:00.000+01:00');
+const CONFERENCE_TIME = Date.parse('2026-07-16T09:00:00.000+02:00');
 //--------------------------------------------------------------------------------------------------
 function ensureTwoDigits(time) {
     return time.toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
