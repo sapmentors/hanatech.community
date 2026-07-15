@@ -371,7 +371,7 @@ const AgendaApp = {
             return TRACK_TEAMS_LINKS;
         },
         linksEnabled() {
-            return Date.now() / 1000 >= getConfUnixTime(8, 50);
+            return Date.now() / 1000 >= getConfUnixTime(8, 0);
         },
         sortedSessions() {
             return [...this.sessions_raw].sort(compareSessions);
