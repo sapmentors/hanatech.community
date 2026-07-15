@@ -349,8 +349,8 @@ function compareSessions(a, b) {
 }
 //--------------------------------------------------------------------------------------------------
 const TRACK_TEAMS_LINKS = {
-    'track-1': 'https://teams.microsoft.com/l/meetup-join/PLACEHOLDER_TRACK_A',
-    'track-2': 'https://teams.microsoft.com/l/meetup-join/PLACEHOLDER_TRACK_B',
+    'track-1': 'https://youtube.com/live/5oC72bAZe24',
+    'track-2': 'https://teams.microsoft.com/meet/381872926992573?p=xeKZoAusegcD3sEedS',
 };
 //--------------------------------------------------------------------------------------------------
 const AgendaApp = {
@@ -371,7 +371,7 @@ const AgendaApp = {
             return TRACK_TEAMS_LINKS;
         },
         linksEnabled() {
-            return Date.now() / 1000 >= getConfUnixTime(9, 0);
+            return Date.now() / 1000 >= getConfUnixTime(8, 50);
         },
         sortedSessions() {
             return [...this.sessions_raw].sort(compareSessions);

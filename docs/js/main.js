@@ -774,6 +774,16 @@ function updateTime() {
     var delta = (CONFERENCE_TIME - Date.now()) / 1000;
     delta = Math.round(delta)
 
+    if (delta <= 0) {
+        const clockContainer = document.querySelector('.clock-container');
+        const dateHeading = document.querySelector('.htec-countdown-container h2');
+        const liveText = document.getElementById('conference-live-text');
+        if (clockContainer) clockContainer.style.display = 'none';
+        if (dateHeading) dateHeading.style.display = 'none';
+        if (liveText) liveText.classList.add('htec-conference-live--visible');
+        return;
+    }
+
     var days = Math.floor(delta / 86400);
     delta -= days * 86400;
 
