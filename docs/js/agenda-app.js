@@ -348,10 +348,10 @@ function compareSessions(a, b) {
     return 1;
 }
 //--------------------------------------------------------------------------------------------------
-const TRACK_TEAMS_LINKS = {
-    'track-1': 'https://youtube.com/live/5oC72bAZe24',
-    'track-2': 'https://teams.microsoft.com/meet/381872926992573?p=xeKZoAusegcD3sEedS',
-};
+const TRACK_CONFIG = [
+    { id: 'track-1', label: 'Track A', cssClass: 'track-A', enableAt: { hour: 8,  minute: 40  }, link: 'https://youtube.com/live/5oC72bAZe24' },
+    { id: 'track-2', label: 'Track B', cssClass: 'track-B', enableAt: { hour: 9,  minute: 40 }, link: 'https://teams.microsoft.com/meet/381872926992573?p=xeKZoAusegcD3sEedS' },
+];
 //--------------------------------------------------------------------------------------------------
 const AgendaApp = {
     components: {
@@ -367,11 +367,16 @@ const AgendaApp = {
         };
     },
     computed: {
-        trackLinks() {
-            return TRACK_TEAMS_LINKS;
+        tracks() {
+            const now = Date.now() / 1000;
+            return TRACK_CONFIG.map(t => ({
+                ...t,
+                enabled: now >= getConfUnixTime(t.enableAt.hour, t.enableAt.minute),
+                enableAtLabel: `${t.enableAt.hour}:${t.enableAt.minute.toString().padStart(2, '0')}`,
+            }));
         },
-        linksEnabled() {
-            return Date.now() / 1000 >= getConfUnixTime(8, 0);
+        trackLinks() {
+            return Object.fromEntries(TRACK_CONFIG.map(t => [t.id, t.link]));
         },
         sortedSessions() {
             return [...this.sessions_raw].sort(compareSessions);
@@ -394,10 +399,11 @@ const AgendaApp = {
             this.showDialog = false;
             this.selectedSession = null;
         },
-        handleTrackLinkClick(e, track) {
-            if (!this.linksEnabled) {
+        handleTrackLinkClick(e, trackId) {
+            const track = this.tracks.find(t => t.id === trackId);
+            if (track && !track.enabled) {
                 e.preventDefault();
-                alert('The online stream links will be available on July 16 when the conference starts.');
+                alert(`${track.label} will be available online from ${track.enableAtLabel}.`);
             }
         },
     },
@@ -405,39 +411,27 @@ const AgendaApp = {
         <h3 id="Agenda" style="text-align: center;">Agenda</h3>
 
         <div class="track-online-bar">
-            <a :href="trackLinks['track-1']" target="_blank" rel="noopener noreferrer"
-               :class="['htec-btn', 'track-A', 'track-online-btn', !linksEnabled && 'track-online-btn--disabled']"
-               @click="handleTrackLinkClick($event, 'track-1')"
-               aria-label="Join Track A online via Microsoft Teams">
+            <a v-for="t in tracks" :key="t.id"
+               :href="t.link" target="_blank" rel="noopener noreferrer"
+               :class="['htec-btn', t.cssClass, 'track-online-btn', !t.enabled && 'track-online-btn--disabled']"
+               @click="handleTrackLinkClick($event, t.id)"
+               :aria-label="'Join ' + t.label + ' online'">
                 <svg class="track-online-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 20 11h-1v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8H4a1 1 0 0 1-.707-1.707l7-7zM12 4.414L6.414 10H7v9h10v-9h.586L12 4.414z"/></svg>
-                Track A – Join online
-            </a>
-            <a :href="trackLinks['track-2']" target="_blank" rel="noopener noreferrer"
-               :class="['htec-btn', 'track-B', 'track-online-btn', !linksEnabled && 'track-online-btn--disabled']"
-               @click="handleTrackLinkClick($event, 'track-2')"
-               aria-label="Join Track B online via Microsoft Teams">
-                <svg class="track-online-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 20 11h-1v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8H4a1 1 0 0 1-.707-1.707l7-7zM12 4.414L6.414 10H7v9h10v-9h.586L12 4.414z"/></svg>
-                Track B – Join online
+                {{ t.label }} – Join online <span class="track-online-time">from {{ t.enableAtLabel }}</span>
             </a>
         </div>
 
         <div class="schedule" aria-labelledby="schedule-heading">
-            <a :href="trackLinks['track-1']" target="_blank" rel="noopener noreferrer"
-               :class="['track-slot', 'track-slot--online', !linksEnabled && 'track-slot--disabled']"
-               style="grid-column: track-1; grid-row: tracks;"
-               @click="handleTrackLinkClick($event, 'track-1')"
-               aria-label="Track A – Join online via Microsoft Teams">
-                Track A
-                <span class="track-slot-online-sub">Join online ↗</span>
-            </a>
-            <a :href="trackLinks['track-2']" target="_blank" rel="noopener noreferrer"
-               :class="['track-slot', 'track-slot--online', !linksEnabled && 'track-slot--disabled']"
-               style="grid-column: track-2; grid-row: tracks;"
-               @click="handleTrackLinkClick($event, 'track-2')"
-               aria-label="Track B – Join online via Microsoft Teams">
-                Track B
-                <span class="track-slot-online-sub">Join online ↗</span>
-            </a>
+            <template v-for="t in tracks" :key="t.id">
+                <a :href="t.link" target="_blank" rel="noopener noreferrer"
+                   :class="['track-slot', 'track-slot--online', !t.enabled && 'track-slot--disabled']"
+                   :style="'grid-column: ' + t.id + '; grid-row: tracks;'"
+                   @click="handleTrackLinkClick($event, t.id)"
+                   :aria-label="t.label + ' – Join online'">
+                    {{ t.label }}
+                    <span class="track-slot-online-sub">Join online from {{ t.enableAtLabel }} ↗</span>
+                </a>
+            </template>
             <span class="track-slot" aria-hidden="true" style="grid-column: track-3; grid-row: tracks;">Track C<span class="track-slot-online-sub">On-site only</span></span>
             <span class="track-slot" aria-hidden="true" style="grid-column: track-4; grid-row: tracks;">Track D<span class="track-slot-online-sub">On-site only</span></span>
 
