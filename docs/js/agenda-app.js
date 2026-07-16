@@ -349,7 +349,7 @@ function compareSessions(a, b) {
 }
 //--------------------------------------------------------------------------------------------------
 const TRACK_CONFIG = [
-    { id: 'track-1', label: 'Track A', cssClass: 'track-A', enableAt: { hour: 8,  minute: 40  }, link: 'https://youtube.com/live/5oC72bAZe24' },
+    { id: 'track-1', label: 'Track A', cssClass: 'track-A', enableAt: { hour: 8,  minute: 40  }, link: 'https://www.youtube.com/live/PBzfBgbFKEI' },
     { id: 'track-2', label: 'Track B', cssClass: 'track-B', enableAt: { hour: 9,  minute: 40 }, link: 'https://teams.microsoft.com/meet/381872926992573?p=xeKZoAusegcD3sEedS' },
 ];
 //--------------------------------------------------------------------------------------------------
