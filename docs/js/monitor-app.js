@@ -6,7 +6,7 @@
 const AGENDA_JSON = [
     {
         "id": "id-1771346373249-652",
-        "title": "Bridging Python and SAP HANA: Inside the sqlalchemy-hana Open-Source Dialect",
+        "title": "Bridging Python and SAP HANA: Inside the sqlalchemy-hana Open-Source Dialec",
         "description": "SQLAlchemy is Python's standard database toolkit and ORM. Alembic provides version-controlled schema migrations. sqlalchemy-hana is the open-source dialect that brings SAP HANA support to both tools.\n\nIn this session, we will explain how sqlalchemy-hana connects Python applications to SAP HANA. You'll learn how the dialect translates SQLAlchemy's database-agnostic API into HANA-specific SQL, and how we handle the quirks that make HANA unique.\n\nTopics covered:\n• What sqlalchemy-hana does and how it integrates with SQLAlchemy's architecture\n• Alembic support: Running schema migrations against SAP HANA databases\n• Async support: How we added aiohdbcli for non-blocking database operations\n• Vector support: Working with HANA's REAL_VECTOR type for modern workloads\n\nWhether you're a Python developer working with SAP HANA or curious about how database dialects work, this session will give you practical insights into bridging two different technology worlds.\n ",
         "type": "presentation_short",
         "extraInfo": "",

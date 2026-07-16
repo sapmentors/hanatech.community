@@ -35,8 +35,8 @@
     display: grid;
     gap: 0 var(--stage-gap);
     grid-template-columns: var(--columns);
-    /* animation: slide linear both; */
-    /* animation-timeline: --scroll-x; */
+    animation: slide linear both;
+    animation-timeline: --scroll-x;
     background: var(--zebra-color-one);
     position: absolute;
     inset-inline-start: 0;
@@ -176,7 +176,7 @@
     }
 
     &.live {
-        /* animation: glowing-pulse 2s ease-in-out infinite; */
+        animation: glowing-pulse 2s ease-in-out infinite;
         background-color: #e60000;
     }
 
@@ -301,7 +301,7 @@
 /* Session hover/focus styles */
 .session {
     cursor: pointer;
-    /* transition: background-color 0.3s ease; */
+    transition: background-color 0.3s ease;
 }
 
 .session.break:hover {
@@ -393,8 +393,8 @@
             left: 3px;
             width: 1.6rem;
             background: var(--white);
-            /* transition: all .2s ease-in-out; */
-            /* transition-behavior: allow-discrete; */
+            transition: all .2s ease-in-out;
+            transition-behavior: allow-discrete;
         }
     }
 }
@@ -452,7 +452,7 @@
 
         span {
             margin: 0 0.25rem;
-            /* animation: text-pulse 2s ease-in-out infinite; */
+            animation: text-pulse 2s ease-in-out infinite;
         }
 
         svg {
@@ -461,13 +461,13 @@
             color: var(--brand-color);
         }
 
-        /* .swipe-arrow-left {
+        .swipe-arrow-left {
             animation: swipe-left 1.5s ease-in-out infinite, color-pulse 2s ease-in-out infinite;
-        } */
+        }
 
-        /* .swipe-arrow-right {
+        .swipe-arrow-right {
             animation: swipe-right 1.5s ease-in-out infinite, color-pulse 2s ease-in-out infinite;
-        } */
+        }
     }
 
     @keyframes swipe-left {

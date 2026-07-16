@@ -82,11 +82,11 @@
     flex-direction: column;
     padding: 0.5rem 1.5rem;
     text-transform: uppercase;
-    /* transition: border 0.5s ease; */
+    transition: border 0.5s ease;
     border: 1px solid var(--brand-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
     position: relative;
-    /* transition: background-color .2s linear; */
+    transition: background-color .2s linear;
     background-color: var(--white);
 }
 
@@ -172,7 +172,7 @@
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
     font-weight: 600;
-    /* transition: all .2s ease-in-out; */
+    transition: all .2s ease-in-out;
 }
 
 .agenda-filter__element input[type="radio"] {
@@ -193,9 +193,9 @@
     outline-offset: 2px;
 }
 
-/* .agenda-filter__element input[type="radio"]:hover+.agenda-filter__label {
+.agenda-filter__element input[type="radio"]:hover+.agenda-filter__label {
     transform: scale(1.05);
-} */
+}
 
 #all+.agenda-filter__label[for="all"] {
     background-color: var(--all);
@@ -345,9 +345,9 @@
     }
 }
 
-/* .agenda-slot.live .agenda-slot-container {
+.agenda-slot.live .agenda-slot-container {
     animation: pulse-live-linear 2s ease-in-out infinite;
-} */
+}
 
 @keyframes glowing-pulse {
     0% {
@@ -376,11 +376,11 @@
     color: var(--background-color);
     font-weight: 700;
     text-align: center;
-    /* transition: background-color 0.6s ease; */
+    transition: background-color 0.6s ease;
 }
 
 .agenda-time.live {
-    /* animation: glowing-pulse 2s ease-in-out infinite; */
+    animation: glowing-pulse 2s ease-in-out infinite;
     background-color: #e60000;
     color: #fff;
 }
@@ -493,7 +493,7 @@
     cursor: pointer;
     overflow: hidden;
     background: transparent;
-    /* transition: all .3s cubic-bezier(0.4, 0, 0.2, 1); */
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 
@@ -518,7 +518,7 @@
     width: 8rem;
     height: 8rem;
     object-fit: cover;
-    /* transition: filter .25s ease; */
+    transition: filter .25s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -694,7 +694,7 @@
     content: "●";
     color: #e60000;
     margin-inline: 0 .3rem;
-    /* animation: blink 1s linear infinite alternate; */
+    animation: blink 1s linear infinite alternate;
     text-decoration-thickness: 0 !important;
     display: inline-block;
     font-size: 85%;

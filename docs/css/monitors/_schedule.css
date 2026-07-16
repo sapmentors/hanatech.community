@@ -118,7 +118,7 @@
         content: "●";
         color: #e60000;
         margin-inline: 0 .3rem;
-        /* animation: blink 1s linear infinite alternate; */
+        animation: blink 1s linear infinite alternate;
         text-decoration-thickness: 0 !important;
         display: inline-block;
 
