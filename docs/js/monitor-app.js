@@ -6,7 +6,7 @@
 const AGENDA_JSON = [
     {
         "id": "id-1771346373249-652",
-        "title": "Bridging Python and SAP HANA: Inside the sqlalchemy-hana Open-Source Dialec",
+        "title": "Bridging Python and SAP HANA: Inside the sqlalchemy-hana Open-Source Dialect",
         "description": "SQLAlchemy is Python's standard database toolkit and ORM. Alembic provides version-controlled schema migrations. sqlalchemy-hana is the open-source dialect that brings SAP HANA support to both tools.\n\nIn this session, we will explain how sqlalchemy-hana connects Python applications to SAP HANA. You'll learn how the dialect translates SQLAlchemy's database-agnostic API into HANA-specific SQL, and how we handle the quirks that make HANA unique.\n\nTopics covered:\n• What sqlalchemy-hana does and how it integrates with SQLAlchemy's architecture\n• Alembic support: Running schema migrations against SAP HANA databases\n• Async support: How we added aiohdbcli for non-blocking database operations\n• Vector support: Working with HANA's REAL_VECTOR type for modern workloads\n\nWhether you're a Python developer working with SAP HANA or curious about how database dialects work, this session will give you practical insights into bridging two different technology worlds.\n ",
         "type": "presentation_short",
         "extraInfo": "",
@@ -117,7 +117,7 @@ const AGENDA_JSON = [
                 "id": "timo.wagner@outlook.com",
                 "firstName": "Timo",
                 "lastName": "Wagner",
-                "company": "",
+                "company": "Freelancer",
                 "bio": "Freelance Software Engineer mainly focusing on SAP HANA technologies.\nFormer Developer at SAP working on the SAP HANA Smart Data Integration, Agile Data Preparation and Data Hub/Data Intelligence Products\n-\nStarted my career in the SAP HANA Smart Data Integration team and developed Adapters for the DPAgent.\nWhen Eclipse needed a replacement we've developed WebIDE (XS Classic) editors for Flowgraphs, Reptasks and everything in the Remote Source area.\nAnd after a while the same with the subsequent deprecation of XSC in favor for XSA and its new WebIDE.",
                 "hash": "fd7f18f6487faf5f32772932f0b2b75012a3dfb8d25820093a5764c344ba4eb3",
                 "photo": true
