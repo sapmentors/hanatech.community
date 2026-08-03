@@ -656,6 +656,8 @@ a:is(.active) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .htec-btn.tiny {

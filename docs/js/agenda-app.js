@@ -348,9 +348,12 @@ function compareSessions(a, b) {
     return 1;
 }
 //--------------------------------------------------------------------------------------------------
+// Set to true after the conference to show "Watch Recordings" buttons instead of "Join Online"
+const POST_CONFERENCE = true;
+
 const TRACK_CONFIG = [
-    { id: 'track-1', label: 'Track A', cssClass: 'track-A', enableAt: { hour: 8,  minute: 40  }, link: 'https://www.youtube.com/live/PBzfBgbFKEI' },
-    { id: 'track-2', label: 'Track B', cssClass: 'track-B', enableAt: { hour: 9,  minute: 40 }, link: 'https://teams.microsoft.com/meet/381872926992573?p=xeKZoAusegcD3sEedS' },
+    { id: 'track-1', label: 'Track A', cssClass: 'track-A', enableAt: { hour: 8,  minute: 40  }, link: 'https://www.youtube.com/live/PBzfBgbFKEI',                                          recordingLink: 'https://www.youtube.com/@HANATechCon' },
+    { id: 'track-2', label: 'Track B', cssClass: 'track-B', enableAt: { hour: 9,  minute: 40 },  link: 'https://teams.microsoft.com/meet/381872926992573?p=xeKZoAusegcD3sEedS', recordingLink: 'https://www.youtube.com/@HANATechCon' },
 ];
 //--------------------------------------------------------------------------------------------------
 const AgendaApp = {
@@ -363,7 +366,8 @@ const AgendaApp = {
         return {
             sessions_raw: AGENDA_JSON,
             selectedSession: null,
-            showDialog: false
+            showDialog: false,
+            postConference: POST_CONFERENCE,
         };
     },
     computed: {
@@ -371,8 +375,9 @@ const AgendaApp = {
             const now = Date.now() / 1000;
             return TRACK_CONFIG.map(t => ({
                 ...t,
-                enabled: now >= getConfUnixTime(t.enableAt.hour, t.enableAt.minute),
+                enabled: POST_CONFERENCE || now >= getConfUnixTime(t.enableAt.hour, t.enableAt.minute),
                 enableAtLabel: `${t.enableAt.hour}:${t.enableAt.minute.toString().padStart(2, '0')}`,
+                activeLink: POST_CONFERENCE ? t.recordingLink : t.link,
             }));
         },
         trackLinks() {
@@ -412,24 +417,26 @@ const AgendaApp = {
 
         <div class="track-online-bar">
             <a v-for="t in tracks" :key="t.id"
-               :href="t.link" target="_blank" rel="noopener noreferrer"
+               :href="t.activeLink" target="_blank" rel="noopener noreferrer"
                :class="['htec-btn', t.cssClass, 'track-online-btn', !t.enabled && 'track-online-btn--disabled']"
                @click="handleTrackLinkClick($event, t.id)"
-               :aria-label="'Join ' + t.label + ' online'">
+               :aria-label="postConference ? 'Watch ' + t.label + ' recording' : 'Join ' + t.label + ' online'">
                 <svg class="track-online-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 20 11h-1v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8H4a1 1 0 0 1-.707-1.707l7-7zM12 4.414L6.414 10H7v9h10v-9h.586L12 4.414z"/></svg>
-                {{ t.label }} – Join online <span class="track-online-time">from {{ t.enableAtLabel }}</span>
+                <template v-if="postConference">{{ t.label }} – Watch Recordings</template>
+                <template v-else>{{ t.label }} – Join online <span class="track-online-time">from {{ t.enableAtLabel }}</span></template>
             </a>
         </div>
 
         <div class="schedule" aria-labelledby="schedule-heading">
             <template v-for="t in tracks" :key="t.id">
-                <a :href="t.link" target="_blank" rel="noopener noreferrer"
+                <a :href="t.activeLink" target="_blank" rel="noopener noreferrer"
                    :class="['track-slot', 'track-slot--online', !t.enabled && 'track-slot--disabled']"
                    :style="'grid-column: ' + t.id + '; grid-row: tracks;'"
                    @click="handleTrackLinkClick($event, t.id)"
-                   :aria-label="t.label + ' – Join online'">
+                   :aria-label="postConference ? t.label + ' – Watch Recordings' : t.label + ' – Join online'">
                     {{ t.label }}
-                    <span class="track-slot-online-sub">Join online from {{ t.enableAtLabel }} ↗</span>
+                    <span class="track-slot-online-sub" v-if="postConference">Watch Recordings ↗</span>
+                    <span class="track-slot-online-sub" v-else>Join online from {{ t.enableAtLabel }} ↗</span>
                 </a>
             </template>
             <span class="track-slot" aria-hidden="true" style="grid-column: track-3; grid-row: tracks;">Track C<span class="track-slot-online-sub">On-site only</span></span>
